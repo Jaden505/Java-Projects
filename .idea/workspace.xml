@@ -4,7 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="80e9e297-462a-46b0-a4c8-be4819d86240" name="Changes" comment="" />
+    <list default="true" id="80e9e297-462a-46b0-a4c8-be4819d86240" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/Assignment1/w1-exercise2-ShapesADT_starter-v21/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/w1-exercise2-ShapesADT_starter-v21/src/main/java/Shape.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/w1-exercise2-ShapesADT_starter-v21/src/test/java/ShapesTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment1/w1-exercise2-ShapesADT_starter-v21/w1-exercise2-ShapesADT-v21.3.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment2/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment3/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment4/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assignment5/pom.xml" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,11 +43,17 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/jadenvanrijswijk/Desktop/Programming files/IntelliJ/Shapes ADS",
+    "last_opened_file_path": "/Users/jadenvanrijswijk/Desktop/Programming files/IntelliJ/ADS/Assignment1",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Assignment1" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="Assignment1-ADS" />
@@ -65,6 +80,7 @@
       <workItem from="1662450787979" duration="23000" />
       <workItem from="1662638680121" duration="5000" />
       <workItem from="1662638964359" duration="1198000" />
+      <workItem from="1662642603964" duration="977000" />
     </task>
     <servers />
   </component>
