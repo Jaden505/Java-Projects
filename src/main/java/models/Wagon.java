@@ -1,6 +1,6 @@
 package models;
 
-public class Wagon {
+public abstract class Wagon {
     protected int id;               // some unique ID of a Wagon
     private Wagon nextWagon;        // another wagon that is appended at the tail of this wagon
                                     // a.k.a. the successor of this wagon in a sequence
@@ -58,9 +58,13 @@ public class Wagon {
      * @return  the last wagon
      */
     public Wagon getLastWagonAttached() {
-        // TODO find the last wagon in the sequence
+        Wagon wagon = this;
 
-        return null;
+        while (wagon.hasNextWagon()) {
+            wagon = wagon.getNextWagon();
+        }
+
+        return wagon;
     }
 
     /**
@@ -68,9 +72,15 @@ public class Wagon {
      * including this wagon itself.
      */
     public int getSequenceLength() {
-        // TODO traverse the sequence and find its length
+        Wagon wagon = this;
+        int count = 1;
 
-        return 0;
+        while (wagon.hasNextWagon()) {
+            wagon = wagon.getNextWagon();
+            count += 1;
+        }
+
+        return count;
     }
 
     /**
@@ -105,10 +115,10 @@ public class Wagon {
      *          or <code>null</code> if it had no wagons attached to its tail.
      */
     public Wagon detachTail() {
-        // TODO detach the tail from this wagon (sustaining the invariant propositions).
-        //  and return the head wagon of that tail
+        Wagon tail_wagon = nextWagon;
+        this.nextWagon = null;
 
-        return null;
+        return tail_wagon;
     }
 
     /**
@@ -118,10 +128,10 @@ public class Wagon {
      *          or <code>null</code> if it had no previousWagon.
      */
     public Wagon detachFront() {
-        // TODO detach this wagon from its predecessor (sustaining the invariant propositions).
-        //   and return that predecessor
+        Wagon predecessor_wagon = previousWagon;
+        this.previousWagon = null;
 
-        return null;
+        return predecessor_wagon;
     }
 
     /**
@@ -159,5 +169,8 @@ public class Wagon {
         return null;
     }
 
-    // TODO string representation of a Wagon
+    @Override
+    public String toString() {
+        return "[Wagon-" + id + "]";
+    }
 }
