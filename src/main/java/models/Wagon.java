@@ -30,22 +30,26 @@ public class Wagon {
         return previousWagon;
     }
 
+    public void setPreviousWagon(Wagon previousWagon) {
+        this.previousWagon = previousWagon;
+    }
+
+    public void setNextWagon(Wagon nextWagon) {
+        this.nextWagon = nextWagon;
+    }
+
     /**
      * @return  whether this wagon has a wagon appended at the tail
      */
     public boolean hasNextWagon() {
-        // TODO
-
-        return false;
+        return nextWagon != null;
     }
 
     /**
      * @return  whether this wagon has a wagon prepended at the front
      */
     public boolean hasPreviousWagon() {
-        // TODO
-
-        return false;
+        return previousWagon != null;
     }
 
     /**
@@ -81,9 +85,18 @@ public class Wagon {
      *          or:   "%s has already been attached to %s"
      */
     public void attachTail(Wagon tail) {
-        // TODO verify the exceptions
+        if (hasNextWagon()) {
+            throw new IllegalStateException(this + " is already pulling " + getNextWagon());
+        }
 
-        // TODO attach the tail wagon to this wagon (sustaining the invariant propositions).
+        else if (tail.hasPreviousWagon()) {
+            throw new IllegalStateException(tail + " has already been attached to " + tail.getPreviousWagon());
+        }
+
+        else {
+            this.nextWagon = tail;
+            tail.setPreviousWagon(this);
+        }
     }
 
     /**

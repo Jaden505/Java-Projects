@@ -5,14 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80e9e297-462a-46b0-a4c8-be4819d86240" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assignment1/w1-exercise2-ShapesADT_starter-v21/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/w1-exercise2-ShapesADT_starter-v21/src/main/java/Shape.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/w1-exercise2-ShapesADT_starter-v21/src/test/java/ShapesTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment1/w1-exercise2-ShapesADT_starter-v21/w1-exercise2-ShapesADT-v21.3.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment2/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment3/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment4/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assignment5/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TrainsMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/TrainsMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/FreightWagon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/FreightWagon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/PassengerWagon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/PassengerWagon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Train.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Wagon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Wagon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,16 +35,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/jadenvanrijswijk/Desktop/Programming files/IntelliJ/ADS/Assignment1",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jadenvanrijswijk/Desktop/Programming files/IntelliJ/ADS/Assignment1&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -81,6 +78,11 @@
       <workItem from="1662638680121" duration="5000" />
       <workItem from="1662638964359" duration="1198000" />
       <workItem from="1662642603964" duration="977000" />
+      <workItem from="1662743634285" duration="482000" />
+      <workItem from="1663057104189" duration="1032000" />
+      <workItem from="1663059481418" duration="6190000" />
+      <workItem from="1663070521295" duration="46000" />
+      <workItem from="1663170359714" duration="1170000" />
     </task>
     <servers />
   </component>

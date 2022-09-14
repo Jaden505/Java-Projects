@@ -1,5 +1,8 @@
 package models;
 
+import java.util.ArrayList;
+import java.util.function.Consumer;
+
 public class Train {
     private final String origin;
     private final String destination;
@@ -19,21 +22,15 @@ public class Train {
 
     /* three helper methods that are usefull in other methods */
     public boolean hasWagons() {
-        // TODO
-
-        return false;
+        return firstWagon != null;
     }
 
     public boolean isPassengerTrain() {
-        // TODO
-
-        return false;
+        return firstWagon instanceof PassengerWagon;
     }
 
     public boolean isFreightTrain() {
-        // TODO
-
-        return false;
+        return firstWagon instanceof FreightWagon;
     }
 
     public Locomotive getEngine() {
@@ -52,25 +49,35 @@ public class Train {
      *              (can be null)
      */
     public void setFirstWagon(Wagon wagon) {
-        // TODO
+        this.firstWagon = wagon;
     }
 
     /**
      * @return  the number of Wagons connected to the train
      */
     public int getNumberOfWagons() {
-        // TODO
+        Wagon wagon = firstWagon;
+        int count_wagons = 0;
 
-        return 0;
+        while (wagon.hasNextWagon()) {
+            wagon = wagon.getNextWagon();
+            count_wagons += 1;
+        }
+
+        return count_wagons;
     }
 
     /**
      * @return  the last wagon attached to the train
      */
     public Wagon getLastWagonAttached() {
-        // TODO
+        Wagon wagon = firstWagon;
 
-        return null;
+        while (wagon.hasNextWagon()) {
+            wagon = wagon.getNextWagon();
+        }
+
+        return wagon;
     }
 
     /**
@@ -78,9 +85,13 @@ public class Train {
      *          (return 0 for a freight train)
      */
     public int getTotalNumberOfSeats() {
-        // TODO
-
-        return 0;
+        if (isFreightTrain()) {
+            return 0;
+        }
+        else {
+            // TODO
+            return 1;
+        }
     }
 
     /**
@@ -129,9 +140,11 @@ public class Train {
      * @return whether type and capacity of this train can accommodate attachment of the sequence
      */
     public boolean canAttach(Wagon wagon) {
-        // TODO
+        boolean wagon_type = (wagon.getClass() == firstWagon.getClass());
 
-        return false;
+        boolean wagon_capicity = engine.getMaxWagons() > getNumberOfWagons();
+
+        return wagon_type && wagon_capicity;
     }
 
     /**
@@ -143,7 +156,13 @@ public class Train {
      * @return  whether the attachment could be completed successfully
      */
     public boolean attachToRear(Wagon wagon) {
-        // TODO
+        if (this.canAttach(wagon)) {
+            this.getLastWagonAttached().attachTail(wagon);
+
+            return true;
+        }
+
+        System.out.println("Can't attach waggon");
 
         return false;
     }
