@@ -5,12 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80e9e297-462a-46b0-a4c8-be4819d86240" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/FreightWagon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/FreightWagon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/PassengerWagon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/PassengerWagon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Train.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/Wagon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Wagon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -36,8 +44,10 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/jadenvanrijswijk/Desktop/Programming files/IntelliJ/ADS/Assignment1&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/joelamarh/team15&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -47,20 +57,29 @@
       <recent name="$PROJECT_DIR$/Assignment1" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WagonTest">
+  <component name="RunManager" selected="Application.TrainsMain">
+    <configuration name="TrainsMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TrainsMain" />
+      <module name="team15" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TrainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Assignment1" />
+      <module name="team15" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TrainTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="WagonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Assignment1" />
+      <module name="team15" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="WagonTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -81,8 +100,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WagonTest" />
+        <item itemvalue="Application.TrainsMain" />
         <item itemvalue="JUnit.TrainTest" />
+        <item itemvalue="JUnit.WagonTest" />
       </list>
     </recent_temporary>
   </component>
@@ -103,10 +123,25 @@
       <workItem from="1663059481418" duration="6190000" />
       <workItem from="1663070521295" duration="46000" />
       <workItem from="1663170359714" duration="5842000" />
+      <workItem from="1663239889453" duration="2461000" />
+      <workItem from="1663245921803" duration="1546000" />
+      <workItem from="1663268959714" duration="510000" />
+      <workItem from="1663329081844" duration="615000" />
+      <workItem from="1663331236757" duration="3228000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

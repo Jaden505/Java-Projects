@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.function.Consumer;
 
 public class Train {
-    private final String origin;
-    private final String destination;
+    public final String origin;
+    public final String destination;
     private final Locomotive engine;
     private Wagon firstWagon;
 
@@ -101,9 +101,21 @@ public class Train {
      *
      */
     public int getTotalMaxWeight() {
-        // TODO
 
-        return 0;
+        int totalWeight = 0;
+
+        if (isFreightTrain()) {
+            FreightWagon temp = (FreightWagon) this.firstWagon;
+
+            while (temp.hasNextWagon()) {
+                int weight = temp.getMaxWeight();
+                totalWeight += weight;
+                temp = (FreightWagon) temp.getNextWagon();
+            }
+            totalWeight += temp.getMaxWeight();
+        }
+        return totalWeight;
+
     }
 
      /**
@@ -125,7 +137,8 @@ public class Train {
      *          (return null if no wagon was found with the given wagonId)
      */
     public Wagon findWagonById(int wagonId) {
-        // TODO
+
+        
 
         return null;
     }
@@ -140,10 +153,9 @@ public class Train {
      * @return whether type and capacity of this train can accommodate attachment of the sequence
      */
     public boolean canAttach(Wagon wagon) {
+
         boolean wagon_type = (wagon.getClass() == firstWagon.getClass());
-
         boolean wagon_capicity = engine.getMaxWagons() > getNumberOfWagons();
-
         return wagon_type && wagon_capicity;
     }
 
