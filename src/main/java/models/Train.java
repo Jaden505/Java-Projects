@@ -1,9 +1,10 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.function.Consumer;
 
-public class Train {
+public class Train implements Iterable<Wagon>{
     public final String origin;
     public final String destination;
     private final Locomotive engine;
@@ -26,11 +27,17 @@ public class Train {
     }
 
     public boolean isPassengerTrain() {
-        return firstWagon instanceof PassengerWagon;
+        if (this.hasWagons()) {
+            return this.firstWagon instanceof PassengerWagon;
+        }
+        return false;
     }
 
     public boolean isFreightTrain() {
-        return firstWagon instanceof FreightWagon;
+        if (this.hasWagons()) {
+            return this.firstWagon instanceof FreightWagon;
+        }
+        return false;
     }
 
     public Locomotive getEngine() {
@@ -56,13 +63,12 @@ public class Train {
      * @return  the number of Wagons connected to the train
      */
     public int getNumberOfWagons() {
-        Wagon wagon = firstWagon;
         int count_wagons = 0;
 
-        while (wagon.hasNextWagon()) {
-            wagon = wagon.getNextWagon();
-            count_wagons += 1;
+        for (Wagon skip : this){
+            count_wagons ++;
         }
+
 
         return count_wagons;
     }
@@ -138,7 +144,7 @@ public class Train {
      */
     public Wagon findWagonById(int wagonId) {
 
-        
+
 
         return null;
     }
@@ -260,5 +266,26 @@ public class Train {
 
     }
 
-    // TODO string representation of a train
+    @Override
+    public Iterator<Wagon> iterator() {
+        return new Iterator<>() {
+
+            Wagon temp = firstWagon;
+
+            @Override
+            public boolean hasNext() {
+                return temp != null;
+            } // return temp as long it is not null
+
+            @Override
+            public Wagon next() {
+
+                Wagon wagon = temp; // set the nextwagon to wagon
+                temp = temp.getNextWagon(); // get the nextwagon
+                return wagon; // return the wagon
+            }
+        };
+    }
+
+
 }

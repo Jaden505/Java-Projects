@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80e9e297-462a-46b0-a4c8-be4819d86240" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/FreightWagon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/FreightWagon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/PassengerWagon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/PassengerWagon.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Train.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Wagon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Wagon.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +53,7 @@
       <recent name="$PROJECT_DIR$/Assignment1" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TrainsMain">
+  <component name="RunManager" selected="JUnit.TrainTest">
     <configuration name="TrainsMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="TrainsMain" />
       <module name="team15" />
@@ -100,9 +96,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TrainsMain" />
         <item itemvalue="JUnit.TrainTest" />
         <item itemvalue="JUnit.WagonTest" />
+        <item itemvalue="Application.TrainsMain" />
       </list>
     </recent_temporary>
   </component>
@@ -127,7 +123,8 @@
       <workItem from="1663245921803" duration="1546000" />
       <workItem from="1663268959714" duration="510000" />
       <workItem from="1663329081844" duration="615000" />
-      <workItem from="1663331236757" duration="3228000" />
+      <workItem from="1663331236757" duration="3724000" />
+      <workItem from="1663517904318" duration="3062000" />
     </task>
     <servers />
   </component>
