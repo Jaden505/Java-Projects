@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80e9e297-462a-46b0-a4c8-be4819d86240" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Wagon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Wagon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Train.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +38,9 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/jadenvanrijswijk/Desktop/Programming files/IntelliJ/ADS/Assignment1&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
@@ -47,7 +50,14 @@
       <recent name="$PROJECT_DIR$/Assignment1" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WagonTest">
+  <component name="RunManager" selected="JUnit.TrainTest">
+    <configuration name="TrainsMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TrainsMain" />
+      <module name="Assignment1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TrainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Assignment1" />
       <option name="PACKAGE_NAME" value="" />
@@ -81,8 +91,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WagonTest" />
         <item itemvalue="JUnit.TrainTest" />
+        <item itemvalue="JUnit.WagonTest" />
+        <item itemvalue="Application.TrainsMain" />
       </list>
     </recent_temporary>
   </component>
@@ -102,7 +113,17 @@
       <workItem from="1663057104189" duration="1032000" />
       <workItem from="1663059481418" duration="6190000" />
       <workItem from="1663070521295" duration="46000" />
-      <workItem from="1663170359714" duration="5842000" />
+      <workItem from="1663170359714" duration="6565000" />
+      <workItem from="1663242258639" duration="989000" />
+      <workItem from="1663245686651" duration="331000" />
+      <workItem from="1663512365438" duration="283000" />
+      <workItem from="1663514313170" duration="201000" />
+      <workItem from="1663515203919" duration="752000" />
+      <workItem from="1663523120974" duration="45000" />
+      <workItem from="1663523633071" duration="39000" />
+      <workItem from="1663581533716" duration="63000" />
+      <workItem from="1663581738901" duration="135000" />
+      <workItem from="1663602717294" duration="469000" />
     </task>
     <servers />
   </component>
