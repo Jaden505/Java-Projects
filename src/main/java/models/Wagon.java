@@ -1,7 +1,7 @@
 package models;
 
 public abstract class Wagon {
-    protected int id;               // some unique ID of a Wagon
+    public int id;               // some unique ID of a Wagon
     private Wagon nextWagon;        // another wagon that is appended at the tail of this wagon
                                     // a.k.a. the successor of this wagon in a sequence
                                     // set to null if no successor is connected
@@ -151,8 +151,30 @@ public abstract class Wagon {
      * Removes this wagon from the sequence that it is part of,
      * and reconnects its tail to the wagon in front of it, if any.
      */
+    public void detachFromPrevious() {
+        if (this.hasPreviousWagon()) {
+            // detaching of both sides
+            this.previousWagon.nextWagon = null;
+            this.previousWagon = null;
+        }
+    }
+
     public void removeFromSequence() {
-        // TODO
+        Wagon next = this.nextWagon;
+        Wagon previous = this.previousWagon;
+
+
+        if (this.hasPreviousWagon()) {
+            this.detachFromPrevious();
+        }
+
+        if (this.hasNextWagon()) {
+            this.detachTail();
+        }
+
+        if (previous != null && next != null) {
+            next.reAttachTo(previous);
+        }
     }
 
 

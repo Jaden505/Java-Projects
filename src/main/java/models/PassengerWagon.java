@@ -1,7 +1,7 @@
 package models;
 // TODO
 public class PassengerWagon extends Wagon {
-    int numberOfSeats;
+    public int numberOfSeats;
     public PassengerWagon(int wagonId, int numberOfSeats) {
         super(wagonId);
 

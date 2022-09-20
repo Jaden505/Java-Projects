@@ -1,11 +1,12 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.function.Consumer;
 
-public class Train {
-    private final String origin;
-    private final String destination;
+public class Train implements Iterable<Wagon>{
+    public final String origin;
+    public final String destination;
     private final Locomotive engine;
     private Wagon firstWagon;
 
@@ -26,11 +27,17 @@ public class Train {
     }
 
     public boolean isPassengerTrain() {
-        return firstWagon instanceof PassengerWagon;
+        if (this.hasWagons()) {
+            return this.firstWagon instanceof PassengerWagon;
+        }
+        return false;
     }
 
     public boolean isFreightTrain() {
-        return firstWagon instanceof FreightWagon;
+        if (this.hasWagons()) {
+            return this.firstWagon instanceof FreightWagon;
+        }
+        return false;
     }
 
     public Locomotive getEngine() {
@@ -56,13 +63,12 @@ public class Train {
      * @return  the number of Wagons connected to the train
      */
     public int getNumberOfWagons() {
-        Wagon wagon = firstWagon;
         int count_wagons = 0;
 
-        while (wagon.hasNextWagon()) {
-            wagon = wagon.getNextWagon();
-            count_wagons += 1;
+        for (Wagon skip : this){
+            count_wagons ++;
         }
+
 
         return count_wagons;
     }
@@ -101,9 +107,21 @@ public class Train {
      *
      */
     public int getTotalMaxWeight() {
-        // TODO
 
-        return 0;
+        int totalWeight = 0;
+
+        if (isFreightTrain()) {
+            FreightWagon temp = (FreightWagon) this.firstWagon;
+
+            while (temp.hasNextWagon()) {
+                int weight = temp.getMaxWeight();
+                totalWeight += weight;
+                temp = (FreightWagon) temp.getNextWagon();
+            }
+            totalWeight += temp.getMaxWeight();
+        }
+        return totalWeight;
+
     }
 
      /**
@@ -125,7 +143,8 @@ public class Train {
      *          (return null if no wagon was found with the given wagonId)
      */
     public Wagon findWagonById(int wagonId) {
-        // TODO
+
+
 
         return null;
     }
@@ -140,10 +159,9 @@ public class Train {
      * @return whether type and capacity of this train can accommodate attachment of the sequence
      */
     public boolean canAttach(Wagon wagon) {
+
         boolean wagon_type = (wagon.getClass() == firstWagon.getClass());
-
         boolean wagon_capicity = engine.getMaxWagons() > getNumberOfWagons();
-
         return wagon_type && wagon_capicity;
     }
 
@@ -248,5 +266,26 @@ public class Train {
 
     }
 
-    // TODO string representation of a train
+    @Override
+    public Iterator<Wagon> iterator() {
+        return new Iterator<>() {
+
+            Wagon temp = firstWagon;
+
+            @Override
+            public boolean hasNext() {
+                return temp != null;
+            } // return temp as long it is not null
+
+            @Override
+            public Wagon next() {
+
+                Wagon wagon = temp; // set the nextwagon to wagon
+                temp = temp.getNextWagon(); // get the nextwagon
+                return wagon; // return the wagon
+            }
+        };
+    }
+
+
 }
