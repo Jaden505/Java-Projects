@@ -115,7 +115,11 @@ public abstract class Wagon {
      *          or <code>null</code> if it had no wagons attached to its tail.
      */
     public Wagon detachTail() {
-        Wagon tail_wagon = nextWagon;
+        if (!this.hasNextWagon()) {return null;}
+
+        Wagon tail_wagon = nextWagon; // Temporary variable
+
+        this.nextWagon.setPreviousWagon(null);
         this.nextWagon = null;
 
         return tail_wagon;
@@ -128,7 +132,11 @@ public abstract class Wagon {
      *          or <code>null</code> if it had no previousWagon.
      */
     public Wagon detachFront() {
-        Wagon predecessor_wagon = previousWagon;
+        if (!this.hasPreviousWagon()) {return null;}
+
+        Wagon predecessor_wagon = previousWagon; // Temporary variable
+
+        this.previousWagon.setNextWagon(null);
         this.previousWagon = null;
 
         return predecessor_wagon;
@@ -142,9 +150,10 @@ public abstract class Wagon {
      * @param front the wagon to which this wagon must be attached to.
      */
     public void reAttachTo(Wagon front) {
-        // TODO detach any existing connections that will be rearranged
+        this.detachFront();
+        front.detachTail();
 
-        // TODO attach this wagon to its new predecessor front (sustaining the invariant propositions).
+        front.attachTail(this);
     }
 
     /**
