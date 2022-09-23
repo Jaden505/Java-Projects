@@ -186,33 +186,28 @@ public class Train implements Iterable<Wagon>{
      * @return whether type and capacity of this train can accommodate attachment of the sequence
      */
     public boolean canAttach(Wagon wagon) {
+        int wagonsToAttach = 0;
+        Wagon wagon1 = wagon;
+        Wagon wagon2 = firstWagon;
 
-
-
-        int total = 0;
-        int cap = this.engine.getMaxWagons();
-        int totaalTrein;
-        int totaalWagon;
-
-        totaalWagon = wagon.getSequenceLength();
-
-        totaalTrein = this.getNumberOfWagons();
-
-
-        total += (totaalWagon + totaalTrein);
-
-        if (total <= cap) {
-
-            if (!this.hasWagons()) {
-                return true;
-            } else if (this.hasWagons()) {
-                return wagon instanceof PassengerWagon && this.isPassengerTrain()
-                        || wagon instanceof FreightWagon && this.isFreightTrain();
-            } else {
+        while (wagon2 != null) {
+            if (wagon2 == wagon) {
                 return false;
             }
+            wagon2 = wagon2.getNextWagon();
         }
-        return false;
+
+        while (wagon1 != null) {
+            wagonsToAttach++;
+            wagon1 = wagon1.getNextWagon();
+        }
+
+        if (isFreightTrain() && wagon instanceof FreightWagon ||
+                isPassengerTrain() && wagon instanceof PassengerWagon) {
+            return engine.getMaxWagons() >= (wagonsToAttach + getNumberOfWagons());
+        } else {
+            return firstWagon == null;
+        }
 
     }
 
@@ -225,18 +220,16 @@ public class Train implements Iterable<Wagon>{
      * @return  whether the attachment could be completed successfully
      */
     public boolean attachToRear(Wagon wagon) {
-//        // check if the new sequence can be attached to the train
-//        if (this.canAttach(wagon)) {
-//            // check if the train has wagons
-//            if (this.firstWagon == null) {
-//                this.firstWagon = wagon;
-//            } else {
-//                // detach from predesessor first, before attach sequence to the last wagon of this train
-//                wagon.detachFromPrevious();
-//                wagon.attachTo(this.firstWagon.getLastWagonAttached());
-//            }
-//            return true;
-//        }
+        if (this.canAttach(wagon)) {
+
+            if (this.firstWagon == null) {
+                this.firstWagon = wagon;
+            } else {
+                wagon.detachFromPrevious();
+                wagon.attachTo(this.firstWagon.getLastWagonAttached());
+            }
+            return true;
+        }
         return false;
     }
 
@@ -340,21 +333,17 @@ public class Train implements Iterable<Wagon>{
     public boolean moveOneWagon(int wagonId, Train toTrain) {
         Wagon current = this.firstWagon;
 
-        // check if there is a wagon with wagonId
         if (findWagonById(wagonId) == null) {
             return false;
         }
 
-        // check if the firstwagon is the same as wagonId
         if (this.firstWagon.getId() == wagonId) {
-            // remove the first one and move the sequence one to the left
             setFirstWagon(this.firstWagon.getNextWagon());
-            current.setNextWagon(null); // detachtail
-            toTrain.attachToRear(current); // place the first wagon the the rear of the given train
+            current.setNextWagon(null);
+            toTrain.attachToRear(current);
             return true;
         } else {
-            // loop through this sequence to find the wagon with the given wagonId, if it is found stop to the
-            // same as above and stop the loop
+
             Wagon previous;
             for (int i = 0; i < getNumberOfWagons(); i++) {
                 previous = current;
@@ -402,13 +391,7 @@ public class Train implements Iterable<Wagon>{
 
     }
 
-    /**
-     * Reverses the sequence of wagons in this train (if any)
-     * i.e. the last wagon becomes the first wagon
-     *      the previous wagon of the last wagon becomes the second wagon
-     *      etc.
-     * (No change if the train has no wagons or only one wagon)
-     */
+
 
     public void reverse() {
         if (this.firstWagon != null) {

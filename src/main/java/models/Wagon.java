@@ -173,7 +173,6 @@ public abstract class Wagon {
      */
     public void detachFromPrevious() {
         if (this.hasPreviousWagon()) {
-            // detaching of both sides
             this.previousWagon.nextWagon = null;
             this.previousWagon = null;
         }
