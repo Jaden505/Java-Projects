@@ -14,5 +14,7 @@ public class Locomotive {
         return maxWagons;
     }
 
-    // TODO
+    public Locomotive(int locNumber) {
+        this.locNumber = locNumber;
+    }
 }
