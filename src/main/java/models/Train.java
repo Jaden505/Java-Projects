@@ -78,6 +78,7 @@ public class Train implements Iterable<Wagon>{
      * @return  the last wagon attached to the train
      */
     public Wagon getLastWagonAttached() {
+
         if (this.firstWagon != null) {
             return this.firstWagon.getLastWagonAttached();
         }
@@ -89,6 +90,7 @@ public class Train implements Iterable<Wagon>{
      *          (return 0 for a freight train)
      */
     public int getTotalNumberOfSeats() {
+
         int totalnumberofseats = 0;
         Wagon wagon = firstWagon;
         while(wagon != null) {
@@ -223,14 +225,18 @@ public class Train implements Iterable<Wagon>{
      * @return  whether the attachment could be completed successfully
      */
     public boolean attachToRear(Wagon wagon) {
-        if (this.canAttach(wagon)) {
-            this.getLastWagonAttached().attachTail(wagon);
-
-            return true;
-        }
-
-        System.out.println("Can't attach waggon");
-
+//        // check if the new sequence can be attached to the train
+//        if (this.canAttach(wagon)) {
+//            // check if the train has wagons
+//            if (this.firstWagon == null) {
+//                this.firstWagon = wagon;
+//            } else {
+//                // detach from predesessor first, before attach sequence to the last wagon of this train
+//                wagon.detachFromPrevious();
+//                wagon.attachTo(this.firstWagon.getLastWagonAttached());
+//            }
+//            return true;
+//        }
         return false;
     }
 
@@ -244,8 +250,29 @@ public class Train implements Iterable<Wagon>{
      * @return  whether the insertion could be completed successfully
      */
     public boolean insertAtFront(Wagon wagon) {
-        // TODO
+        if (this.firstWagon == wagon) {
+            return false;
+        } else {
+            // check if this train has wagons
+            if (!this.hasWagons()) {
+                if (canAttach(wagon)) {
+                    this.setFirstWagon(wagon);
+                    return true;
+                }
+            } else {
+                if (canAttach(wagon)) {
+                    Wagon mid = this.firstWagon; // get the firstwagon of this train
+                    // set this firstwagon of this train to the rear of the given sequence
+                    wagon.getLastWagonAttached().setNextWagon(mid);
+                    mid.setPreviousWagon(wagon);
+                    // replace this first sequence with the whole new sequence
+                    this.firstWagon = wagon;
 
+                    return true;
+                }
+                return false;
+            }
+        }
         return false;
     }
 
@@ -264,8 +291,38 @@ public class Train implements Iterable<Wagon>{
      * @return  whether the insertion could be completed successfully
      */
     public boolean insertAtPosition(int position, Wagon wagon) {
-        // TODO
 
+        if (canAttach(wagon)) {
+            // if this train has no wagons, but the position to insert is one, set the new sequence as the fistwagon
+            if (!this.hasWagons() && position == 1) {
+                this.firstWagon = wagon;
+                return true;
+
+            } else if (this.hasWagons() && position == 1) {
+                Wagon mid = this.firstWagon;
+                // set this firstwagon to the rear of the given sequence
+                wagon.getLastWagonAttached().setNextWagon(mid);
+                mid.setPreviousWagon(wagon);
+                this.firstWagon = wagon;
+
+                return true;
+            } else if (this.hasWagons() && position != 1) {
+                // find the wagon at the given position and detaching
+                Wagon mid = this.findWagonAtPosition(position);
+
+                // get the previouswagon to attach the given sequence to the rear of that
+                Wagon prev = mid.getPreviousWagon();
+                mid.detachFromPrevious();
+                prev.setNextWagon(wagon);
+
+                // attach the end to the other half
+                wagon.getLastWagonAttached().setNextWagon(mid);
+                mid.setPreviousWagon(wagon);
+                return true;
+            } else {
+                return false;
+            }
+        }
         return false;
     }
 
@@ -281,9 +338,37 @@ public class Train implements Iterable<Wagon>{
      * @return  whether the move could be completed successfully
      */
     public boolean moveOneWagon(int wagonId, Train toTrain) {
-        // TODO
+        Wagon current = this.firstWagon;
 
-        return false;
+        // check if there is a wagon with wagonId
+        if (findWagonById(wagonId) == null) {
+            return false;
+        }
+
+        // check if the firstwagon is the same as wagonId
+        if (this.firstWagon.getId() == wagonId) {
+            // remove the first one and move the sequence one to the left
+            setFirstWagon(this.firstWagon.getNextWagon());
+            current.setNextWagon(null); // detachtail
+            toTrain.attachToRear(current); // place the first wagon the the rear of the given train
+            return true;
+        } else {
+            // loop through this sequence to find the wagon with the given wagonId, if it is found stop to the
+            // same as above and stop the loop
+            Wagon previous;
+            for (int i = 0; i < getNumberOfWagons(); i++) {
+                previous = current;
+                current = current.getNextWagon();
+                if (current.getId() == wagonId) {
+                    previous.setNextWagon(current.getNextWagon());
+                    current.setPreviousWagon(null);
+                    current.setNextWagon(null);
+                    toTrain.attachToRear(current);
+                    break;
+                }
+            }
+        }
+        return true;
      }
 
     /**
@@ -326,7 +411,9 @@ public class Train implements Iterable<Wagon>{
      */
 
     public void reverse() {
-        // TODO
+        if (this.firstWagon != null) {
+            this.firstWagon = this.firstWagon.reverseSequence();
+        }
 
     }
 

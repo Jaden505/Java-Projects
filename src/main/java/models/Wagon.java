@@ -2,6 +2,7 @@ package models;
 
 public abstract class Wagon {
     public int id;               // some unique ID of a Wagon
+    Wagon start;
     private Wagon nextWagon;        // another wagon that is appended at the tail of this wagon
                                     // a.k.a. the successor of this wagon in a sequence
                                     // set to null if no successor is connected
@@ -81,6 +82,16 @@ public abstract class Wagon {
         }
 
         return count;
+    }
+
+    public void attachTo(Wagon newPreviousWagon) {
+        //if there are any wagons to this wagon, this wagon cannot be attached.
+        if (this.hasPreviousWagon() || newPreviousWagon.hasNextWagon()) {
+            throw new RuntimeException("Wagon already got a wagon appended or has already been appended!");
+        } else {
+            newPreviousWagon.nextWagon = this;
+            this.previousWagon = newPreviousWagon;
+        }
     }
 
     /**
@@ -194,10 +205,37 @@ public abstract class Wagon {
      * @return the new start Wagon of the reversed sequence (with is the former last Wagon of the original sequence)
      */
     public Wagon reverseSequence() {
-        // TODO provide an iterative implementation,
-        //   using attach- and detach methods of this class
 
-        return null;
+        Wagon start = this.getLastWagonAttached();
+        Wagon before = this.previousWagon;
+        Wagon prev = this.getLastWagonAttached().getPreviousWagon();
+
+        if (this.hasNextWagon()) {
+            start.detachFromPrevious();
+            prev.detachTail();
+
+            if (this.start == null) {
+                this.start = start;
+            } else {
+                Wagon temp = this.start.getLastWagonAttached();
+                temp.setNextWagon(start);
+                start.setPreviousWagon(temp);
+            }
+            this.reverseSequence();
+
+        } else {
+            Wagon temp = this.start.getLastWagonAttached();
+            Wagon deze = this;
+            temp.setNextWagon(deze);
+            deze.setPreviousWagon(temp);
+
+            if (before != null) {
+                this.start.previousWagon = before;
+                before.nextWagon = this.start;
+            }
+        }
+        return this.start;
+
     }
 
     @Override
