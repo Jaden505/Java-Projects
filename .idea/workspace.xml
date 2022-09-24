@@ -8,9 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Train.java" afterDir="false" />
     </list>
-    <list id="068ba13a-0e89-44e9-a850-585b846f9f27" name="Changes by jadenvanrijswijk" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Train.java" afterDir="false" />
-    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,26 +18,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/models/Train.java">
-      <ranges>
-        <range start1="174" end1="174" start2="174" end2="175" changelist="068ba13a-0e89-44e9-a850-585b846f9f27" />
-        <range start1="175" end1="176" start2="176" end2="176" changelist="068ba13a-0e89-44e9-a850-585b846f9f27" />
-        <range start1="188" end1="191" start2="188" end2="189" changelist="068ba13a-0e89-44e9-a850-585b846f9f27" />
-        <range start1="192" end1="198" start2="190" end2="191" changelist="068ba13a-0e89-44e9-a850-585b846f9f27" />
-        <range start1="199" end1="203" start2="192" end2="193" changelist="068ba13a-0e89-44e9-a850-585b846f9f27" />
-        <range start1="204" end1="211" start2="194" end2="195" changelist="068ba13a-0e89-44e9-a850-585b846f9f27" />
-        <range start1="223" end1="223" start2="207" end2="208" changelist="068ba13a-0e89-44e9-a850-585b846f9f27" />
-        <range start1="224" end1="230" start2="209" end2="209" changelist="068ba13a-0e89-44e9-a850-585b846f9f27" />
-        <range start1="232" end1="232" start2="211" end2="214" changelist="068ba13a-0e89-44e9-a850-585b846f9f27" />
-        <range start1="375" end1="376" start2="357" end2="358" changelist="80e9e297-462a-46b0-a4c8-be4819d86240" />
-        <range start1="377" end1="381" start2="359" end2="363" changelist="80e9e297-462a-46b0-a4c8-be4819d86240" />
-        <range start1="382" end1="383" start2="364" end2="365" changelist="80e9e297-462a-46b0-a4c8-be4819d86240" />
-        <range start1="384" end1="385" start2="366" end2="367" changelist="80e9e297-462a-46b0-a4c8-be4819d86240" />
-        <range start1="424" end1="424" start2="406" end2="430" changelist="068ba13a-0e89-44e9-a850-585b846f9f27" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -172,7 +149,7 @@
       <workItem from="1663517904318" duration="3373000" />
       <workItem from="1663691713986" duration="544000" />
       <workItem from="1663848869257" duration="14725000" />
-      <workItem from="1664018326988" duration="5942000" />
+      <workItem from="1664018326988" duration="6229000" />
     </task>
     <servers />
   </component>

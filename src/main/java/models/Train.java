@@ -412,9 +412,7 @@ public class Train implements Iterable<Wagon>{
     @Override
     public String toString() {
         StringBuilder result = new StringBuilder();
-
         result.append(engine.toString());
-
         Wagon wagon = firstWagon;
 
         // Appends every wagon id to string
