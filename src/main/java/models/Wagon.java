@@ -220,21 +220,22 @@ public abstract class Wagon {
                 temp.setNextWagon(start);
                 start.setPreviousWagon(temp);
             }
-            this.reverseSequence();
 
-        } else {
+            this.reverseSequence();
+        }
+
+        else {
             Wagon temp = this.start.getLastWagonAttached();
-            Wagon deze = this;
-            temp.setNextWagon(deze);
-            deze.setPreviousWagon(temp);
+            temp.setNextWagon(this);
+            this.setPreviousWagon(temp);
 
             if (before != null) {
                 this.start.previousWagon = before;
                 before.nextWagon = this.start;
             }
         }
-        return this.start;
 
+        return this.start;
     }
 
     @Override

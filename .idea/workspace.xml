@@ -8,6 +8,10 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Train.java" afterDir="false" />
     </list>
+    <list id="e55d1ebe-aa41-4074-be96-29feecdcd6c6" name="Changes by jadenvanrijswijk" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Train.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Wagon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Wagon.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -18,6 +22,36 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/models/Train.java">
+      <ranges>
+        <range start1="6" end1="7" start2="6" end2="7" changelist="e55d1ebe-aa41-4074-be96-29feecdcd6c6" />
+        <range start1="67" end1="68" start2="67" end2="68" changelist="e55d1ebe-aa41-4074-be96-29feecdcd6c6" />
+        <range start1="69" end1="74" start2="69" end2="70" changelist="e55d1ebe-aa41-4074-be96-29feecdcd6c6" />
+        <range start1="80" end1="81" start2="76" end2="76" changelist="e55d1ebe-aa41-4074-be96-29feecdcd6c6" />
+        <range start1="84" end1="84" start2="79" end2="80" changelist="e55d1ebe-aa41-4074-be96-29feecdcd6c6" />
+        <range start1="92" end1="94" start2="88" end2="89" changelist="e55d1ebe-aa41-4074-be96-29feecdcd6c6" />
+        <range start1="95" end1="95" start2="90" end2="91" changelist="e55d1ebe-aa41-4074-be96-29feecdcd6c6" />
+        <range start1="97" end1="98" start2="93" end2="94" changelist="e55d1ebe-aa41-4074-be96-29feecdcd6c6" />
+        <range start1="99" end1="99" start2="95" end2="96" changelist="e55d1ebe-aa41-4074-be96-29feecdcd6c6" />
+        <range start1="101" end1="102" start2="98" end2="99" changelist="e55d1ebe-aa41-4074-be96-29feecdcd6c6" />
+        <range start1="162" end1="173" start2="159" end2="165" changelist="e55d1ebe-aa41-4074-be96-29feecdcd6c6" />
+        <range start1="194" end1="194" start2="186" end2="187" changelist="e55d1ebe-aa41-4074-be96-29feecdcd6c6" />
+        <range start1="207" end1="208" start2="200" end2="208" changelist="e55d1ebe-aa41-4074-be96-29feecdcd6c6" />
+        <range start1="211" end1="214" start2="211" end2="211" changelist="e55d1ebe-aa41-4074-be96-29feecdcd6c6" />
+        <range start1="227" end1="244" start2="224" end2="235" changelist="e55d1ebe-aa41-4074-be96-29feecdcd6c6" />
+        <range start1="245" end1="249" start2="236" end2="237" changelist="e55d1ebe-aa41-4074-be96-29feecdcd6c6" />
+        <range start1="250" end1="250" start2="238" end2="239" changelist="e55d1ebe-aa41-4074-be96-29feecdcd6c6" />
+        <range start1="270" end1="274" start2="259" end2="262" changelist="80e9e297-462a-46b0-a4c8-be4819d86240" />
+        <range start1="275" end1="282" start2="263" end2="269" changelist="80e9e297-462a-46b0-a4c8-be4819d86240" />
+        <range start1="283" end1="286" start2="270" end2="272" changelist="80e9e297-462a-46b0-a4c8-be4819d86240" />
+        <range start1="287" end1="295" start2="273" end2="275" changelist="80e9e297-462a-46b0-a4c8-be4819d86240" />
+        <range start1="296" end1="299" start2="276" end2="285" changelist="80e9e297-462a-46b0-a4c8-be4819d86240" />
+        <range start1="374" end1="376" start2="360" end2="360" changelist="e55d1ebe-aa41-4074-be96-29feecdcd6c6" />
+        <range start1="384" end1="406" start2="368" end2="368" changelist="e55d1ebe-aa41-4074-be96-29feecdcd6c6" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -116,9 +150,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TrainTest.T18_CanInsertAtFront" />
         <item itemvalue="JUnit.TrainTest" />
         <item itemvalue="JUnit.TrainTest.T20_CantSplitTowardsAFullTrain" />
-        <item itemvalue="JUnit.TrainTest.T18_CanInsertAtFront" />
         <item itemvalue="JUnit.TrainTest.T17_CanAttachToRear" />
         <item itemvalue="Application.TrainsMain" />
       </list>
@@ -150,6 +184,7 @@
       <workItem from="1663691713986" duration="544000" />
       <workItem from="1663848869257" duration="14725000" />
       <workItem from="1664018326988" duration="6229000" />
+      <workItem from="1664025866620" duration="4193000" />
     </task>
     <servers />
   </component>

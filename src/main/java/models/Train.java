@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.function.Consumer;
 
-public class Train implements Iterable<Wagon>{
+public class Train{
     public final String origin;
     public final String destination;
     private final Locomotive engine;
@@ -65,23 +65,19 @@ public class Train implements Iterable<Wagon>{
      * @return  the number of Wagons connected to the train
      */
     public int getNumberOfWagons() {
-        int count_wagons = 0;
+        if (firstWagon == null) {return 0;}
 
-        for (Wagon skip : this){
-            count_wagons ++;
-        }
-
-        return count_wagons;
+        return firstWagon.getSequenceLength();
     }
 
     /**
      * @return  the last wagon attached to the train
      */
     public Wagon getLastWagonAttached() {
-
         if (this.firstWagon != null) {
             return this.firstWagon.getLastWagonAttached();
         }
+
         return null;
     }
 
@@ -90,16 +86,17 @@ public class Train implements Iterable<Wagon>{
      *          (return 0 for a freight train)
      */
     public int getTotalNumberOfSeats() {
-
-        int totalnumberofseats = 0;
+        int total_seats = 0;
         Wagon wagon = firstWagon;
+
         while(wagon != null) {
             if(isPassengerTrain()) {
-                totalnumberofseats = totalnumberofseats+ ((PassengerWagon) wagon).getNumberOfSeats();
+                total_seats += ((PassengerWagon) wagon).getNumberOfSeats();
             }
+
             wagon = wagon.getNextWagon();
         }
-        return totalnumberofseats;
+        return total_seats;
     }
 
     /**
@@ -160,17 +157,12 @@ public class Train implements Iterable<Wagon>{
      *          (return null if no wagon was found with the given wagonId)
      */
     public Wagon findWagonById(int wagonId) {
-        Wagon temp = this.firstWagon;
-        if (temp != null) {
-            if (temp.getId() == wagonId) {
-                return temp;
-            } else
-                while (temp.hasNextWagon()) {
-                    temp = temp.getNextWagon();
-                    if (temp.getId() == wagonId) {
-                        return temp;
-                    }
-                }
+        Wagon wagon = firstWagon;
+
+        while (wagon.hasNextWagon()) {
+            if (wagon.getId() == wagonId) return wagon;
+
+            wagon = wagon.getNextWagon();
         }
 
         return null;
@@ -192,6 +184,7 @@ public class Train implements Iterable<Wagon>{
 
         boolean dup_wagon = this.findWagonById(wagon.getId()) == null;
 
+        // Returns if all above booleans are true
         return wagon_type && wagon_capicity && dup_wagon;
     }
 
@@ -205,13 +198,17 @@ public class Train implements Iterable<Wagon>{
      */
     public boolean attachToRear(Wagon wagon) {
         if (this.canAttach(wagon)) {
-            this.getLastWagonAttached().attachTail(wagon);
+            wagon.detachFromPrevious();
+
+            if (firstWagon == null) {
+                this.setFirstWagon(wagon);
+            }
+            else {
+                wagon.attachTo(this.getLastWagonAttached());
+            }
 
             return true;
         }
-
-        System.out.println("Can't attach waggon");
-
         return false;
     }
 
@@ -225,29 +222,21 @@ public class Train implements Iterable<Wagon>{
      * @return  whether the insertion could be completed successfully
      */
     public boolean insertAtFront(Wagon wagon) {
-        if (this.firstWagon == wagon) {
-            return false;
-        } else {
-            // check if this train has wagons
-            if (!this.hasWagons()) {
-                if (canAttach(wagon)) {
-                    this.setFirstWagon(wagon);
-                    return true;
-                }
-            } else {
-                if (canAttach(wagon)) {
-                    Wagon mid = this.firstWagon; // get the firstwagon of this train
-                    // set this firstwagon of this train to the rear of the given sequence
-                    wagon.getLastWagonAttached().setNextWagon(mid);
-                    mid.setPreviousWagon(wagon);
-                    // replace this first sequence with the whole new sequence
-                    this.firstWagon = wagon;
+        if(canAttach(wagon)) {
+            wagon.detachFront();
 
-                    return true;
-                }
-                return false;
+            Wagon prev_first_wagon = firstWagon;
+
+            this.setFirstWagon(wagon);
+
+            // Reattaches previous front wagon to current front wagon tail if exists
+            if (prev_first_wagon != null) {
+                prev_first_wagon.reAttachTo(wagon.getLastWagonAttached());
             }
+
+            return true;
         }
+
         return false;
     }
 
@@ -268,35 +257,32 @@ public class Train implements Iterable<Wagon>{
     public boolean insertAtPosition(int position, Wagon wagon) {
 
         if (canAttach(wagon)) {
-            // if this train has no wagons, but the position to insert is one, set the new sequence as the fistwagon
-            if (!this.hasWagons() && position == 1) {
-                this.firstWagon = wagon;
+            Wagon now;
+            Wagon front;
+            wagon.detachFront();
+
+            if (!this.hasWagons() || position == 1) {
+                now = firstWagon;
+                setFirstWagon(wagon);
+                if (now != null) {
+                    wagon.attachTail(now);
+                }
                 return true;
-
-            } else if (this.hasWagons() && position == 1) {
-                Wagon mid = this.firstWagon;
-                // set this firstwagon to the rear of the given sequence
-                wagon.getLastWagonAttached().setNextWagon(mid);
-                mid.setPreviousWagon(wagon);
-                this.firstWagon = wagon;
-
-                return true;
-            } else if (this.hasWagons() && position != 1) {
-                // find the wagon at the given position and detaching
-                Wagon mid = this.findWagonAtPosition(position);
-
-                // get the previouswagon to attach the given sequence to the rear of that
-                Wagon prev = mid.getPreviousWagon();
-                mid.detachFromPrevious();
-                prev.setNextWagon(wagon);
-
-                // attach the end to the other half
-                wagon.getLastWagonAttached().setNextWagon(mid);
-                mid.setPreviousWagon(wagon);
-                return true;
-            } else {
-                return false;
             }
+            now = findWagonAtPosition(position);
+
+            if (now == null){
+                this.getLastWagonAttached().attachTail(wagon)
+                return true;
+            }
+
+            if (now.hasPreviousWagon()){
+                front = now.getPreviousWagon();
+            }
+
+
+
+            return false;
         }
         return false;
     }
@@ -373,36 +359,12 @@ public class Train implements Iterable<Wagon>{
 
     }
 
-
-
     public void reverse() {
         if (this.firstWagon != null) {
             this.firstWagon = this.firstWagon.reverseSequence();
         }
 
     }
-
-    @Override
-    public Iterator<Wagon> iterator() {
-        return new Iterator<>() {
-
-            Wagon temp = firstWagon;
-
-            @Override
-            public boolean hasNext() {
-                return temp != null;
-            } // return temp as long it is not null
-
-            @Override
-            public Wagon next() {
-
-                Wagon wagon = temp; // set the nextwagon to wagon
-                temp = temp.getNextWagon(); // get the nextwagon
-                return wagon; // return the wagon
-            }
-        };
-    }
-
 
     /**
      * Return string as example:
