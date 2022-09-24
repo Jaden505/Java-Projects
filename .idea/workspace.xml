@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db9ca179-f0df-473a-803f-196c1768f23e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Train.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +52,16 @@
       <recent name="$PROJECT_DIR$/Assignment1" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WagonTest">
+  <component name="RunManager" selected="JUnit.TrainTest (1)">
+    <configuration name="TrainTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Assignment1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TrainTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TrainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="team15" />
       <option name="PACKAGE_NAME" value="" />
@@ -64,11 +72,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TrainTest.T17_CanAttachToRear" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="team15" />
+    <configuration name="TrainTest.T15_findWagonOnTrainById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Assignment1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TrainTest" />
-      <option name="METHOD_NAME" value="T17_CanAttachToRear" />
+      <option name="METHOD_NAME" value="T15_findWagonOnTrainById" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -79,16 +87,6 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TrainTest" />
       <option name="METHOD_NAME" value="T18_CanInsertAtFront" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TrainTest.T20_CantSplitTowardsAFullTrain" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="team15" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TrainTest" />
-      <option name="METHOD_NAME" value="T20_CantSplitTowardsAFullTrain" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -118,12 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TrainTest (1)" />
+        <item itemvalue="JUnit.TrainTest.T15_findWagonOnTrainById" />
         <item itemvalue="JUnit.WagonTest" />
         <item itemvalue="JUnit.TrainTest.T18_CanInsertAtFront" />
         <item itemvalue="JUnit.TrainTest" />
-        <item itemvalue="JUnit.TrainTest.T18_CanInsertAtFront" />
-        <item itemvalue="JUnit.TrainTest.T20_CantSplitTowardsAFullTrain" />
-        <item itemvalue="JUnit.TrainTest.T17_CanAttachToRear" />
       </list>
     </recent_temporary>
   </component>

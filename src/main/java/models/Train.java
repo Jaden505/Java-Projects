@@ -159,7 +159,7 @@ public class Train{
     public Wagon findWagonById(int wagonId) {
         Wagon wagon = firstWagon;
 
-        while (wagon.hasNextWagon()) {
+        while (wagon != null) {
             if (wagon.getId() == wagonId) return wagon;
 
             wagon = wagon.getNextWagon();
