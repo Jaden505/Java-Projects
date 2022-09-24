@@ -278,10 +278,15 @@ public class Train{
 
             if (now.hasPreviousWagon()){
                 front = now.getPreviousWagon();
+                now.detachFront();
+                front.attachTail(wagon);
+                if (wagon.hasNextWagon()){
+                    wagon.getLastWagonAttached().attachTail(now);
+                }else {
+                    return true;
+                }
             }
-
-
-
+            
             return false;
         }
         return false;
