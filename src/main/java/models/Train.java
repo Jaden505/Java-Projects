@@ -272,7 +272,7 @@ public class Train{
             now = findWagonAtPosition(position);
 
             if (now == null){
-                this.getLastWagonAttached().attachTail(wagon)
+                this.getLastWagonAttached().attachTail(wagon);
                 return true;
             }
 

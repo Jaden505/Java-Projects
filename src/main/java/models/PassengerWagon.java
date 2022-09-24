@@ -11,9 +11,4 @@ public class PassengerWagon extends Wagon {
     public int getNumberOfSeats() {
         return this.numberOfSeats;
     }
-
-    @Override
-    public String toString() {
-        return "wagon: " + this.id;
-    }
 }
