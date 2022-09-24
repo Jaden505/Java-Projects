@@ -121,6 +121,7 @@
         <item itemvalue="JUnit.WagonTest" />
         <item itemvalue="JUnit.TrainTest.T18_CanInsertAtFront" />
         <item itemvalue="JUnit.TrainTest" />
+        <item itemvalue="JUnit.TrainTest.T18_CanInsertAtFront" />
         <item itemvalue="JUnit.TrainTest.T20_CantSplitTowardsAFullTrain" />
         <item itemvalue="JUnit.TrainTest.T17_CanAttachToRear" />
       </list>
@@ -152,7 +153,7 @@
       <workItem from="1663691713986" duration="544000" />
       <workItem from="1663848869257" duration="14725000" />
       <workItem from="1664018326988" duration="6229000" />
-      <workItem from="1664025866620" duration="4193000" />
+      <workItem from="1664025866620" duration="7895000" />
     </task>
     <servers />
   </component>
