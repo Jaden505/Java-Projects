@@ -20,7 +20,8 @@ public class ExtraTrainTest {
 
     @Test
     public void T1_ADifferentOriginDestination() {
-        assertNotSame(sameDestinationTrain.origin, sameDestinationTrain.destination);
+        assertSame(sameDestinationTrain.origin, sameDestinationTrain.destination);
+        assertNotSame(passengerTrain.origin, passengerTrain.destination);
     }
 
     @Test
