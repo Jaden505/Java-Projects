@@ -4,217 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db9ca179-f0df-473a-803f-196c1768f23e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Train.java" afterDir="false" />
-    </list>
-    <list id="5a68c812-1836-4897-bc1a-e5a82cbfd615" name="Changes by nilavakazal" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Train.java" afterDir="false" />
+    <list default="true" id="229f3c23-1eaa-467d-ad66-624be1c5466f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Locomotive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Locomotive.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
-    <execution />
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/models/Train.java">
-      <ranges>
-        <range start1="270" end1="270" start2="270" end2="271" changelist="db9ca179-f0df-473a-803f-196c1768f23e" />
-        <range start1="272" end1="273" start2="273" end2="274" changelist="db9ca179-f0df-473a-803f-196c1768f23e" />
-        <range start1="277" end1="278" start2="278" end2="279" changelist="db9ca179-f0df-473a-803f-196c1768f23e" />
-        <range start1="281" end1="289" start2="282" end2="286" changelist="db9ca179-f0df-473a-803f-196c1768f23e" />
-        <range start1="306" end1="306" start2="303" end2="304" changelist="5a68c812-1836-4897-bc1a-e5a82cbfd615" />
-        <range start1="307" end1="308" start2="305" end2="306" changelist="5a68c812-1836-4897-bc1a-e5a82cbfd615" />
-        <range start1="314" end1="314" start2="312" end2="313" changelist="5a68c812-1836-4897-bc1a-e5a82cbfd615" />
-        <range start1="317" end1="318" start2="316" end2="316" changelist="5a68c812-1836-4897-bc1a-e5a82cbfd615" />
-      </ranges>
-    </file>
-  </component>
-  <component name="MarkdownSettingsMigration">
-    <option name="stateVersion" value="1" />
-  </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="useMavenConfig" value="true" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
-  <component name="ProjectId" id="2ENzM4Zo50dUacaWq02RDqunGj8" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/joelamarh/team15&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  }
-}</component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/Assignment1" />
-    </key>
-  </component>
-  <component name="RunManager" selected="JUnit.TrainTest (1)">
-<<<<<<< HEAD
-    <configuration name="TrainTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager">
+    <configuration name="TrainsMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="TrainsMain" />
       <module name="Assignment1" />
-=======
-    <configuration name="TrainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="team15" />
->>>>>>> 99f6d7f540254d7b1a92f9d088eec04d2e280f7c
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TrainTest" />
-      <option name="METHOD_NAME" value="" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TrainTest.T19_CanInsertAtAnyPosition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="team15" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TrainTest" />
-      <option name="METHOD_NAME" value="T19_CanInsertAtAnyPosition" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-<<<<<<< HEAD
-    <configuration name="TrainTest.T19_CanInsertAtAnyPosition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Assignment1" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TrainTest" />
-      <option name="METHOD_NAME" value="T19_CanInsertAtAnyPosition" />
-=======
-    <configuration name="TrainTest.T20_ShouldSplitTrainCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="team15" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TrainTest" />
-      <option name="METHOD_NAME" value="T20_ShouldSplitTrainCorrectly" />
->>>>>>> 99f6d7f540254d7b1a92f9d088eec04d2e280f7c
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TrainTest.T21_ShouldMoveOneWagonCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="team15" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TrainTest" />
-      <option name="METHOD_NAME" value="T21_ShouldMoveOneWagonCorrectly" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="WagonTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="team15" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="WagonTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Assignment1-ADS" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Assignment1-ADS" />
-      <option name="filePath" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TrainTest (1)" />
-<<<<<<< HEAD
-        <item itemvalue="JUnit.TrainTest.T19_CanInsertAtAnyPosition" />
-        <item itemvalue="JUnit.TrainTest.T20_ShouldSplitTrainCorrectly" />
-        <item itemvalue="JUnit.TrainTest.T15_findWagonOnTrainById" />
-        <item itemvalue="JUnit.WagonTest" />
-=======
-        <item itemvalue="JUnit.TrainTest.T21_ShouldMoveOneWagonCorrectly" />
-        <item itemvalue="JUnit.WagonTest (1)" />
-        <item itemvalue="JUnit.TrainTest.T19_CanInsertAtAnyPosition" />
-        <item itemvalue="JUnit.TrainTest.T20_ShouldSplitTrainCorrectly" />
->>>>>>> 99f6d7f540254d7b1a92f9d088eec04d2e280f7c
+        <item itemvalue="Application.TrainsMain" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="80e9e297-462a-46b0-a4c8-be4819d86240" name="Changes" comment="" />
-      <created>1662450782280</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1662450782280</updated>
-      <workItem from="1662450787979" duration="23000" />
-      <workItem from="1662638680121" duration="5000" />
-      <workItem from="1662638964359" duration="1198000" />
-      <workItem from="1662642603964" duration="977000" />
-      <workItem from="1662743634285" duration="482000" />
-      <workItem from="1663057104189" duration="1032000" />
-      <workItem from="1663059481418" duration="6190000" />
-      <workItem from="1663070521295" duration="46000" />
-      <workItem from="1663170359714" duration="5842000" />
-      <workItem from="1663239889453" duration="2461000" />
-      <workItem from="1663245921803" duration="1546000" />
-      <workItem from="1663268959714" duration="510000" />
-      <workItem from="1663329081844" duration="615000" />
-      <workItem from="1663331236757" duration="3724000" />
-      <workItem from="1663517904318" duration="3373000" />
-      <workItem from="1663691713986" duration="544000" />
-      <workItem from="1663848869257" duration="14725000" />
-      <workItem from="1664018326988" duration="6229000" />
-      <workItem from="1664025866620" duration="8143000" />
-    </task>
     <servers />
-  </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NullPointerException" package="java.lang" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
