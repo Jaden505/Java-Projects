@@ -106,20 +106,18 @@ public class Train{
      *
      */
     public int getTotalMaxWeight() {
-
         int totalWeight = 0;
+
         if (isFreightTrain()) {
-            FreightWagon temp = (FreightWagon) this.firstWagon;
+            FreightWagon wagon = (FreightWagon) this.firstWagon;
 
-            while (temp.hasNextWagon()) {
-                int weight = temp.getMaxWeight();
-                totalWeight += weight;
-                temp = (FreightWagon) temp.getNextWagon();
+            while (wagon != null) {
+                totalWeight += wagon.getMaxWeight();
+                wagon = (FreightWagon) wagon.getNextWagon();
             }
-            totalWeight += temp.getMaxWeight();
         }
-        return totalWeight;
 
+        return totalWeight;
     }
 
      /**
@@ -133,21 +131,19 @@ public class Train{
 
         if (!(this.getNumberOfWagons() >= position)) {
             return null;
-        } else {
-            if (this.firstWagon == null) {
-                return null;
-            } else {
-                for (int i = 1; i <= position; i++) {
-                    if (i == position) {
-                        return temp;
-                    } else {
-                        temp = temp.getNextWagon();
-                    }
-                }
-            }
         }
-        return null;
 
+        if (this.firstWagon == null) {return null;}
+
+        for (int i = 1; i <= position; i++) {
+            if (i == position) {
+                return temp;
+            }
+
+            temp = temp.getNextWagon();
+        }
+
+        return null;
     }
 
     /**
@@ -309,27 +305,37 @@ public class Train{
             return false;
         }
 
-        if (this.firstWagon.getId() == wagonId) {
-            this.firstWagon = this.firstWagon.getNextWagon();
+        // If wagonID is first wagon
+        if (firstWagon.getId() == wagonId) {
+            this.setFirstWagon(firstWagon.getNextWagon());
+
             current.setNextWagon(null);
-            this.firstWagon.setPreviousWagon(null);
+            firstWagon.setPreviousWagon(null);
+
             toTrain.attachToRear(current);
+
             return true;
-        } else {
-            Wagon previous;
-            for (int i = 0; i < getNumberOfWagons(); i++) {
-                previous = current;
-                current = current.getNextWagon();
-                if (current.getId() == wagonId) {
-                    previous.setNextWagon(current.getNextWagon());
-                    current.setPreviousWagon(null);
-                    current.setNextWagon(null);
-                    toTrain.attachToRear(current);
-                    break;
-                }
+        }
+
+        Wagon previous;
+
+        for (int i = 0; i < getNumberOfWagons(); i++) {
+            previous = current;
+            current = current.getNextWagon();
+
+            if (current.getId() == wagonId) {
+                previous.setNextWagon(current.getNextWagon());
+
+                current.setPreviousWagon(null);
+                current.setNextWagon(null);
+
+                toTrain.attachToRear(current);
+
+                return true;
             }
         }
-        return true;
+
+        return false;
      }
 
     /**
