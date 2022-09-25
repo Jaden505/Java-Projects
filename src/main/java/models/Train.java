@@ -268,25 +268,22 @@ public class Train{
                 }
                 return true;
             }
+
             now = findWagonAtPosition(position);
 
-            if (now == null){
+            if (now == null) {
                 this.getLastWagonAttached().attachTail(wagon);
                 return true;
             }
 
-            if (now.hasPreviousWagon()){
+            if (now.hasPreviousWagon()) {
                 front = now.getPreviousWagon();
                 now.detachFront();
                 front.attachTail(wagon);
-                if (wagon.hasNextWagon()){
-                    wagon.getLastWagonAttached().attachTail(now);
-                }else {
-                    return true;
-                }
+                wagon.getLastWagonAttached().attachTail(now);
             }
 
-            return false;
+            return true;
         }
         return false;
     }
@@ -304,18 +301,19 @@ public class Train{
      */
     public boolean moveOneWagon(int wagonId, Train toTrain) {
         Wagon current = this.firstWagon;
+        Wagon wagonToMove = findWagonById(wagonId);
 
-        if (findWagonById(wagonId) == null) {
+        if (wagonToMove == null || !toTrain.canAttach(wagonToMove)) {
             return false;
         }
 
         if (this.firstWagon.getId() == wagonId) {
             setFirstWagon(this.firstWagon.getNextWagon());
             current.setNextWagon(null);
+            this.firstWagon.setPreviousWagon(null);
             toTrain.attachToRear(current);
             return true;
         } else {
-
             Wagon previous;
             for (int i = 0; i < getNumberOfWagons(); i++) {
                 previous = current;

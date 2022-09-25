@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db9ca179-f0df-473a-803f-196c1768f23e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Train.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/TrainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TrainTest.java" afterDir="false" />
+    </list>
+    <list id="5a68c812-1836-4897-bc1a-e5a82cbfd615" name="Changes by nilavakazal" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Train.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +22,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/src/main/java/models/Train.java">
+      <ranges>
+        <range start1="270" end1="270" start2="270" end2="271" changelist="db9ca179-f0df-473a-803f-196c1768f23e" />
+        <range start1="272" end1="273" start2="273" end2="274" changelist="db9ca179-f0df-473a-803f-196c1768f23e" />
+        <range start1="277" end1="278" start2="278" end2="279" changelist="db9ca179-f0df-473a-803f-196c1768f23e" />
+        <range start1="281" end1="289" start2="282" end2="286" changelist="db9ca179-f0df-473a-803f-196c1768f23e" />
+        <range start1="306" end1="306" start2="303" end2="304" changelist="5a68c812-1836-4897-bc1a-e5a82cbfd615" />
+        <range start1="307" end1="308" start2="305" end2="306" changelist="5a68c812-1836-4897-bc1a-e5a82cbfd615" />
+        <range start1="314" end1="314" start2="312" end2="313" changelist="5a68c812-1836-4897-bc1a-e5a82cbfd615" />
+        <range start1="317" end1="318" start2="316" end2="316" changelist="5a68c812-1836-4897-bc1a-e5a82cbfd615" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -53,38 +71,29 @@
       <recent name="$PROJECT_DIR$/Assignment1" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TrainTest.T20_ShouldSplitTrainCorrectly">
-    <configuration name="TrainTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Assignment1" />
+  <component name="RunManager" selected="JUnit.TrainTest (1)">
+    <configuration name="TrainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="team15" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TrainTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TrainTest.T15_findWagonOnTrainById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Assignment1" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TrainTest" />
-      <option name="METHOD_NAME" value="T15_findWagonOnTrainById" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TrainTest.T18_CanInsertAtFront" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="TrainTest.T19_CanInsertAtAnyPosition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="team15" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TrainTest" />
-      <option name="METHOD_NAME" value="T18_CanInsertAtFront" />
+      <option name="METHOD_NAME" value="T19_CanInsertAtAnyPosition" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <configuration name="TrainTest.T20_ShouldSplitTrainCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Assignment1" />
+      <module name="team15" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TrainTest" />
       <option name="METHOD_NAME" value="T20_ShouldSplitTrainCorrectly" />
@@ -93,8 +102,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WagonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Assignment1" />
+    <configuration name="TrainTest.T21_ShouldMoveOneWagonCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="team15" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TrainTest" />
+      <option name="METHOD_NAME" value="T21_ShouldMoveOneWagonCorrectly" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="WagonTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="team15" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="WagonTest" />
       <option name="TEST_OBJECT" value="class" />
@@ -117,11 +136,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TrainTest.T20_ShouldSplitTrainCorrectly" />
         <item itemvalue="JUnit.TrainTest (1)" />
-        <item itemvalue="JUnit.TrainTest.T15_findWagonOnTrainById" />
-        <item itemvalue="JUnit.WagonTest" />
-        <item itemvalue="JUnit.TrainTest.T18_CanInsertAtFront" />
+        <item itemvalue="JUnit.TrainTest.T21_ShouldMoveOneWagonCorrectly" />
+        <item itemvalue="JUnit.WagonTest (1)" />
+        <item itemvalue="JUnit.TrainTest.T19_CanInsertAtAnyPosition" />
+        <item itemvalue="JUnit.TrainTest.T20_ShouldSplitTrainCorrectly" />
       </list>
     </recent_temporary>
   </component>
