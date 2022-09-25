@@ -384,7 +384,7 @@ public class Train{
         Wagon wagon = firstWagon;
 
         // Appends every wagon id to string
-        while (wagon.hasNextWagon()) {
+        while (wagon != null) {
             result.append(wagon);
             wagon = wagon.getNextWagon();
         }
