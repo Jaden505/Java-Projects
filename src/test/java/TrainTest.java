@@ -10,7 +10,6 @@ import static org.junit.jupiter.api.Assertions.*;
 @TestMethodOrder(MethodOrderer.MethodName.class)
 public class TrainTest {
     Train passengerTrain, trainWithoutWagons, freightTrain;
-
     Wagon passengerWagon1, passengerWagon2, passengerWagon3;
     Wagon passengerWagon8001, passengerWagon8002;
     Wagon freightWagon1, freightWagon2;
