@@ -255,7 +255,6 @@ public class Train{
      * @return  whether the insertion could be completed successfully
      */
     public boolean insertAtPosition(int position, Wagon wagon) {
-
         if (canAttach(wagon)) {
             Wagon now;
             Wagon front;
@@ -349,26 +348,26 @@ public class Train{
             Wagon middle = this.findWagonAtPosition(position);
 
             if (toTrain.canAttach(middle)) {
-                //split the sequence
                 middle.detachFromPrevious();
-                // check if train has wagons
-                if (toTrain.firstWagon != null) {
-                    toTrain.getLastWagonAttached().setNextWagon(middle);
+
+                // Attach at position
+                if (toTrain.hasWagons()) {
+                    toTrain.attachToRear(middle);
                 } else {
-                    toTrain.firstWagon = middle;
+                    toTrain.setFirstWagon(middle);
                 }
+
                 return true;
             }
         }
-        return false;
 
+        return false;
     }
 
     public void reverse() {
         if (this.firstWagon != null) {
             this.firstWagon = this.firstWagon.reverseSequence();
         }
-
     }
 
     /**

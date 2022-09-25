@@ -309,7 +309,6 @@ public class TrainTest {
                 "can split the last wagon of a train");
         assertEquals(4, trainWithoutWagons.getNumberOfWagons());
         assertEquals(3, passengerTrain.getNumberOfWagons());
-
         assertFalse(passengerTrain.splitAtPosition(4, trainWithoutWagons),
                 "cannot split from beyond the last wagon of a train");
         assertFalse(passengerTrain.splitAtPosition(3, freightTrain),

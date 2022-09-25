@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="db9ca179-f0df-473a-803f-196c1768f23e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/models/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Train.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TrainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TrainTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,21 +53,11 @@
       <recent name="$PROJECT_DIR$/Assignment1" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TrainTest (1)">
+  <component name="RunManager" selected="JUnit.TrainTest.T20_ShouldSplitTrainCorrectly">
     <configuration name="TrainTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Assignment1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TrainTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TrainTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="team15" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="TrainTest" />
-      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -87,6 +78,16 @@
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TrainTest" />
       <option name="METHOD_NAME" value="T18_CanInsertAtFront" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrainTest.T20_ShouldSplitTrainCorrectly" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Assignment1" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="TrainTest" />
+      <option name="METHOD_NAME" value="T20_ShouldSplitTrainCorrectly" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -116,11 +117,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TrainTest.T20_ShouldSplitTrainCorrectly" />
         <item itemvalue="JUnit.TrainTest (1)" />
         <item itemvalue="JUnit.TrainTest.T15_findWagonOnTrainById" />
         <item itemvalue="JUnit.WagonTest" />
         <item itemvalue="JUnit.TrainTest.T18_CanInsertAtFront" />
-        <item itemvalue="JUnit.TrainTest" />
       </list>
     </recent_temporary>
   </component>
