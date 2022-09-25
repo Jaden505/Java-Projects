@@ -258,6 +258,7 @@ public class Train{
         if (canAttach(wagon)) {
             Wagon now;
             Wagon front;
+
             wagon.detachFront();
 
             if (!this.hasWagons() || position == 1) {
@@ -288,6 +289,7 @@ public class Train{
 
             return false;
         }
+
         return false;
     }
 
@@ -310,7 +312,7 @@ public class Train{
         }
 
         if (this.firstWagon.getId() == wagonId) {
-            setFirstWagon(this.firstWagon.getNextWagon());
+            this.firstWagon = this.firstWagon.getNextWagon();
             current.setNextWagon(null);
             toTrain.attachToRear(current);
             return true;
@@ -350,9 +352,11 @@ public class Train{
             if (toTrain.canAttach(middle)) {
                 middle.detachFromPrevious();
 
+                if (position == 1) {this.firstWagon = null;}
+
                 // Attach at position
                 if (toTrain.hasWagons()) {
-                    toTrain.attachToRear(middle);
+                     toTrain.attachToRear(middle);
                 } else {
                     toTrain.setFirstWagon(middle);
                 }

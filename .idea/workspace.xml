@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="db9ca179-f0df-473a-803f-196c1768f23e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/models/Train.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Train.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TrainTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/TrainTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +52,7 @@
       <recent name="$PROJECT_DIR$/Assignment1" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TrainTest.T20_ShouldSplitTrainCorrectly">
+  <component name="RunManager" selected="JUnit.TrainTest (1)">
     <configuration name="TrainTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Assignment1" />
       <option name="PACKAGE_NAME" value="" />
@@ -73,11 +72,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TrainTest.T18_CanInsertAtFront" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="team15" />
+    <configuration name="TrainTest.T19_CanInsertAtAnyPosition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Assignment1" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="TrainTest" />
-      <option name="METHOD_NAME" value="T18_CanInsertAtFront" />
+      <option name="METHOD_NAME" value="T19_CanInsertAtAnyPosition" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -117,11 +116,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.TrainTest.T20_ShouldSplitTrainCorrectly" />
         <item itemvalue="JUnit.TrainTest (1)" />
+        <item itemvalue="JUnit.TrainTest.T19_CanInsertAtAnyPosition" />
+        <item itemvalue="JUnit.TrainTest.T20_ShouldSplitTrainCorrectly" />
         <item itemvalue="JUnit.TrainTest.T15_findWagonOnTrainById" />
         <item itemvalue="JUnit.WagonTest" />
-        <item itemvalue="JUnit.TrainTest.T18_CanInsertAtFront" />
       </list>
     </recent_temporary>
   </component>
