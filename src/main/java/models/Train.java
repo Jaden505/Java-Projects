@@ -129,11 +129,9 @@ public class Train{
     public Wagon findWagonAtPosition(int position) {
         Wagon temp = this.firstWagon;
 
-        if (!(this.getNumberOfWagons() >= position)) {
+        if (this.getNumberOfWagons() < position || firstWagon == null) {
             return null;
         }
-
-        if (this.firstWagon == null) {return null;}
 
         for (int i = 1; i <= position; i++) {
             if (i == position) {
