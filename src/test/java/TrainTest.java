@@ -65,8 +65,7 @@ public class TrainTest {
     }
     public static void checkRepresentationInvariant(Train train) {
         // TODO check all aspects of the representation invariant of a train and its wagons
-
-        assertFalse(train.hasWagons() && train.getFirstWagon().hasPreviousWagon(),
+         assertFalse(train.hasWagons() && train.getFirstWagon().hasPreviousWagon(),
                 "The first wagon in a train should not have a previous wagon");
         //  check the representation invariant of each wagon
         for (Wagon wagon = train.getFirstWagon(); wagon != null; wagon = wagon.getNextWagon()) {
@@ -294,7 +293,6 @@ public class TrainTest {
 
         assertFalse(trainWithoutWagons.insertAtPosition(2, passengerWagon8002),
                 "cannot insert a wagon that is already on the train");
-
         assertEquals(6, trainWithoutWagons.getNumberOfWagons());
         assertEquals(1, passengerTrain.getNumberOfWagons());
     }
