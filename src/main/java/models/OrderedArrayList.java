@@ -154,6 +154,7 @@ public class OrderedArrayList<E>
         }
     }
 
+
     /**
      * calculates the total sum of contributions of all items in the list
      * @param mapper    a function that calculates the contribution of a single item
