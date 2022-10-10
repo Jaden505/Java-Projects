@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96d521f0-2261-4f6c-b655-c5413079076b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Comparators/LicenseplateOrder.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Comparators/CarCityOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/OrderedArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/OrderedArrayList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/TrafficTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/TrafficTracker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/models/OrderedArrayList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/OrderedArrayList.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/TrafficTracker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/TrafficTracker.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +54,7 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.CarsListTest">
+  <component name="RunManager" selected="JUnit.CarsListTest.insertSustainsRepresentationInvariant">
     <configuration name="CarsListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="traffic-control" />
       <extension name="coverage">
@@ -65,6 +66,22 @@
       <option name="PACKAGE_NAME" value="models" />
       <option name="MAIN_CLASS_NAME" value="models.CarsListTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CarsListTest.insertSustainsRepresentationInvariant" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="traffic-control" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="models" />
+      <option name="MAIN_CLASS_NAME" value="models.CarsListTest" />
+      <option name="METHOD_NAME" value="insertSustainsRepresentationInvariant" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -87,6 +104,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CarsListTest.insertSustainsRepresentationInvariant" />
         <item itemvalue="JUnit.CarsListTest" />
         <item itemvalue="JUnit.DetectionTest.canConvertATextLineToADetection" />
       </list>
@@ -103,7 +121,7 @@
       <workItem from="1665057449294" duration="99000" />
       <workItem from="1665239370328" duration="388000" />
       <workItem from="1665397601755" duration="3265000" />
-      <workItem from="1665401130631" duration="5231000" />
+      <workItem from="1665401130631" duration="10499000" />
     </task>
     <servers />
   </component>

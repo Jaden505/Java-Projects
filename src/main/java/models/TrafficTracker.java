@@ -22,6 +22,7 @@ public class TrafficTracker {
         //  Use your generic implementation class OrderedArrayList
 
         this.cars = new OrderedArrayList<>(new LicenseplateOrder());
+//        this.violations =
     }
 
     /**

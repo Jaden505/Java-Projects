@@ -1,6 +1,7 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Comparator;
 import java.util.function.BinaryOperator;
 import java.util.function.Function;
@@ -43,14 +44,30 @@ public class OrderedArrayList<E>
         this.nSorted = this.size();
     }
 
-    // TODO override the ArrayList.add(index, item), ArrayList.remove(index) and Collection.remove(object) methods
-    //  such that they both meet the ArrayList contract of these methods (see ArrayList JavaDoc)
-    //  and sustain the representation invariant of OrderedArrayList
-    //  (hint: only change nSorted as required to guarantee the representation invariant,
-    //   do not invoke a sort or reorder items otherwise differently than is specified by the ArrayList contract)
+    @Override
+    public void add(int index, E item) {
+        super.add(index, item);
 
+        if (index <= nSorted) this.nSorted += 1;
+    }
 
+    @Override
+    public E remove(int index) {
+        E removed = super.remove(index);
 
+        if (index <= nSorted) this.nSorted -= 1;
+
+        return removed;
+    }
+
+    @Override
+    public boolean remove(Object object) {
+        boolean removed = super.remove(object);
+
+        if (removed) this.nSorted -= 1;
+
+        return removed;
+    }
 
     @Override
     public void sort() {
