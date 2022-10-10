@@ -57,10 +57,8 @@ public class Violation {
         this.offencesCount = offencesCount;
     }
 
-    // TODO represent the violation in the format: licensePlate/city/offencesCount
     @Override
     public String toString() {
-
-        return "TODO:Violation.toString";   // replace by a proper outcome
+        return car.getLicensePlate() + "/" + city + "/" + offencesCount;
     }
 }
