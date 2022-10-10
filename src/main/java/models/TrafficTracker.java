@@ -1,5 +1,7 @@
 package models;
 
+import models.Comparators.LicenseplateOrder;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.net.URISyntaxException;
@@ -19,7 +21,7 @@ public class TrafficTracker {
         //  initalize violations with an empty ordered list which sorts items by car and city.
         //  Use your generic implementation class OrderedArrayList
 
-
+        this.cars = new OrderedArrayList<>(new LicenseplateOrder());
     }
 
     /**

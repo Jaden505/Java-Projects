@@ -89,16 +89,32 @@ public class OrderedArrayList<E>
      * @return              the position index of the found item in the arrayList, or -1 if no item matches the search item.
      */
     public int indexOfByIterativeBinarySearch(E searchItem) {
+        // Search Sorted
+        int left = 0, right = nSorted - 1;
 
-        // TODO implement an iterative binary search on the sorted section of the arrayList, 0 <= index < nSorted
-        //   to find the position of an item that matches searchItem (this.ordening comparator yields a 0 result)
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
 
+            // Check if searchItem is at mid
+            if (ordening.compare(this.get(mid), searchItem) == 0)
+                return mid;
 
+            // If searchItem greater, ignore left half
+            if (ordening.compare(this.get(mid), searchItem) < 0)
+                left = mid + 1;
 
-        // TODO if no match was found, attempt a linear search of searchItem in the section nSorted <= index < size()
+            // If searchItem is smaller, ignore right half
+            else
+                right = mid - 1;
+        }
 
+        // Search unsorted
+        for (int i = nSorted; i < this.size(); i++) {
+            if (ordening.compare(this.get(i), searchItem) == 0)
+                return i;
+        }
 
-        return -1;  // nothing was found ???
+        return -1;
     }
 
     /**
@@ -111,19 +127,60 @@ public class OrderedArrayList<E>
      * @return              the position index of the found item in the arrayList, or -1 if no item matches the search item.
      */
     public int indexOfByRecursiveBinarySearch(E searchItem) {
+        // Search Sorted
+        int left = 0, right = nSorted - 1;
 
-        // TODO implement a recursive binary search on the sorted section of the arrayList, 0 <= index < nSorted
-        //   to find the position of an item that matches searchItem (this.ordening comparator yields a 0 result)
+        if (right >= left) {
+            int mid = left + (right - left) / 2;
 
+            // Check if searchItem is at mid
+            if (ordening.compare(this.get(mid), searchItem) == 0)
+                return mid;
 
+            // If searchItem greater, ignore left half
+            if (ordening.compare(this.get(mid), searchItem) > 0)
+                return indexOfByRecursiveBinarySearch(searchItem, left, mid - 1);
 
-        // TODO if no match was found, attempt a linear search of searchItem in the section nSorted <= index < size()
+                // If searchItem is smaller, ignore right half
+            else
+                return indexOfByRecursiveBinarySearch(searchItem, mid + 1, right);
+        }
 
+        // Search unsorted
+        for (int i = nSorted; i < this.size(); i++) {
+            if (ordening.compare(this.get(i), searchItem) == 0)
+                return i;
+        }
 
-        return -1;  // nothing was found ???
+        return -1;
     }
 
+    public int indexOfByRecursiveBinarySearch(E searchItem, int left, int right) {
+        // Search Sorted
+        if (right >= left) {
+            int mid = left + (right - left) / 2;
 
+            // Check if searchItem is at mid
+            if (ordening.compare(this.get(mid), searchItem) == 0)
+                return mid;
+
+            // If searchItem greater, ignore left half
+            if (ordening.compare(this.get(mid), searchItem) > 0)
+                return indexOfByRecursiveBinarySearch(searchItem, left, mid-1);
+
+                // If searchItem is smaller, ignore right half
+            else
+                return indexOfByRecursiveBinarySearch(searchItem, mid+1, right);
+        }
+
+        // Search unsorted
+        for (int i = nSorted; i < this.size(); i++) {
+            if (ordening.compare(this.get(i), searchItem) == 0)
+                return i;
+        }
+
+        return -1;
+    }
 
     /**
      * finds a match of newItem in the list and applies the merger operator with the newItem to that match
@@ -163,10 +220,9 @@ public class OrderedArrayList<E>
     public double aggregate(Function<E,Double> mapper) {
         double sum = 0.0;
 
-        // TODO loop over all items and use the mapper
-        //  to calculate and accumulate the contribution of each item
-
-
+        for (E item : this) {
+            sum += mapper.apply(item);
+        }
 
         return sum;
     }
