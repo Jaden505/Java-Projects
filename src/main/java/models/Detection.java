@@ -36,11 +36,26 @@ public class Detection {
      * or null if the textLine is corrupt or incomplete
      */
     public static Detection fromLine(String textLine, List<Car> cars) {
-        Detection newDetection;
+        Detection newDetection = null;
 
-        String[] carInfo = textLine.split(",");
+        if (textLine != null) {
+            String[] carInfo = textLine.split(",");
+            String licensePlateDetection = carInfo[0].trim();
+            String cityDetection = carInfo[1].trim();
+            LocalDateTime dateDetection = LocalDateTime.parse(carInfo[2].trim());
 
-        cars.in
+            List<Car> carPlates = cars.stream().filter(car -> car.getLicensePlate().equals(licensePlateDetection)).toList();
+            Car detectedCar;
+
+            if (carPlates.size() > 0) {
+                detectedCar = carPlates.get(0);
+            }
+            else {
+                detectedCar = new Car(licensePlateDetection);
+            }
+
+            newDetection = new Detection(detectedCar, cityDetection, dateDetection);
+        }
 
         return newDetection;
     }

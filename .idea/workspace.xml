@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="96d521f0-2261-4f6c-b655-c5413079076b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/models/Detection.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Detection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Violation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Violation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/OrderedArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/OrderedArrayList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +42,29 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RunManager">
+    <configuration name="DetectionTest.canConvertATextLineToADetection" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="traffic-control" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="models" />
+      <option name="MAIN_CLASS_NAME" value="models.DetectionTest" />
+      <option name="METHOD_NAME" value="canConvertATextLineToADetection" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.DetectionTest.canConvertATextLineToADetection" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -52,7 +75,7 @@
       <updated>1665057448033</updated>
       <workItem from="1665057449294" duration="99000" />
       <workItem from="1665239370328" duration="388000" />
-      <workItem from="1665397601755" duration="786000" />
+      <workItem from="1665397601755" duration="3066000" />
     </task>
     <servers />
   </component>

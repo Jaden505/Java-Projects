@@ -145,10 +145,9 @@ public class OrderedArrayList<E>
             this.add(newItem);
             return true;
         } else {
-            // TODO retrieve the matched item and
-            //  replace the matched item in the list with the merger of the matched item and the newItem
+            E merged = merger.apply(this.get(matchedItemIndex), newItem);
 
-
+            this.set(matchedItemIndex, merged);
 
             return false;
         }
