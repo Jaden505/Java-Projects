@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96d521f0-2261-4f6c-b655-c5413079076b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/TrafficTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/TrafficTracker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/OrderedArrayList.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/OrderedArrayList.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/TrafficTracker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/TrafficTracker.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/models/DetectionTest2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/models/TrafficTrackerTest2.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +51,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="models" />
+    </key>
+  </component>
   <component name="RunManager" selected="JUnit.TrafficTrackerTest">
     <configuration name="CarsListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="traffic-control" />
