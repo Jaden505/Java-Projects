@@ -1,5 +1,6 @@
 package models;
 
+import models.Comparators.CarCityOrder;
 import models.Comparators.LicenseplateOrder;
 
 import java.io.File;
@@ -17,12 +18,8 @@ public class TrafficTracker {
     private OrderedList<Violation> violations;      // the accumulation of all offences by car and by city
 
     public TrafficTracker() {
-        // TODO initialize cars with an empty ordered list which sorts items by licensePlate.
-        //  initalize violations with an empty ordered list which sorts items by car and city.
-        //  Use your generic implementation class OrderedArrayList
-
         this.cars = new OrderedArrayList<>(new LicenseplateOrder());
-//        this.violations =
+        this.violations = new OrderedArrayList<>(new CarCityOrder());
     }
 
     /**
@@ -71,8 +68,13 @@ public class TrafficTracker {
             //  retrieve a list of all files and sub folders in this directory
             File[] filesInDirectory = Objects.requireNonNullElse(file.listFiles(), new File[0]);
 
-            // TODO recursively process all files and sub folders from the filesInDirectory list.
-            //  also track the total number of offences found
+            for (File f : filesInDirectory) {
+                if (f.isDirectory()) {totalNumberOfOffences += mergeDetectionsFromVaultRecursively(f);}
+
+                else {
+                    totalNumberOfOffences += this.mergeDetectionsFromFile(f);
+                }
+            }
 
 
 
@@ -89,32 +91,27 @@ public class TrafficTracker {
      * imports another batch detection data from the filePath text file
      * and merges the offences into the earlier imported and accumulated violations
      * @param file
+     * @return total number of offences
      */
     private int mergeDetectionsFromFile(File file) {
-
-        // re-sort the accumulated violations for efficient searching and merging
         this.violations.sort();
 
-        // use a regular ArrayList to load the raw detection info from the file
         List<Detection> newDetections = new ArrayList<>();
 
-        // TODO import all detections from the specified file into the newDetections list
-        //  using the importItemsFromFile helper method and the Detection.fromLine parser.
+        // Total number of offences
+        Function<String, Detection> convert = s -> Detection.fromLine(s, this.cars);
+        TrafficTracker.importItemsFromFile(newDetections, file, convert);
 
+        // Check for violations
+        for (Detection detection : newDetections) {
+            Violation violation = detection.validatePurple();
 
+            if (violation != null) {
+                this.violations.add(violation);
+            }
+        }
 
-        System.out.printf("Imported %d detections from %s.\n", newDetections.size(), file.getPath());
-
-        int totalNumberOfOffences = 0; // tracks the number of offences that emerges from the data in this file
-
-        // TODO validate all detections against the purple criteria and
-        //  merge any resulting offences into this.violations, accumulating offences per car and per city
-        //  also keep track of the totalNumberOfOffences for reporting
-
-
-
-
-        return totalNumberOfOffences;
+        return importItemsFromFile(newDetections, file,convert);
     }
 
     /**
@@ -179,24 +176,17 @@ public class TrafficTracker {
 
         Scanner scanner = createFileScanner(file);
 
-        // read all source lines from the scanner,
-        // convert each line to an item of type E
-        // and add each successfully converted item into the list
         while (scanner.hasNext()) {
-            // input another line with author information
             String line = scanner.nextLine();
             numberOfLines++;
 
-            // TODO convert the line to an instance of E
+            E instance = converter.apply(line);
 
-
-
-            // TODO add a successfully converted item to the list of items
-
-
+            items.add(instance);
         }
 
-        //System.out.printf("Imported %d lines from %s.\n", numberOfLines, file.getPath());
+        System.out.printf("Imported %d lines from %s.\n", numberOfLines, file.getPath());
+
         return numberOfLines;
     }
 
