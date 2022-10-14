@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="96d521f0-2261-4f6c-b655-c5413079076b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/models/DetectionTest2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/models/TrafficTrackerTest2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/TrafficTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/TrafficTracker.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/Detection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Detection.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/TrafficTracker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/TrafficTracker.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,6 +144,8 @@
       <workItem from="1665479557087" duration="2677000" />
       <workItem from="1665487985003" duration="39000" />
       <workItem from="1665488729695" duration="6154000" />
+      <workItem from="1665603269485" duration="137000" />
+      <workItem from="1665743627243" duration="3021000" />
     </task>
     <servers />
   </component>

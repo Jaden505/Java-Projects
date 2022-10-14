@@ -114,19 +114,26 @@ public class TrafficTracker {
         return importItemsFromFile(newDetections, file,convert);
     }
 
+    private double calculateFine(Violation v) {
+        if (v.getCar().getCarType() == Car.CarType.Truck) {
+            return 25;
+        }
+        else if (v.getCar().getCarType() == Car.CarType.Coach) {
+            return 35;
+        }
+
+        return 0;
+    }
+
     /**
      * calculates the total revenue of fines from all violations,
      * Trucks pay €25 per offence, Coaches €35 per offence
      * @return      the total amount of money recovered from all violations
      */
     public double calculateTotalFines() {
+        Function<Violation, Double> calculateFine = this::calculateFine;
 
-        return this.violations.aggregate(
-                // TODO provide a calculator function for the specified fine scheme
-                //  of €25 per truck-offence and €35 per coach-offence
-
-                null  // replace this reference
-        );
+        return this.violations.aggregate(calculateFine);
     }
 
     /**
