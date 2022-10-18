@@ -15,6 +15,9 @@ public class Violation {
         // TODO compute the ordening of v1 vs v2 as per conventions of Comparator<Violation>
 
 
+
+
+
         return 0;   // replace by a proper outcome
     }
 
