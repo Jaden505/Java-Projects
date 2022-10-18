@@ -7,13 +7,9 @@
     <list default="true" id="96d521f0-2261-4f6c-b655-c5413079076b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/models/TrafficTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/TrafficTracker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/Violation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/Violation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/models/TrafficTracker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/TrafficTracker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/Violation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/Violation.class" afterDir="false" />
     </list>
-    <list id="247c2e96-6f83-4f24-a465-1d3a07ef3912" name="Changes by jadenvanrijswijk" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/OrderedArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/OrderedArrayList.java" afterDir="false" />
-    </list>
+    <list id="247c2e96-6f83-4f24-a465-1d3a07ef3912" name="Changes by jadenvanrijswijk" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -170,7 +166,7 @@
       <workItem from="1665937245929" duration="123000" />
       <workItem from="1666097367990" duration="1987000" />
       <workItem from="1666100335692" duration="15000" />
-      <workItem from="1666113302093" duration="655000" />
+      <workItem from="1666113302093" duration="1148000" />
     </task>
     <servers />
   </component>

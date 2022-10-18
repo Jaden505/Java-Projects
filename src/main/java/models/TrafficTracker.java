@@ -242,11 +242,15 @@ public class TrafficTracker {
 //        return null;
 //    }
 
-
+    private static int orderCity(Violation v1, Violation v2) {
+        int result = v1.getCity().compareTo(v2.getCity());
+        v1.combineOffencesCounts(v2);
+        return result;
+    }
 
     public List<Violation> topViolationsByCity(int topNumber) {
 
-        OrderedArrayList<Violation> topViolationsByCityArrayList = new OrderedArrayList<>(TrafficTracker::orderByCity);
+        OrderedArrayList<Violation> topViolationsByCityArrayList = new OrderedArrayList<>(TrafficTracker::orderCity);
         for (Violation violation: this.violations) {
             topViolationsByCityArrayList.merge(violation, Violation::combineOffencesCounts);
         }
@@ -260,12 +264,6 @@ public class TrafficTracker {
 
     }
 
-    private static int orderByCity(Violation v1, Violation v2) {
-        int result = v1.getCity().compareTo(v2.getCity());
-        if (result == 0)
-            v1.combineOffencesCounts(v2);
-        return result;
-    }
 
 
 
