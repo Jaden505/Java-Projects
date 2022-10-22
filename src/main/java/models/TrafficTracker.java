@@ -250,18 +250,57 @@ public class TrafficTracker {
 
     public List<Violation> topViolationsByCity(int topNumber) {
 
-        OrderedArrayList<Violation> topViolationsByCityArrayList = new OrderedArrayList<>(TrafficTracker::orderCity);
-        for (Violation violation: this.violations) {
-            topViolationsByCityArrayList.merge(violation, Violation::combineOffencesCounts);
+        int totalviolatonsAmsterdam = 0;
+        int totalviolatonsDenhaag = 0;
+        int totalviolatonsEindhoven = 0;
+        int totalviolatonsLeiden = 0;
+        int totalviolatonsRotterdam = 0;
+        int totalviolatonsUtrecht = 0;
+
+
+        // TODO merge all violations from this.violations into a new OrderedArrayList
+        //   which orders and aggregates violations by Car
+        // TODO sort the new list by decreasing offencesCount.
+        // TODO use .subList to return only the topNumber of violations from the sorted list
+        //  (You may want to prepare/reuse a local private method for all this)
+
+        for (int i = 0; i < violations.size() ; i++) {
+            if (violations.get(i).getCity().equals("Amsterdam")){
+                totalviolatonsAmsterdam+= violations.get(i).getOffencesCount();
+
+            } else if (violations.get(i).getCity().equals("Den Haag")){
+                totalviolatonsDenhaag+= violations.get(i).getOffencesCount();
+
+            } else if (violations.get(i).getCity().equals("Eindhoven")){
+                totalviolatonsEindhoven+= violations.get(i).getOffencesCount();
+
+            }else if (violations.get(i).getCity().equals("Leiden")) {
+                totalviolatonsLeiden+= violations.get(i).getOffencesCount();
+
+            }else if (violations.get(i).getCity().equals("Rotterdam")) {
+                totalviolatonsRotterdam+= violations.get(i).getOffencesCount();
+            } else {
+                totalviolatonsUtrecht+= violations.get(i).getOffencesCount();
+            }
         }
 
-        Comparator<Violation> violationOffencesComparator = Comparator.comparing(Violation::getOffencesCount);
-        Comparator<Violation> violationReversedComparator = violationOffencesComparator.reversed();
-        topViolationsByCityArrayList.sort(violationReversedComparator);
-
-        return topViolationsByCityArrayList.subList(0, topNumber);
+        List violatonsPerCity = new ArrayList();
 
 
+
+        violatonsPerCity.add(totalviolatonsAmsterdam);
+        violatonsPerCity.add(totalviolatonsDenhaag);
+        violatonsPerCity.add(totalviolatonsEindhoven);
+        violatonsPerCity.add(totalviolatonsRotterdam);
+        violatonsPerCity.add(totalviolatonsUtrecht);
+        violatonsPerCity.add(totalviolatonsLeiden);
+
+
+        Collections.sort(violatonsPerCity);
+        Collections.reverse(violatonsPerCity);
+
+
+          return violatonsPerCity.subList(0,topNumber);
     }
 
 
