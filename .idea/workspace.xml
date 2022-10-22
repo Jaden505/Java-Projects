@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="96d521f0-2261-4f6c-b655-c5413079076b" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/TrafficTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/TrafficTracker.java" afterDir="false" />
     </list>
     <list id="247c2e96-6f83-4f24-a465-1d3a07ef3912" name="Changes by jadenvanrijswijk" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -165,6 +166,7 @@
       <workItem from="1666097367990" duration="1987000" />
       <workItem from="1666100335692" duration="15000" />
       <workItem from="1666113302093" duration="1782000" />
+      <workItem from="1666434169508" duration="690000" />
     </task>
     <servers />
   </component>
