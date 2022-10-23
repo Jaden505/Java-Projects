@@ -96,32 +96,28 @@ public class TrafficTracker {
      */
     private int mergeDetectionsFromFile(File file) {
         int total_offences = 0;
+
         this.violations.sort();
 
         List<Detection> newDetections = new ArrayList<>();
 
-        // Total number of offences
+        // Total number of detections
         Function<String, Detection> convert = s -> Detection.fromLine(s, this.cars);
         TrafficTracker.importItemsFromFile(newDetections, file, convert);
-
-        OrderedArrayList<Violation> topViolationsByCityArrayList = new OrderedArrayList<>(TrafficTracker::orderCityList);
 
         // Check for violations
         for (Detection detection : newDetections) {
             Violation violation = detection.validatePurple();
 
             if (violation != null) {
+                this.violations.merge(violation, Violation::combineOffencesCounts);
                 total_offences++;
             }
 
             if (!cars.contains(detection.getCar())) {
                 cars.add(detection.getCar());
             }
-
-            topViolationsByCityArrayList.merge(violation, Violation::combineOffencesCounts);
         }
-
-        this.violations.add(topViolationsByCityArrayList.get(0));
 
         return total_offences;
     }

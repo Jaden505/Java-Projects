@@ -220,7 +220,7 @@ public class OrderedArrayList<E>
             return true;
         } else {
             E merged = merger.apply(this.get(matchedItemIndex), newItem);
-
+;
             this.set(matchedItemIndex, merged);
 
             return false;
