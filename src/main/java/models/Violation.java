@@ -11,18 +11,6 @@ public class Violation {
         this.offencesCount = 1;
     }
 
-    public static int compareByLicensePlateAndCity(Violation v1, Violation v2) {
-        // TODO compute the ordening of v1 vs v2 as per conventions of Comparator<Violation>
-
-
-
-
-
-        return 0;   // replace by a proper outcome
-    }
-
-
-
     /**
      * Aggregates this violation with the other violation by adding their counts and
      * nullifying identifying attributes car and/or city that do not match
@@ -62,6 +50,8 @@ public class Violation {
 
     @Override
     public String toString() {
+        if (car == null) {return null + "/" + city + "/" + offencesCount;}
+
         return car.getLicensePlate() + "/" + city + "/" + offencesCount;
     }
 }

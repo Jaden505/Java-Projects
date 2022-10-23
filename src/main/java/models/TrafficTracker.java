@@ -148,8 +148,8 @@ public class TrafficTracker {
      * @return              a list of topNum items that provides the top aggregated violations
      */
     public List<Violation> topViolationsByCar(int topNumber) {
-
         OrderedArrayList<Violation> topViolationsByCarArrayList = new OrderedArrayList<>(TrafficTracker::orderCarList);
+
         for (Violation violation: this.violations) {
             topViolationsByCarArrayList.merge(violation, Violation::combineOffencesCounts);
         }
@@ -169,53 +169,25 @@ public class TrafficTracker {
         return result;
     }
 
+    private static int orderCityList(Violation v1, Violation v2) {
+        int result = v1.getCity().compareTo(v2.getCity());
+        if (result == 0)
+            v1.combineOffencesCounts(v2);
+        return result;
+    }
+
     public List<Violation> topViolationsByCity(int topNumber) {
+        OrderedArrayList<Violation> topViolationsByCityArrayList = new OrderedArrayList<>(TrafficTracker::orderCityList);
 
-        int totalviolatonsAmsterdam = 0;
-        int totalviolatonsDenhaag = 0;
-        int totalviolatonsEindhoven = 0;
-        int totalviolatonsLeiden = 0;
-        int totalviolatonsRotterdam = 0;
-        int totalviolatonsUtrecht = 0;
-
-
-        for (int i = 0; i < violations.size() ; i++) {
-            if (violations.get(i).getCity().equals("Amsterdam")){
-                totalviolatonsAmsterdam+= violations.get(i).getOffencesCount();
-
-            } else if (violations.get(i).getCity().equals("Den Haag")){
-                totalviolatonsDenhaag+= violations.get(i).getOffencesCount();
-
-            } else if (violations.get(i).getCity().equals("Eindhoven")){
-                totalviolatonsEindhoven+= violations.get(i).getOffencesCount();
-
-            }else if (violations.get(i).getCity().equals("Leiden")) {
-                totalviolatonsLeiden+= violations.get(i).getOffencesCount();
-
-            }else if (violations.get(i).getCity().equals("Rotterdam")) {
-                totalviolatonsRotterdam+= violations.get(i).getOffencesCount();
-            } else {
-                totalviolatonsUtrecht+= violations.get(i).getOffencesCount();
-            }
+        for (Violation violation: this.violations) {
+            topViolationsByCityArrayList.merge(violation, Violation::combineOffencesCounts);
         }
 
-        List violatonsPerCity = new ArrayList();
+        Comparator<Violation> violationOffencesComparator = Comparator.comparing(Violation::getOffencesCount).reversed();
 
+        topViolationsByCityArrayList.sort(violationOffencesComparator);
 
-
-        violatonsPerCity.add(totalviolatonsAmsterdam);
-        violatonsPerCity.add(totalviolatonsDenhaag);
-        violatonsPerCity.add(totalviolatonsEindhoven);
-        violatonsPerCity.add(totalviolatonsRotterdam);
-        violatonsPerCity.add(totalviolatonsUtrecht);
-        violatonsPerCity.add(totalviolatonsLeiden);
-
-
-        Collections.sort(violatonsPerCity);
-        Collections.reverse(violatonsPerCity);
-
-
-          return violatonsPerCity.subList(0,topNumber);
+        return topViolationsByCityArrayList.subList(0, topNumber);
     }
     
 
