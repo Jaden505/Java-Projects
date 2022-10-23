@@ -5,8 +5,132 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ed0207d0-bdca-4d81-ab39-539dfa7bdcba" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/models/TrafficTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/TrafficTracker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/models/TrafficTracker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/TrafficTracker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/TrafficControlMain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Car.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Comparators/CarCityOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Comparators/LicenseplateOrder.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Detection.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/OrderedArrayList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/OrderedList.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/TrafficTracker.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/Violation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/cars.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Amsterdam/0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Amsterdam/12.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Amsterdam/18.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Amsterdam/24.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Amsterdam/30.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Amsterdam/36.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Amsterdam/6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Den Haag/14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Den Haag/2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Den Haag/20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Den Haag/26.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Den Haag/32.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Den Haag/38.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Den Haag/8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Eindhoven/10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Eindhoven/16.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Eindhoven/22.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Eindhoven/28.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Eindhoven/34.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Eindhoven/4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Leiden/11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Leiden/17.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Leiden/23.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Leiden/29.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Leiden/35.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Leiden/5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Rotterdam/1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Rotterdam/13.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Rotterdam/19.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Rotterdam/25.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Rotterdam/31.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Rotterdam/37.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Rotterdam/7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Utrecht/15.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Utrecht/21.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Utrecht/27.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Utrecht/3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Utrecht/33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Utrecht/39.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/2022-09/detections/Utrecht/9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/test1/cars.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/test1/detections/Amsterdam/0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/test1/detections/Rotterdam/1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/test2/cars.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/test2/detections/Amsterdam/0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/test2/detections/Rotterdam/1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/CarsListTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/DetectionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/DetectionTest2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/TrafficTrackerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/models/TrafficTrackerTest2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/cars.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Amsterdam/0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Amsterdam/12.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Amsterdam/18.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Amsterdam/24.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Amsterdam/30.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Amsterdam/36.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Amsterdam/6.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Den Haag/14.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Den Haag/2.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Den Haag/20.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Den Haag/26.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Den Haag/32.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Den Haag/38.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Den Haag/8.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Eindhoven/10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Eindhoven/16.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Eindhoven/22.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Eindhoven/28.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Eindhoven/34.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Eindhoven/4.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Leiden/11.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Leiden/17.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Leiden/23.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Leiden/29.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Leiden/35.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Leiden/5.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Rotterdam/1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Rotterdam/13.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Rotterdam/19.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Rotterdam/25.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Rotterdam/31.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Rotterdam/37.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Rotterdam/7.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Utrecht/15.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Utrecht/21.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Utrecht/27.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Utrecht/3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Utrecht/33.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Utrecht/39.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/2022-09/detections/Utrecht/9.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/TrafficControlMain.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/Car$CarType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/Car$FuelType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/Car.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/Comparators/CarCityOrder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/Comparators/LicenseplateOrder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/Detection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/OrderedArrayList 2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/OrderedArrayList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/OrderedList.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/TrafficTracker.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/models/Violation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test1/cars.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test1/detections/Amsterdam/0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test1/detections/Rotterdam/1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test2/cars.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test2/detections/Amsterdam/0.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test2/detections/Rotterdam/1.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/models/CarsListTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/models/DetectionTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/models/DetectionTest2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/models/TrafficTrackerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/models/TrafficTrackerTest2.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,18 +168,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/joelamarh/team15/src/main/resources&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "last_opened_file_path": "/Users/joelamarh/team15/src/main/resources",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "show.migrate.to.gradle.popup": "false",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources" />
