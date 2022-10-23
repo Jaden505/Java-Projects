@@ -18,25 +18,23 @@ public class TrafficTrackerTest2 {
         trafficTracker.importDetectionsFromVault(VAULT_NAME + "/detections");
     }
 
-
     @Test
     public void calculateTotalFines() {
+        //Check if calculateTotalFines is not null
         assertNotNull(trafficTracker.calculateTotalFines());
     }
 
     @Test
     public void TopPerCity() {
-        //         Check top 2 city Violations
-        assertEquals(trafficTracker.topViolationsByCity(1).size(),
-                 trafficTracker.topViolationsByCar(1).size(),
+        //Check top 2 city Violations
+        assertEquals(1, trafficTracker.topViolationsByCar(1).size(),
                 "Top 2 City Violations");
     }
 
     @Test
     public void TopPerCar() {
-        //         Check top 2 Car Violations
-        assertEquals(trafficTracker.topViolationsByCar(1).size(),
-                trafficTracker.topViolationsByCar(1).size(),
+        //Check top 2 Car Violations
+        assertEquals(1, trafficTracker.topViolationsByCar(1).size(),
                 "Top 2 car Violations");
     }
 }
