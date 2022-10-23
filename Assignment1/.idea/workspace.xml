@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="973e11b7-c8d7-4167-83e1-5e778267f207" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../src/main/resources/test2/cars.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/main/resources/test2/detections/Amsterdam/0.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../src/main/resources/test2/detections/Rotterdam/1.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/models/OrderedArrayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/models/OrderedArrayList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/models/TrafficTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/models/TrafficTracker.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../src/main/java/models/Violation.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/main/java/models/Violation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../target/classes/models/TrafficTracker.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/models/TrafficTracker.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../src/test/java/models/TrafficTrackerTest2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../src/test/java/models/TrafficTrackerTest2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../target/classes/models/Violation.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/classes/models/Violation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../target/test-classes/models/TrafficTrackerTest2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../target/test-classes/models/TrafficTrackerTest2.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,16 +27,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "show.migrate.to.gradle.popup": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -45,6 +46,7 @@
       <option name="presentableId" value="Default" />
       <updated>1665940202765</updated>
       <workItem from="1665940204032" duration="1000" />
+      <workItem from="1666540879283" duration="23000" />
     </task>
     <servers />
   </component>

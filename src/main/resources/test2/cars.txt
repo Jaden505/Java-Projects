@@ -1,0 +1,10 @@
+081-DJ-3, 5, Car, Gasoline, 2022-02-28
+227-HX-3, 4, Truck, Diesel, 2020-08-29
+ZLC-14-G, 5, Car, Gasoline, 2017-07-29
+57-VY-LF, 3, Van, Gasoline, 2002-08-29
+387-NJ-8, 5, Van, Gasoline, 2019-09-29
+232-FD-8, 9, Car, Electric, 2021-05-29
+233-IG-7, 6, Car, Gasoline, 2022-09-29
+UFP-17-D, 7, Car, Electric, 2016-11-29
+BJF-99-Z, 6, Car, Gasoline, 2018-03-29
+SUR-72-N, 5, Car, Gasoline, 2017-09-29

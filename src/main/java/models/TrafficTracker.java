@@ -186,7 +186,12 @@ public class TrafficTracker {
 
         topViolationsByCityArrayList.sort(violationOffencesComparator);
 
+
+        System.out.println(topViolationsByCityArrayList);
+        System.out.println(topViolationsByCityArrayList.subList(0,topNumber));
         return topViolationsByCityArrayList.subList(0, topNumber);
+
+
     }
 
 
