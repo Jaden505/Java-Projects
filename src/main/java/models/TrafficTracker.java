@@ -189,7 +189,7 @@ public class TrafficTracker {
 
         return topViolationsByCityArrayList.subList(0, topNumber);
     }
-    
+
 
 
     /**
