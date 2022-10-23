@@ -124,10 +124,10 @@ public class TrafficTracker {
 
     private double calculateFine(Violation v) {
         if (v.getCar().getCarType() == Car.CarType.Truck) {
-            return 25;
+            return 25*v.getOffencesCount();
         }
         else if (v.getCar().getCarType() == Car.CarType.Coach) {
-            return 35;
+            return 35*v.getOffencesCount();
         }
 
         return 0;
@@ -193,13 +193,8 @@ public class TrafficTracker {
         topViolationsByCityArrayList.sort(violationOffencesComparator);
 
 
-        System.out.println(topViolationsByCityArrayList);
-        System.out.println(topViolationsByCityArrayList.subList(0,topNumber));
         return topViolationsByCityArrayList.subList(0, topNumber);
-
-
     }
-
 
 
     /**
