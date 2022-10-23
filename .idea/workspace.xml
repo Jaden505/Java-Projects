@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="96d521f0-2261-4f6c-b655-c5413079076b" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/models/DetectionTest2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/DetectionTest2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/models/TrafficTrackerTest2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/models/TrafficTrackerTest2.java" afterDir="false" />
+    <list default="true" id="ed0207d0-bdca-4d81-ab39-539dfa7bdcba" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/models/TrafficTracker.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/models/TrafficTracker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/models/TrafficTracker.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/models/TrafficTracker.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/models/TrafficTrackerTest2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/models/TrafficTrackerTest2.class" afterDir="false" />
     </list>
-    <list id="247c2e96-6f83-4f24-a465-1d3a07ef3912" name="Changes by jadenvanrijswijk" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -68,14 +64,7 @@
       <recent name="models" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TrafficTrackerTest2.TopPerCity">
-    <configuration name="TrafficControlMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="TrafficControlMain" />
-      <module name="team15" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.TrafficTrackerTest">
     <configuration name="DetectionTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="team15" />
       <extension name="coverage">
@@ -86,6 +75,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="models" />
       <option name="MAIN_CLASS_NAME" value="models.DetectionTest2" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrafficTrackerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="traffic-control" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="models" />
+      <option name="MAIN_CLASS_NAME" value="models.TrafficTrackerTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -140,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TrafficTrackerTest" />
         <item itemvalue="JUnit.TrafficTrackerTest2.TopPerCity" />
         <item itemvalue="JUnit.TrafficTrackerTest2" />
         <item itemvalue="JUnit.TrafficTrackerTest2.TopPerCar" />
         <item itemvalue="JUnit.DetectionTest2" />
-        <item itemvalue="Application.TrafficControlMain" />
       </list>
     </recent_temporary>
   </component>
@@ -180,16 +184,5 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/models/TrafficTracker.java</url>
-          <line>159</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
