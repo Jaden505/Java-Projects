@@ -47,6 +47,7 @@ public class DetectionTest2 {
         assertSame(mercedes, detection3.getCar());
         assertEquals("Amsterdam", detection3.getCity());
         assertEquals(LocalDateTime.of(2022,10,1,12,11,10), detection3.getDateTime());
+
     }
 
     @Test
