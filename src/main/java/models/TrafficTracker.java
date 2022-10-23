@@ -8,10 +8,7 @@ import java.io.FileNotFoundException;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.*;
-import java.util.function.BinaryOperator;
 import java.util.function.Function;
-import java.util.logging.XMLFormatter;
-import java.util.stream.Collectors;
 
 public class TrafficTracker {
     private final String TRAFFIC_FILE_EXTENSION = ".txt";
@@ -97,6 +94,7 @@ public class TrafficTracker {
      * @return total number of offences
      */
     private int mergeDetectionsFromFile(File file) {
+        int total_offences = 0;
         this.violations.sort();
 
         List<Detection> newDetections = new ArrayList<>();
@@ -110,11 +108,12 @@ public class TrafficTracker {
             Violation violation = detection.validatePurple();
 
             if (violation != null) {
+                total_offences++;
                 this.violations.add(violation);
             }
         }
 
-        return importItemsFromFile(newDetections, file,convert);
+        return total_offences;
     }
 
     private double calculateFine(Violation v) {
@@ -213,7 +212,7 @@ public class TrafficTracker {
             items.add(instance);
         }
 
-        System.out.printf("Imported %d lines from %s.\n", numberOfLines, file.getPath());
+        System.out.printf("Imported %d detections from %s.\n", numberOfLines, file.getPath());
 
         return numberOfLines;
     }
