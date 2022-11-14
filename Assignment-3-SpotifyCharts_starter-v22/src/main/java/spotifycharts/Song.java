@@ -35,9 +35,6 @@ public class Song {
     public int countSP;
     public int countIT;
 
-    // TODO add instance variable(s) to track the streams counts per country
-    //  choose a data structure that you deem to be most appropriate for this application.
-
     /**
      * Constructs a new instance of Song based on given attribute values
      */
@@ -47,7 +44,6 @@ public class Song {
         this.title = title;
         this.language = language;
 
-        // TODO initialise streams counts per country as appropriate.
     }
 
     public Song(String artist, String title, Language language, int totalSteamCount, int countNL, int countUK, int countDE, int countBE, int countFR, int countSP, int countIT) {
@@ -69,7 +65,6 @@ public class Song {
      * @param streamsCount
      */
     public void setStreamsCountOfCountry(Country country, int streamsCount) {
-        // TODO register the streams count for the given country.
         switch (country){
             case NL: countNL = streamsCount;
             break;
@@ -95,7 +90,6 @@ public class Song {
      * @return
      */
     public int getStreamsCountOfCountry(Country country) {
-        // TODO retrieve the streams count for the given country.
         int count = 0;
         switch (country){
             case NL: countNL = count;
@@ -123,11 +117,9 @@ public class Song {
      * @return
      */
     public int getStreamsCountTotal() {
-        // TODO calculate/get the total number of streams across all countries
         int streamsCountTotal = countDE + countIT + countUK
                 +countNL + countSP + countFR + countBE;
 
-        System.out.println(streamsCountTotal);
         return streamsCountTotal; // replace by the proper amount
 
     }
