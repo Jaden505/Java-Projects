@@ -25,6 +25,14 @@ public class Song {
     private final String title;
     private final Language language;
 
+    public static int countNL;
+    public static int countUK;
+    public static int countDE;
+    public static int countBE;
+    public static int countFR;
+    public static int countSP;
+    public static int countIT;
+
     // TODO add instance variable(s) to track the streams counts per country
     //  choose a data structure that you deem to be most appropriate for this application.
 
@@ -33,6 +41,7 @@ public class Song {
     /**
      * Constructs a new instance of Song based on given attribute values
      */
+
     public Song(String artist, String title, Language language) {
         this.artist = artist;
         this.title = title;
@@ -49,6 +58,22 @@ public class Song {
      */
     public void setStreamsCountOfCountry(Country country, int streamsCount) {
         // TODO register the streams count for the given country.
+        switch (country){
+            case NL: countNL = streamsCount;
+            break;
+            case UK: countUK = streamsCount;
+            break;
+            case DE: countDE = streamsCount;
+            break;
+            case BE: countBE = streamsCount;
+            break;
+            case FR: countFR = streamsCount;
+            break;
+            case SP: countSP = streamsCount;
+            break;
+            case IT: countIT = streamsCount;
+            break;
+        }
 
     }
 
@@ -59,9 +84,25 @@ public class Song {
      */
     public int getStreamsCountOfCountry(Country country) {
         // TODO retrieve the streams count for the given country.
+        int count = 0;
+        switch (country){
+            case NL: countNL = count;
+            break;
+            case UK: countUK = count;
+            break;
+            case DE: countDE = count;
+            break;
+            case BE: countBE = count;
+            break;
+            case FR: countFR = count;
+            break;
+            case SP: countSP = count;;
+            break;
+            case IT: countIT = count;
+            break;
+        }
 
-
-        return 0; // replace by the proper amount
+        return count;
     }
     /**
      * Calculates/retrieves the total of all streams counts across all countries from this song
@@ -69,9 +110,11 @@ public class Song {
      */
     public int getStreamsCountTotal() {
         // TODO calculate/get the total number of streams across all countries
+        int streamsCountTotal = countDE + countIT + countUK
+                +countNL + countSP + countFR + countBE;
 
+        return streamsCountTotal; // replace by the proper amount
 
-        return 0; // replace by the proper amount
     }
 
 
