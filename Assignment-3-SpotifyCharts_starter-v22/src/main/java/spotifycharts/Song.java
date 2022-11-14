@@ -173,10 +173,5 @@ public class Song {
     @Override
     public String toString() {
         return artist + "/" + title + "{" + language + "}" + "(total " + getStreamsCountTotal() + ")";
-
     }
-
-    // TODO provide a toString implementation to format songs as in "artist/title{language}(total streamsCount)"
-
-
 }
