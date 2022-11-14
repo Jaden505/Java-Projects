@@ -25,13 +25,13 @@ public class Song {
     private final String title;
     private final Language language;
 
-    public static int countNL;
-    public static int countUK;
-    public static int countDE;
-    public static int countBE;
-    public static int countFR;
-    public static int countSP;
-    public static int countIT;
+    public int countNL;
+    public int countUK;
+    public int countDE;
+    public int countBE;
+    public int countFR;
+    public int countSP;
+    public int countIT;
 
     // TODO add instance variable(s) to track the streams counts per country
     //  choose a data structure that you deem to be most appropriate for this application.
@@ -48,7 +48,19 @@ public class Song {
         this.language = language;
 
         // TODO initialise streams counts per country as appropriate.
+    }
 
+    public Song(String artist, String title, Language language, int countNL, int countUK, int countDE, int countBE, int countFR, int countSP, int countIT) {
+        this.artist = artist;
+        this.title = title;
+        this.language = language;
+        this.countNL = countNL;
+        this.countUK = countUK;
+        this.countDE = countDE;
+        this.countBE = countBE;
+        this.countFR = countFR;
+        this.countSP = countSP;
+        this.countIT = countIT;
     }
 
     /**
@@ -127,9 +139,11 @@ public class Song {
     public int compareByHighestStreamsCountTotal(Song other) {
         // TODO compare the total of stream counts of this song across all countries
         //  with the total of the other song
-
-
-        return 0;    // replace by proper result
+        if (this.getStreamsCountTotal() > other.getStreamsCountTotal()){
+            return 0;
+        } else {
+            return getStreamsCountTotal();
+        }
     }
 
     /**
@@ -160,6 +174,11 @@ public class Song {
         return language;
     }
 
+
+    @Override
+    public String toString() {
+        return artist + "/" + title + "{" + language + "}" + "(total " + getStreamsCountTotal() + ")";
+    }
     // TODO provide a toString implementation to format songs as in "artist/title{language}(total streamsCount)"
 
 
