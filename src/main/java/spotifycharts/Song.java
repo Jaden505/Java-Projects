@@ -25,8 +25,6 @@ public class Song {
     private final String title;
     private final Language language;
 
-    private int totalSteamCount;
-
     public int countNL;
     public int countUK;
     public int countDE;
@@ -46,11 +44,10 @@ public class Song {
 
     }
 
-    public Song(String artist, String title, Language language, int totalSteamCount, int countNL, int countUK, int countDE, int countBE, int countFR, int countSP, int countIT) {
+    public Song(String artist, String title, Language language,  int countNL, int countUK, int countDE, int countBE, int countFR, int countSP, int countIT) {
         this.artist = artist;
         this.title = title;
         this.language = language;
-        this.totalSteamCount = totalSteamCount;
         this.countNL = countNL;
         this.countUK = countUK;
         this.countDE = countDE;
@@ -90,38 +87,27 @@ public class Song {
      * @return
      */
     public int getStreamsCountOfCountry(Country country) {
-        int count = 0;
-        switch (country){
-            case NL: countNL = count;
-            break;
-            case UK: countUK = count;
-            break;
-            case DE: countDE = count;
-            break;
-            case BE: countBE = count;
-            break;
-            case FR: countFR = count;
-            break;
-            case SP: countSP = count;;
-            break;
-            case IT: countIT = count;
-            break;
+        if (country == Country.NL){
+            return countNL;
+        } else if (country == Country.UK) {
+            return countUK;
+        }else if (country == Country.DE) {
+            return countDE;
+        }else if (country == Country.BE) {
+            return countBE;
+        }else if (country == Country.FR) {
+            return countFR;
+        }else if (country == Country.SP) {
+            return countNL;
+        }else {
+            return countIT;
         }
-        count = this.totalSteamCount;
-
-
-        return count;
     }
-    /**
-     * Calculates/retrieves the total of all streams counts across all countries from this song
-     * @return
-     */
+
     public int getStreamsCountTotal() {
         int streamsCountTotal = countDE + countIT + countUK
                 +countNL + countSP + countFR + countBE;
-
         return streamsCountTotal; // replace by the proper amount
-
     }
 
 
@@ -131,13 +117,9 @@ public class Song {
      * @param other     the other song to compare against
      * @return  negative number, zero or positive number according to Comparator convention
      */
+
     public int compareByHighestStreamsCountTotal(Song other) {
-        // TODO compare the total of stream counts of this song across all countries
-        //  with the total of the other song
-
-
-        return this.artist.compareTo(other.artist);
-        //work in progess
+        return -Integer.compare(this.getStreamsCountTotal(), other.getStreamsCountTotal());
     }
 
     /**
@@ -147,13 +129,7 @@ public class Song {
      * @return  negative number, zero or positive number according to Comparator conventions
      */
     public int compareForDutchNationalChart(Song other) {
-
-        // TODO compare this song with the other song
-        //  ordening all Dutch songs upfront and then by decreasing total number of streams
-
-
-        return this.countNL;
-        //work in progess
+        return -Integer.compare(this.getStreamsCountOfCountry(Country.NL), other.getStreamsCountOfCountry(Country.NL));
     }
 
 

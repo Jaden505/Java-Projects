@@ -84,6 +84,7 @@ public class SorterImpl<E> implements Sorter<E> {
             // position 0 holds the root item of a heap of size i+1 organised by reverseComparator
             // this root item is the worst item of the remaining front part of the lead collection
 
+            //swap methode
             // TODO swap item[0] and item[i];
             //  this moves item[0] to its designated position
 
