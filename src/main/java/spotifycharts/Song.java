@@ -129,13 +129,7 @@ public class Song {
      */
 
     public int compareByHighestStreamsCountTotal(Song other) {
-        if (this.getStreamsCountTotal() > other.getStreamsCountTotal()){
-            return this.getStreamsCountTotal();
-        } else {
-            return other.getStreamsCountTotal();
-        }
-        // TODO compare the total of stream counts of this song across all countries
-        //  with the total of the other song
+        return -Integer.compare(this.getStreamsCountTotal(), other.getStreamsCountTotal());
     }
 
     /**
@@ -145,12 +139,8 @@ public class Song {
      * @return  negative number, zero or positive number according to Comparator conventions
      */
     public int compareForDutchNationalChart(Song other) {
-        if (this.getStreamsCountOfCountry(Country.NL) > other.getStreamsCountOfCountry(Country.NL)){
-            return this.getStreamsCountOfCountry(Country.NL);
-        }
-        else{
-            return other.getStreamsCountOfCountry(Country.NL);
-        }
+
+        return -Integer.compare(this.getStreamsCountOfCountry(Country.NL), other.getStreamsCountOfCountry(Country.NL));
     }
 
 
@@ -169,6 +159,6 @@ public class Song {
 
     @Override
     public String toString() {
-        return artist + "/" + title + "{" + language + "}" + "(total " + getStreamsCountTotal() + ")";
+        return artist + "/" + title + "{" + language + "}" + "(" + getStreamsCountTotal() + ")";
     }
 }
