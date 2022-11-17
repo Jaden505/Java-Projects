@@ -17,9 +17,6 @@ public class SorterImpl<E> implements Sorter<E> {
     public List<E> selInsBubSort(List<E> items, Comparator<E> comparator) {
         // TODO implement selection sort or insertion sort or bubble sort
 
-
-
-
         return items;   // replace as you find appropriate
     }
 
@@ -34,8 +31,6 @@ public class SorterImpl<E> implements Sorter<E> {
     public List<E> quickSort(List<E> items, Comparator<E> comparator) {
         // TODO provide a recursive quickSort implementation,
         //  that is different from the example given in the lecture
-
-
 
         return items;   // replace as you find appropriate
     }
@@ -91,11 +86,12 @@ public class SorterImpl<E> implements Sorter<E> {
             // position 0 holds the root item of a heap of size i+1 organised by reverseComparator
             // this root item is the worst item of the remaining front part of the lead collection
 
+            //swap methode
             // TODO swap item[0] and item[i];
             //  this moves item[0] to its designated position
 
 
-
+//heapsink met reverse comparator
             // TODO the new root may have violated the heap condition
             //  repair the heap condition on the remaining heap of size i
 

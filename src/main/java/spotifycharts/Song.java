@@ -108,8 +108,6 @@ public class Song {
             break;
         }
         count = this.totalSteamCount;
-
-
         return count;
     }
     /**
@@ -119,9 +117,7 @@ public class Song {
     public int getStreamsCountTotal() {
         int streamsCountTotal = countDE + countIT + countUK
                 +countNL + countSP + countFR + countBE;
-
         return streamsCountTotal; // replace by the proper amount
-
     }
 
 
@@ -131,13 +127,15 @@ public class Song {
      * @param other     the other song to compare against
      * @return  negative number, zero or positive number according to Comparator convention
      */
+
     public int compareByHighestStreamsCountTotal(Song other) {
+        if (this.getStreamsCountTotal() > other.getStreamsCountTotal()){
+            return this.getStreamsCountTotal();
+        } else {
+            return other.getStreamsCountTotal();
+        }
         // TODO compare the total of stream counts of this song across all countries
         //  with the total of the other song
-
-
-        return this.artist.compareTo(other.artist);
-        //work in progess
     }
 
     /**
@@ -147,13 +145,12 @@ public class Song {
      * @return  negative number, zero or positive number according to Comparator conventions
      */
     public int compareForDutchNationalChart(Song other) {
-
-        // TODO compare this song with the other song
-        //  ordening all Dutch songs upfront and then by decreasing total number of streams
-
-
-        return this.countNL;
-        //work in progess
+        if (this.getStreamsCountOfCountry(Country.NL) > other.getStreamsCountOfCountry(Country.NL)){
+            return this.getStreamsCountOfCountry(Country.NL);
+        }
+        else{
+            return other.getStreamsCountOfCountry(Country.NL);
+        }
     }
 
 
