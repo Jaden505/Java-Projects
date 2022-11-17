@@ -172,6 +172,6 @@ public class Song {
 
     @Override
     public String toString() {
-        return artist + "/" + title + "{" + language + "}" + "(total " + getStreamsCountTotal() + ")";
+        return artist + "/" + title + "{" + language + "}" + "(" + getStreamsCountTotal() + ")";
     }
 }
