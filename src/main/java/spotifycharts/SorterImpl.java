@@ -1,5 +1,6 @@
 package spotifycharts;
 
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
@@ -85,27 +86,21 @@ public class SorterImpl<E> implements Sorter<E> {
             // this root item is the worst item of the remaining front part of the lead collection
 
             //swap methode
-            // TODO swap item[0] and item[i];
-            //  this moves item[0] to its designated position
-
             items = swap(0, i, items);
 
-            // TODO the new root may have violated the heap condition
-            //  repair the heap condition on the remaining heap of size i
-
-            heapSink(items, numTops, reverseComparator);
+            heapSink(items, i, reverseComparator);
         }
 
         return items;
     }
 
-    List<E> swap(int x, int y, List <E> myList) {
-        E s = myList.get(x);
+        List<E> swap(int x, int y, List <E> items) {
+        E s = items.get(x);
 
-        myList.set(x, myList.get(y));
-        myList.set(y, s);
+        items.set(x, items.get(y));
+        items.set(y, s);
 
-        return myList;
+        return items;
     }
 
     int parent(int root) {
@@ -146,10 +141,10 @@ public class SorterImpl<E> implements Sorter<E> {
         int prev = 0;
 
         for (int heaper = 1; heaper < heapSize;) {
-            if (comparator.compare(items.get(heaper), items.get(prev)) > 0) break;
-
             if (heaper +1 < heapSize && comparator.compare(items.get(heaper), items.get(heaper+1)) >= 0)
                 heaper++;
+
+            if (comparator.compare(items.get(heaper), items.get(prev)) > 0) break;
 
             else {
                 items = swap(prev, heaper, items);
