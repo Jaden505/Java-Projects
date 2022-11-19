@@ -129,7 +129,12 @@ public class Song {
      * @return  negative number, zero or positive number according to Comparator conventions
      */
     public int compareForDutchNationalChart(Song other) {
-        return -Integer.compare(this.getStreamsCountOfCountry(Country.NL), other.getStreamsCountOfCountry(Country.NL));
+        int languagecompare = this.language.compareTo(other.language);
+        if (languagecompare == 0){
+            return -Integer.compare(this.getStreamsCountTotal(), other.getStreamsCountTotal());
+        }
+        return languagecompare;
+
     }
 
 
