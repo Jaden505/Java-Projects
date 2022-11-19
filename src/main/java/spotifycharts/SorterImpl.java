@@ -143,7 +143,20 @@ public class SorterImpl<E> implements Sorter<E> {
      * @param comparator
      */
     protected void heapSink(List<E> items, int heapSize, Comparator<E> comparator) {
-        // TODO sink items[0] down the heap until
-        //      2*i+1>=heapSize || (items[i] <= items[2*i+1] && items[i] <= items[2*i+2])
+        int prev = 0;
+
+        for (int heaper = 1; heaper < heapSize;) {
+            if (comparator.compare(items.get(heaper), items.get(prev)) > 0) break;
+
+            if (heaper +1 < heapSize && comparator.compare(items.get(heaper), items.get(heaper+1)) >= 0)
+                heaper++;
+
+            else {
+                items = swap(prev, heaper, items);
+
+                prev = heaper;
+                heaper = prev * 2;
+            }
+        }
     }
 }
