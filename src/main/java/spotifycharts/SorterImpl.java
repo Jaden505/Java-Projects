@@ -94,7 +94,7 @@ public class SorterImpl<E> implements Sorter<E> {
         return items;
     }
 
-        List<E> swap(int x, int y, List <E> items) {
+        private List<E> swap(int x, int y, List <E> items) {
         E s = items.get(x);
 
         items.set(x, items.get(y));
@@ -103,7 +103,7 @@ public class SorterImpl<E> implements Sorter<E> {
         return items;
     }
 
-    int parent(int root) {
+    private int parent(int root) {
         return root / 2;
     }
 
