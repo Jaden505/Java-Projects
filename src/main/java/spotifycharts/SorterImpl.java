@@ -94,7 +94,14 @@ public class SorterImpl<E> implements Sorter<E> {
         return items;
     }
 
-        private List<E> swap(int x, int y, List <E> items) {
+    /**
+     * Swap items in items list by index
+     * @param x index of first element
+     * @param y index of second element
+     * @param items
+     * @return
+     */
+    protected List<E> swap(int x, int y, List <E> items) {
         E s = items.get(x);
 
         items.set(x, items.get(y));
@@ -103,6 +110,11 @@ public class SorterImpl<E> implements Sorter<E> {
         return items;
     }
 
+    /**
+     * Returns the devident of 2 from root parameter. Used in heapSwim
+     * @param root
+     * @return Divident of 2
+     */
     private int parent(int root) {
         return root / 2;
     }
@@ -120,10 +132,11 @@ public class SorterImpl<E> implements Sorter<E> {
     protected void heapSwim(List<E> items, int heapSize, Comparator<E> comparator) {
         int heaper = heapSize-1;
 
-        while (heapSize > 0 && comparator.compare(items.get(parent(heaper)), items.get(heaper)) > 0) {
+        // While heaper / 2 is bigger than heaper according to comparator
+        while (heaper > 0 && comparator.compare(items.get(parent(heaper)), items.get(heaper)) > 0) {
             items = swap(heaper, parent(heaper), items);
 
-            heaper = parent(heaper);
+            heaper = parent(heaper); // Divide heaper by 2
         }
     }
 
@@ -141,9 +154,11 @@ public class SorterImpl<E> implements Sorter<E> {
         int prev = 0;
 
         for (int heaper = 1; heaper < heapSize;) {
+            // Check if heaper +1 is smaller than heaper and heapsize
             if (heaper +1 < heapSize && comparator.compare(items.get(heaper), items.get(heaper+1)) >= 0)
                 heaper++;
 
+            // Stop sinking if heaper is bigger than prev according to the comparator
             if (comparator.compare(items.get(heaper), items.get(prev)) > 0) break;
 
             else {
