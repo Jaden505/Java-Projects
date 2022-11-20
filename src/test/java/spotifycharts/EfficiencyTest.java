@@ -9,19 +9,14 @@ class EfficiencyTest {
     private SongSorter songSorter;
     private SorterImpl<Song> test;
     private List<Song> fewSongs;
-    private List<Song> manySongs;
     private List<Song> alot;
-    private Comparator<Song> rankingScheme = Song::compareByHighestStreamsCountTotal;
-    private List<Song> heap;
-
-    private Comparator<Song> heapComparator = Comparator.comparing(Song::getTitle);
 
     @BeforeEach
     void setup() {
         ChartsCalculator chartsCalculator = new ChartsCalculator(1L);
         this.songSorter = new SongSorter();
         test = new SorterImpl<>();
-        fewSongs = new ArrayList(chartsCalculator.registerStreamedSongs(10));
+        fewSongs = new ArrayList(chartsCalculator.registerStreamedSongs(1000000));
         alot = new ArrayList<>(fewSongs);
     }
 
@@ -37,7 +32,11 @@ class EfficiencyTest {
         long end = System.nanoTime();
         long duration = end - start;
 
-        System.out.println("heapTester Time:"+duration);
+//        System.out.println("heapTester Time:"+duration);
+
+        double heapTimeInSecond = (double) duration / 1_000_000_000;
+        System.out.println("heapTester Time: "+ heapTimeInSecond + " seconds");
+
     }
 
     void bubbleChecker() {
@@ -52,7 +51,10 @@ class EfficiencyTest {
         long end = System.nanoTime();
         long duration = end - start;
 
-        System.out.println("bubbleChecker Time:"+duration);
+//        System.out.println("bubbleChecker Time:"+duration);
+
+        double bubbleTimeInSecond = (double) duration / 1_000_000_000;
+        System.out.println("bubbleChecker Time: "+ bubbleTimeInSecond + " seconds");
     }
 
     void quicksortChecker() {
@@ -67,7 +69,10 @@ class EfficiencyTest {
         long end = System.nanoTime();
         long duration = end - start;
 
-        System.out.println("quicksortTester Time:"+duration);
+//        System.out.println("quicksortTester Time:"+duration);
+
+        double quickSortTimeInSecond = (double) duration / 1_000_000_000;
+        System.out.println("quicksortTester Time: "+ quickSortTimeInSecond + " seconds");
     }
 
 }
