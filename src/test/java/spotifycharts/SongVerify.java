@@ -47,64 +47,14 @@ public class SongVerify {
     }
 
     @Test
-    void songStreamsCountSetsAndGetsCorrectly() {
-        assertEquals(40, songBYC.getStreamsCountOfCountry(Song.Country.NL),
-                "Streams count was not registered correctly");
-        assertEquals(20, songBYC.getStreamsCountOfCountry(Song.Country.BE),
-                "Streams count was not registered correctly");
-        assertEquals(0, songBYC.getStreamsCountOfCountry(Song.Country.FR),
-                "Empty streams count is not reported correctly");
-
-
-
-        songBYC.setStreamsCountOfCountry(Song.Country.NL,30);
-        assertEquals(30, songBYC.getStreamsCountOfCountry(Song.Country.NL),
-                "Streams count was not updated correctly");
-    }
-
-
-    @Test
-    void toStringFormatsCorrectly() {
-        assertEquals("Beyoncé/CUFF IT{EN}(160)", songBYC.toString());
-        assertEquals("Kris Kross Amsterdam/Vluchtstrook{NL}(70)", songKKA.toString());
-        assertEquals("Bad Bunny/La Coriente{SP}(0)", songBB.toString());
+    void compareEqualSongsReturnZero() {
+        assertEquals(0, rankingSchemeTotal.compare(songTS, songTS), "Comparing song to itself not return zero (equal)");
+        assertEquals(0, rankingSchemeDutchNational.compare(songBYC, songBYC), "Comparing song to itself not return zero (equal)");
     }
 
     @Test
-    public void streamsCountTotalCalculatesCorrectly() {
-        assertEquals(160, songBYC.getStreamsCountTotal(),
-                "Streams count total was not calculated correctly");
-        assertEquals(70, songKKA.getStreamsCountTotal(),
-                "Streams count total was not calculated correctly");
-        assertEquals(0, songBB.getStreamsCountTotal(),
-                "Streams count total was not calculated correctly");
-
-        songBYC.setStreamsCountOfCountry(Song.Country.NL,30);
-        assertEquals(150, songBYC.getStreamsCountTotal(),
-                "Streams count total was not updated correctly");
-        songBYC.setStreamsCountOfCountry(Song.Country.FR,35);
-        assertEquals(185, songBYC.getStreamsCountTotal(),
-                "Streams count total was not updated correctly");
-        songBYC.setStreamsCountOfCountry(Song.Country.NL,0);
-        assertEquals(155, songBYC.getStreamsCountTotal(),
-                "Streams count total was not updated correctly");
-    }
-
-    private static int sign(int a) {
-        return a > 0 ? +1 : a < 0 ? -1 : a;
-    }
-
-    private void checkRankingScheme(String schemeName, Comparator<Song> rankingScheme,
-                                   int bycVSkka, int bycVSts, int kkaVSts, int kkaVSjvt, int bbVSbyc) {
-        assertEquals(bycVSkka, sign(rankingScheme.compare(songBYC, songKKA)),
-                String.format("'%s'-comparator does not properly compare '%s' with '%s'", schemeName, songBYC, songKKA));
-        assertEquals(bycVSts, sign(rankingScheme.compare(songBYC, songTS)),
-                String.format("'%s'-comparator does not properly compare '%s' with '%s'", schemeName, songBYC, songTS));
-        assertEquals(kkaVSts, sign(rankingScheme.compare(songKKA, songTS)),
-                String.format("'%s'-comparator does not properly compare '%s' with '%s'", schemeName, songKKA, songTS));
-        assertEquals(kkaVSjvt, sign(rankingScheme.compare(songKKA, songJVT)),
-                String.format("'%s'-comparator does not properly compare '%s' with '%s'", schemeName, songKKA, songJVT));
-        assertEquals(bbVSbyc, sign(rankingScheme.compare(songBB, songBYC)),
-                String.format("'%s'-comparator does not properly compare '%s' with '%s'", schemeName, songBB, songBYC));
+    void compareEqualsNegativeBackwards() {
+        assertEquals(-rankingSchemeTotal.compare(songBYC, songTS), rankingSchemeTotal.compare(songTS, songBYC), "Compare elements switched places don't equal it's negative");
+        assertEquals(-rankingSchemeDutchNational.compare(songBYC, songBB), rankingSchemeDutchNational.compare(songBB, songBYC), "Compare elements switched places don't equal it's negative");
     }
 }
