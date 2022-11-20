@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="f85e8287-dc84-492d-9c35-cefc89a26899" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2HUsl4OikyTXqeirTDX3SDbs9ET" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "/Users/jadenvanrijswijk/Desktop/Programming files/IntelliJ/ADS",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.." />
+      <recent name="$PROJECT_DIR$/Assignment5" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Assignment3" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.SongSorterVerify">
+    <configuration name="SpotifyChartsMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SpotifyChartsMain" />
+      <module name="spotify-charts" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SongSorterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spotify-charts" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spotifycharts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="spotifycharts" />
+      <option name="MAIN_CLASS_NAME" value="spotifycharts.SongSorterTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SongSorterVerify" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spotify-charts" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spotifycharts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="spotifycharts" />
+      <option name="MAIN_CLASS_NAME" value="spotifycharts.SongSorterVerify" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SongTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spotify-charts" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spotifycharts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="spotifycharts" />
+      <option name="MAIN_CLASS_NAME" value="spotifycharts.SongTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SongVerify" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="spotify-charts" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="spotifycharts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="spotifycharts" />
+      <option name="MAIN_CLASS_NAME" value="spotifycharts.SongVerify" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.SongSorterVerify" />
+        <item itemvalue="JUnit.SongSorterTest" />
+        <item itemvalue="JUnit.SongVerify" />
+        <item itemvalue="Application.SpotifyChartsMain" />
+        <item itemvalue="JUnit.SongTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f85e8287-dc84-492d-9c35-cefc89a26899" name="Changes" comment="" />
+      <created>1668351147429</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1668351147429</updated>
+      <workItem from="1668351150172" duration="1385000" />
+      <workItem from="1668606773602" duration="2446000" />
+      <workItem from="1668699774398" duration="17559000" />
+      <workItem from="1668852888178" duration="3927000" />
+      <workItem from="1668862601081" duration="4099000" />
+      <workItem from="1668937490013" duration="3818000" />
+      <workItem from="1668942690848" duration="1250000" />
+      <workItem from="1668947856370" duration="49000" />
+      <workItem from="1668981338592" duration="682000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
