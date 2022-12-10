@@ -41,10 +41,18 @@ public class Candidate {
         // every candidate shall have a last name
         String fullName = lastName;
 
-        // TODO prepend optional lastNamePrefix and optional firstName
-        //  to compose a unique and nicely formatted full name
+        if (lastNamePrefix == null && firstName == null){
+            fullName = lastName;
+        } else if (lastNamePrefix == null) {
+            fullName = firstName + " " + lastName;
+        } else if (firstName == null) {
+            fullName =  lastNamePrefix + " " + lastName;
+        } else {
+            fullName = firstName + " " + lastNamePrefix + " " + lastName;
+        }
 
 
+        System.out.println(fullName);
 
         return fullName;
     }
