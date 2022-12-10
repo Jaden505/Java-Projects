@@ -1,0 +1,67 @@
+Nuenen, Gerwen en Nederwetten
+Het gemeente telling-bestand van Nuenen, Gerwen en Nederwetten (Telling_TK2021_gemeente_Nuenen_Gerwen_en_Nederwetten.eml.xml) is de gemeentenaam in het bestand gecorrigeerd waardoor de hashcode afwijkt van die in document N 11 is vermeld.
+
+Hoeksche Waard
+Het gemeente telling-bestand van Hoeksche Waard (Telling_TK2021_gemeente_Hoeksche_Waard.eml.xml) is de gemeentenaam in het bestand gecorrigeerd waardoor de hashcode afwijkt van die in document N 11 is vermeld.
+
+Stein
+In het telling-bestand van Stein (Telling_TK2021_gemeente_Stein.eml.xml) wordt een aantal van 24 ongeldige stemmen vermeld. Dit aantal is niet overgenomen door hoofdstembureau Maastricht waardoor in het telling-bestand van de kieskring Maatstricht (Telling_TK2021_kieskring_Maastricht.eml.xml) het aantal ongeldige stemmen van de gemeente Stein 0 is. Het officele aantal is 24 ongeldige stemmen in de gemeente Stein.
+
+Bij de volgende gemeenten is het vermelde aantal kiesgerechtigden in het kieskring telling-bestand 0. Het aantal kiesgerechtigden is achter de gemeenten vermeld.
+Berg en Dal: 28.200
+Bloemendaal: 17.760
+Haarlem: 116.791
+Leidschendam-Voorburg: 56.038
+Weststellingwerf: 21.073
+Zandvoort: 13.503
+
+Bij de volgende gemeenten is het vermelde aantal kiesgerechtigden in het gemeente telling-bestand 0. Het aantal kiesgerechtigden is achter de gemeenten vermeld.
+Aalten: 21.386
+Alblasserdam: 15.070
+Ameland: 2.935
+Berg en Dal: 28.200
+Bergen op Zoom: 51.656
+Beverwijk: 30.700
+Bloemendaal: 17.760
+Boxmeer: 23.584
+Cranendonck: 16.178
+De Bilt: 33.103
+Den Helder: 44.777
+Dongen: 20.776
+Dordrecht: 90.249
+Goirle: 18.782
+Haarlem: 11.679
+Hendrik-Ido-Ambacht: 23.105
+Hollands Kroon: 37.210
+Hoorn: 55.736
+Lansingerland: 45.917
+Leiden: 93.046
+Leiderdorp: 21.104
+Middelburg: 37.650
+Montfoort: 10.675
+Noordenveld: 25.307
+Nuenen, Gerwen en Nederwetten: 18.561
+Raalte: 30.201
+Schiedam: 55.801
+Sliedrecht: 19.525
+Smallingerland: 43.700
+Son en Breugel: 13.456
+Steenwijkerland: 35.106
+Tubbergen: 16.884
+Venlo: 76.044
+Vught: 24.436
+Wassenaar: 18.139
+Waterland: 13.588
+Weststellingwerf: 21.073
+Wijk bij Duurstede: 18.913
+Zandvoort: 13.503
+
+Bij de volgende gemeenten is het vermelde aantal kiesgerechtigden in het gemeente telling-bestand onjuist. Het correcte aantal kiesgerechtigden is achter de gemeenten vermeld.
+Coevorden: 50.214 -> 28.398
+Diemen: 28.280 -> 22.280
+Doetinchem: 33.268 -> 46.245
+Kapelle: 13.301 -> 9.840
+Rotterdam: 605.457 -> 460.271
+Vijfheerenlanden: 42.921 -> 44.353
+Weert: 56.884 -> 39.345
+Zwolle: 84.879 -> 99.879
