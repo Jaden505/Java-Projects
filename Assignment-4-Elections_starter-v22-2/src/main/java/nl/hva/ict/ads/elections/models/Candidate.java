@@ -75,11 +75,11 @@ public class Candidate {
         if (!(o instanceof Candidate)) return false;
         Candidate other = (Candidate) o;
 
-        // TODO provide the equality criterion to identify unique candidate instances
-        //  hint: every candidate shall have a unique full name within his/her party.
 
 
-        return false; // replace by a proper outcome
+
+        return   this.getFullName().equals(other.getFullName())
+                && this.getParty().equals(other.getParty());
     }
 
     @Override
@@ -87,8 +87,8 @@ public class Candidate {
         // TODO provide a hashCode that is consistent with above equality criterion
 
 
-        return 0; // replace by a proper outcome
-    }
+        return Objects.hash(this.getFullName(), this.party);
+     }
 
     public String getFirstName() {
         return firstName;
