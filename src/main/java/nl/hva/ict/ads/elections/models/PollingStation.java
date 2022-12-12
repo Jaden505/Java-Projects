@@ -38,7 +38,10 @@ public class PollingStation {
      * @param numberOfVotes
      */
     public void addVotes(Candidate candidate, int numberOfVotes) {
-        this.votesByCandidate.put(candidate, numberOfVotes);
+        if (votesByCandidate.get(candidate) == null)
+            this.votesByCandidate.put(candidate, numberOfVotes);
+        else
+            this.votesByCandidate.replace(candidate, votesByCandidate.get(candidate)+numberOfVotes);
     }
 
     public int getVotes(Candidate candidate) {
