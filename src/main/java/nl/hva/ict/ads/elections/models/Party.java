@@ -67,15 +67,10 @@ public class Party {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Party)) return false;
-        Party other = (Party) o;
+        if (!(o instanceof Party other)) return false;
 
-
-        return this.getCandidates().equals(other.candidates);
-
-        // TODO provide the equality criterion to identify unique party instances
-
-// replace by a proper outcome
+        return this.getCandidates().equals(other.candidates)
+                && this.getId() == other.getId();
     }
 
     @Override

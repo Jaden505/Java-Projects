@@ -5,17 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f85e8287-dc84-492d-9c35-cefc89a26899" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Candidate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Candidate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Party.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Party.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/PollingStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/PollingStation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/EML_bestanden_TK2021_HvA_UvA/Gemeente tellingen/09 Amsterdam/Telling_TK2021_gemeente_zone_HvA_UvA.eml.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/EML_bestanden_TK2021_HvA_UvA/Kandidatenlijsten_TK2021_Amsterdam.eml.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/EML_bestanden_TK2021_HvA_UvA/Kandidatenlijsten_TK2021_Den_Helder.eml.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/EML_bestanden_TK2021_HvA_UvA/Opmerking bestanden TK2021.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/EML_bestanden_TK2021_HvA_UvA/Verkiezingsdefinitie_TK2021.eml.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/logging.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Candidate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Candidate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Party.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Party.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/PollingStation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/PollingStation.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +63,7 @@
       <recent name="$PROJECT_DIR$/Assignment3" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PartyTest">
+  <component name="RunManager" selected="JUnit.CandidateTest">
     <configuration name="ElectionsMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="nl.hva.ict.ads.elections.ElectionsMain" />
       <module name="elections" />
@@ -117,16 +107,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SongSorterTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spotify-charts" />
+    <configuration name="PollingStationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="elections" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="spotifycharts.*" />
+          <option name="PATTERN" value="nl.hva.ict.ads.elections.models.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="spotifycharts" />
-      <option name="MAIN_CLASS_NAME" value="spotifycharts.SongSorterTest" />
+      <option name="PACKAGE_NAME" value="nl.hva.ict.ads.elections.models" />
+      <option name="MAIN_CLASS_NAME" value="nl.hva.ict.ads.elections.models.PollingStationTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -149,11 +139,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PartyTest" />
         <item itemvalue="JUnit.CandidateTest" />
+        <item itemvalue="JUnit.PollingStationTest" />
+        <item itemvalue="JUnit.PartyTest" />
         <item itemvalue="Application.ElectionsMain" />
         <item itemvalue="JUnit.SongSorterVerify" />
-        <item itemvalue="JUnit.SongSorterTest" />
       </list>
     </recent_temporary>
   </component>
