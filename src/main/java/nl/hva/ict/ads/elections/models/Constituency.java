@@ -63,15 +63,11 @@ public class Constituency {
         this.rankedCandidatesByParty.computeIfAbsent(party, c -> new TreeMap<>());
 
         // Check for duplicates
-        List<Integer> ranks = rankedCandidatesByParty.values().stream()
-                .flatMap(navigableMap -> navigableMap.keySet().stream()).toList();
+        boolean dup_rank = rankedCandidatesByParty.get(party).entrySet().stream().anyMatch(c -> c.getKey() == rank);
 
-        if (ranks.contains(rank) || getCandidates(candidate.getParty()).contains(candidate)) return false;
+        if (dup_rank || getCandidates(candidate.getParty()).contains(candidate)) return false;
 
-        NavigableMap<Integer, Candidate> candidateWithRank = new TreeMap<>();
-        candidateWithRank.put(rank,candidate);
-        this.rankedCandidatesByParty.put(party, candidateWithRank);
-
+        this.rankedCandidatesByParty.get(party).put(rank, candidate);
 
         return true;
     }
@@ -101,7 +97,6 @@ public class Constituency {
      */
     public final List<Candidate> getCandidates(Party party) {
         // TODO: return a list with all registered candidates of a given party in order of their rank
-
         return new ArrayList<>(rankedCandidatesByParty.get(party).values());
     }
 

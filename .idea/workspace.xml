@@ -66,7 +66,7 @@
       <recent name="$PROJECT_DIR$/Assignment3" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ConstituencyTest.getCandidatesShouldReturnAllCandidatesOfAPartyInOrderOfRank">
+  <component name="RunManager" selected="JUnit.ConstituencyTest">
     <configuration name="CandidateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="elections" />
       <extension name="coverage">
@@ -146,8 +146,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ConstituencyTest.getCandidatesShouldReturnAllCandidatesOfAPartyInOrderOfRank" />
         <item itemvalue="JUnit.ConstituencyTest" />
+        <item itemvalue="JUnit.ConstituencyTest.getCandidatesShouldReturnAllCandidatesOfAPartyInOrderOfRank" />
         <item itemvalue="JUnit.ConstituencyTest.registerShouldFailOnDuplicateRegistration" />
         <item itemvalue="JUnit.PollingStationTest" />
         <item itemvalue="JUnit.CandidateTest" />
@@ -171,7 +171,7 @@
       <workItem from="1668942690848" duration="1250000" />
       <workItem from="1668947856370" duration="49000" />
       <workItem from="1668981338592" duration="682000" />
-      <workItem from="1670853980485" duration="13527000" />
+      <workItem from="1670853980485" duration="14641000" />
     </task>
     <servers />
   </component>
