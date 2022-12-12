@@ -75,17 +75,12 @@ public class Candidate {
         if (!(o instanceof Candidate)) return false;
         Candidate other = (Candidate) o;
 
-
-
-
         return   this.getFullName().equals(other.getFullName())
                 && this.getParty().equals(other.getParty());
     }
 
     @Override
     public int hashCode() {
-
-
         return Objects.hash(this.getFullName(), this.party);
      }
 

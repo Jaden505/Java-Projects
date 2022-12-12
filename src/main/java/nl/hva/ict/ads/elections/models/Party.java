@@ -29,10 +29,7 @@ public class Party {
     public Party(int id, String name) {
         this.id = id;
         this.name = name;
-
-        // TODO initialise this.candidates with an appropriate Set implementation
-
-
+        this.candidates = new HashSet<>();
     }
 
     /**
@@ -46,17 +43,17 @@ public class Party {
      *              or otherwise the newCandidate itself
      */
     public Candidate addOrGetCandidate(Candidate newCandidate) {
-
-        // associate the new Candidate with this party
         newCandidate.setParty(this);
 
-        // TODO try to add the newCandidate to the set of candidates,
-        //  and if that fails then return the existing duplicate instance that is in the set already.
+        for (Candidate candidate : candidates) {
+            if (candidate.equals(newCandidate)) {
+                newCandidate.setParty(null);
+                return candidate;
+            }
+        }
+        this.candidates.add(newCandidate);
 
-
-
-
-        return null; // replace by a proper outcome
+        return newCandidate;
     }
 
     @Override
@@ -74,7 +71,7 @@ public class Party {
         Party other = (Party) o;
 
 
-        return   this.getCandidates().equals(other.candidates);
+        return this.getCandidates().equals(other.candidates);
 
         // TODO provide the equality criterion to identify unique party instances
 
@@ -84,8 +81,6 @@ public class Party {
     @Override
     public int hashCode() {
         return Objects.hash(this.candidates);
-
-
     }
 
     public int getId() {

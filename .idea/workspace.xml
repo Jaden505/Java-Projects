@@ -4,7 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f85e8287-dc84-492d-9c35-cefc89a26899" name="Changes" comment="" />
+    <list default="true" id="f85e8287-dc84-492d-9c35-cefc89a26899" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Candidate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Candidate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Party.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Party.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/PollingStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/PollingStation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/EML_bestanden_TK2021_HvA_UvA/Gemeente tellingen/09 Amsterdam/Telling_TK2021_gemeente_zone_HvA_UvA.eml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/EML_bestanden_TK2021_HvA_UvA/Kandidatenlijsten_TK2021_Amsterdam.eml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/EML_bestanden_TK2021_HvA_UvA/Kandidatenlijsten_TK2021_Den_Helder.eml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/EML_bestanden_TK2021_HvA_UvA/Opmerking bestanden TK2021.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/EML_bestanden_TK2021_HvA_UvA/Verkiezingsdefinitie_TK2021.eml.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/logging.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Candidate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Candidate.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Party.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Party.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/PollingStation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/PollingStation.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -38,17 +51,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/Users/jadenvanrijswijk/Desktop/Programming files/IntelliJ/ADS",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/jadenvanrijswijk/Desktop/Programming files/IntelliJ/ADS&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/.." />
@@ -56,14 +69,50 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Assignment3" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Assignment3" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SongSorterVerify">
-    <configuration name="SpotifyChartsMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="SpotifyChartsMain" />
-      <module name="spotify-charts" />
+  <component name="RunManager" selected="JUnit.PartyTest">
+    <configuration name="ElectionsMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="nl.hva.ict.ads.elections.ElectionsMain" />
+      <module name="elections" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="nl.hva.ict.ads.elections.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CandidateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="elections" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="nl.hva.ict.ads.elections.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="nl.hva.ict.ads.elections.models" />
+      <option name="MAIN_CLASS_NAME" value="nl.hva.ict.ads.elections.models.CandidateTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PartyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="elections" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="nl.hva.ict.ads.elections.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="nl.hva.ict.ads.elections.models" />
+      <option name="MAIN_CLASS_NAME" value="nl.hva.ict.ads.elections.models.PartyTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -98,43 +147,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SongTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spotify-charts" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="spotifycharts.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="spotifycharts" />
-      <option name="MAIN_CLASS_NAME" value="spotifycharts.SongTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SongVerify" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="spotify-charts" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="spotifycharts.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="spotifycharts" />
-      <option name="MAIN_CLASS_NAME" value="spotifycharts.SongVerify" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PartyTest" />
+        <item itemvalue="JUnit.CandidateTest" />
+        <item itemvalue="Application.ElectionsMain" />
         <item itemvalue="JUnit.SongSorterVerify" />
         <item itemvalue="JUnit.SongSorterTest" />
-        <item itemvalue="JUnit.SongVerify" />
-        <item itemvalue="Application.SpotifyChartsMain" />
-        <item itemvalue="JUnit.SongTest" />
       </list>
     </recent_temporary>
   </component>
