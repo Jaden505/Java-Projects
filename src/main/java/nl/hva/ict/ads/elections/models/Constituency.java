@@ -62,9 +62,11 @@ public class Constituency {
         // Create new ballot map if it doesn't exist
         this.rankedCandidatesByParty.computeIfAbsent(party, c -> new TreeMap<>());
 
-        Object[] candidates = Arrays.stream(rankedCandidatesByParty.values().toArray()).toArray();
-        System.out.println(Arrays.toString(candidates));
-//        if () return false;
+        // Check for duplicates
+        List<Integer> ranks = rankedCandidatesByParty.values().stream()
+                .flatMap(navigableMap -> navigableMap.keySet().stream()).toList();
+
+        if (ranks.contains(rank) || getCandidates(candidate.getParty()).contains(candidate)) return false;
 
         NavigableMap<Integer, Candidate> candidateWithRank = new TreeMap<>();
         candidateWithRank.put(rank,candidate);
@@ -99,11 +101,8 @@ public class Constituency {
      */
     public final List<Candidate> getCandidates(Party party) {
         // TODO: return a list with all registered candidates of a given party in order of their rank
-        //  hint: if the implementation classes of rankedCandidatesByParty are well chosen, this only takes one line of code
-        //  hint: the resulting list may be immutable at your choice of implementation.
 
-
-        return null; // replace by a proper outcome
+        return new ArrayList<>(rankedCandidatesByParty.get(party).values());
     }
 
     /**
@@ -112,11 +111,8 @@ public class Constituency {
      * @return the set of all candidates in this Constituency.
      */
     public Set<Candidate> getAllCandidates() {
-        // TODO collect all candidates of all parties of this Constituency into a Set.
-        //  hint: flatMap may help...
-
-
-        return null;    // replace by a proper outcome
+        return rankedCandidatesByParty.values().stream().flatMap(navigableMap ->
+                        navigableMap.values().stream()).collect(Collectors.toSet());
     }
 
     /**

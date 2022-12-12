@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f85e8287-dc84-492d-9c35-cefc89a26899" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Assignment-4-Elections-v22.1 2.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom 2.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Constituency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Constituency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/PollingStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/PollingStation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +66,7 @@
       <recent name="$PROJECT_DIR$/Assignment3" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ConstituencyTest.registerShouldFailOnDuplicateRegistration">
+  <component name="RunManager" selected="JUnit.ConstituencyTest.getCandidatesShouldReturnAllCandidatesOfAPartyInOrderOfRank">
     <configuration name="CandidateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="elections" />
       <extension name="coverage">
@@ -100,6 +97,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ConstituencyTest.getCandidatesShouldReturnAllCandidatesOfAPartyInOrderOfRank" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="elections" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="nl.hva.ict.ads.elections.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="nl.hva.ict.ads.elections.models" />
+      <option name="MAIN_CLASS_NAME" value="nl.hva.ict.ads.elections.models.ConstituencyTest" />
+      <option name="METHOD_NAME" value="getCandidatesShouldReturnAllCandidatesOfAPartyInOrderOfRank" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ConstituencyTest.registerShouldFailOnDuplicateRegistration" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="elections" />
       <extension name="coverage">
@@ -112,21 +125,6 @@
       <option name="MAIN_CLASS_NAME" value="nl.hva.ict.ads.elections.models.ConstituencyTest" />
       <option name="METHOD_NAME" value="registerShouldFailOnDuplicateRegistration" />
       <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PartyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="elections" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="nl.hva.ict.ads.elections.models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="nl.hva.ict.ads.elections.models" />
-      <option name="MAIN_CLASS_NAME" value="nl.hva.ict.ads.elections.models.PartyTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -148,11 +146,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ConstituencyTest.registerShouldFailOnDuplicateRegistration" />
+        <item itemvalue="JUnit.ConstituencyTest.getCandidatesShouldReturnAllCandidatesOfAPartyInOrderOfRank" />
         <item itemvalue="JUnit.ConstituencyTest" />
+        <item itemvalue="JUnit.ConstituencyTest.registerShouldFailOnDuplicateRegistration" />
         <item itemvalue="JUnit.PollingStationTest" />
         <item itemvalue="JUnit.CandidateTest" />
-        <item itemvalue="JUnit.PartyTest" />
       </list>
     </recent_temporary>
   </component>
@@ -173,7 +171,7 @@
       <workItem from="1668942690848" duration="1250000" />
       <workItem from="1668947856370" duration="49000" />
       <workItem from="1668981338592" duration="682000" />
-      <workItem from="1670853980485" duration="8693000" />
+      <workItem from="1670853980485" duration="13527000" />
     </task>
     <servers />
   </component>
