@@ -73,20 +73,19 @@ public class Party {
         if (!(o instanceof Party)) return false;
         Party other = (Party) o;
 
+
+        return   this.getCandidates().equals(other.candidates);
+
         // TODO provide the equality criterion to identify unique party instances
 
-
-
-        return false; // replace by a proper outcome
+// replace by a proper outcome
     }
 
     @Override
     public int hashCode() {
-        // TODO provide a hashCode that is consistent with above equality criterion
+        return Objects.hash(this.candidates);
 
 
-
-        return 0; // replace by a proper outcome
     }
 
     public int getId() {

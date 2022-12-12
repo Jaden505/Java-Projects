@@ -84,7 +84,6 @@ public class Candidate {
 
     @Override
     public int hashCode() {
-        // TODO provide a hashCode that is consistent with above equality criterion
 
 
         return Objects.hash(this.getFullName(), this.party);
