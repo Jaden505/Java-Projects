@@ -14,7 +14,7 @@ import java.util.stream.Collectors;
  * Each polling station has an Id, but multiple vote counts can be submitted for the same polling station
  * possibly distinguishing different voting days, or votes by mail.
  */
-public class PollingStation {
+public class PollingStation implements Comparable<PollingStation> {
 
     private final String id;
     private final String zipCode;
@@ -190,5 +190,10 @@ public class PollingStation {
             return pollingStation;
         }
         return null;
+    }
+
+    @Override
+    public int compareTo(PollingStation o) {
+        return 0;
     }
 }

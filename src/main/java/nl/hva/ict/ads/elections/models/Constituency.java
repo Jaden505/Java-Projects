@@ -6,6 +6,7 @@ import javax.xml.stream.XMLStreamException;
 import java.util.*;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 /**
  * A Constituency (kieskring) is a regional district (of multiple cities and villages).
@@ -40,8 +41,8 @@ public class Constituency {
 
         // TODO initialise this.rankedCandidatesByParty with an appropriate Map implementation
         //  and this.pollingStations with an appropriate Set implementation organised by zipCode and Id
-
-
+        this.rankedCandidatesByParty = new HashMap<>();
+        this.pollingStations = new TreeSet<>();
     }
 
     /**
@@ -56,10 +57,21 @@ public class Constituency {
     public boolean register(int rank, Candidate candidate) {
         // TODO  register the candidate in this constituency for his/her party at the given rank (ballot position)
         //  hint: try to use computeIfAbsent to efficiently create and insert an empty ballot map into rankedCandidatesByParty only when required
+        Party party = candidate.getParty();
+
+        // Create new ballot map if it doesn't exist
+        this.rankedCandidatesByParty.computeIfAbsent(party, c -> new TreeMap<>());
+
+        Object[] candidates = Arrays.stream(rankedCandidatesByParty.values().toArray()).toArray();
+        System.out.println(Arrays.toString(candidates));
+//        if () return false;
+
+        NavigableMap<Integer, Candidate> candidateWithRank = new TreeMap<>();
+        candidateWithRank.put(rank,candidate);
+        this.rankedCandidatesByParty.put(party, candidateWithRank);
 
 
-
-        return false;    // replace by a proper outcome
+        return true;
     }
 
     /**
@@ -67,12 +79,7 @@ public class Constituency {
      * @return
      */
     public Collection<Party> getParties() {
-        // TODO: return all parties that have been registered at this constituency
-        //  hint: there is no need to build a new collection; just return what you have got...
-
-
-
-        return null;    // replace by a proper outcome
+        return this.rankedCandidatesByParty.keySet().stream().filter(c -> c.getCandidates().size() >= 1).collect(Collectors.toList());
     }
 
     /**
@@ -82,10 +89,7 @@ public class Constituency {
      * @return
      */
     public Candidate getCandidate(Party party, int rank) {
-        // TODO: return the candidate at the given rank in the given party
-
-
-        return null;    // replace by a proper outcome
+        return rankedCandidatesByParty.get(party).get(rank);
     }
 
     /**
