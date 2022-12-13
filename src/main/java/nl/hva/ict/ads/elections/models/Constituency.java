@@ -39,10 +39,9 @@ public class Constituency implements Comparable<Constituency> {
         this.id = id;
         this.name = name;
 
-        // TODO initialise this.rankedCandidatesByParty with an appropriate Map implementation
-        //  and this.pollingStations with an appropriate Set implementation organised by zipCode and Id
         this.rankedCandidatesByParty = new HashMap<>();
-        this.pollingStations = new TreeSet<>();
+        this.pollingStations = new TreeSet<>(Comparator.comparing(PollingStation::getId)
+                .thenComparing(PollingStation::getZipCode));
     }
 
     /**
@@ -132,12 +131,10 @@ public class Constituency implements Comparable<Constituency> {
      * @return
      */
     public Map<Party,Integer> getVotesByParty() {
-        // TODO prepare a map of total number of votes per party
-
-
-        return null; // replace by a proper outcome
+        return pollingStations.stream().map(PollingStation::getVotesByParty)
+                .flatMap(m -> m.entrySet().stream())
+                .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue, Integer::sum));
     }
-
     /**
      * adds a polling station to this constituency
      * @param pollingStation
