@@ -40,8 +40,7 @@ public class Election {
      * @return all parties participating in at least one constituency, without duplicates
      */
     public Collection<Party> getParties() {
-//         TODO: return all parties that have been registered for the election
-//          hint: there is no need to build a new collection; just return what you have got...
+
 
 
         return parties.values();
@@ -110,6 +109,10 @@ public class Election {
         // TODO build the collection of candidates with duplicate names across parties
         //   Hint: There are multiple approaches possible,
         //   if you cannot think of one, read the hints at the bottom of this file.
+
+        // create a set of candidates with duplicate names
+
+        Set<Candidate> candidatesWithDuplicateNames = new HashSet<>();
 
 
         return null; // replace by a proper outcome

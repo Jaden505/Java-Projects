@@ -5,16 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f85e8287-dc84-492d-9c35-cefc89a26899" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Candidate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Candidate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Election.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Election.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Party.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Party.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Candidate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Candidate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Election.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Party.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Party.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Constituency.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Constituency.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -166,8 +159,8 @@
         <item itemvalue="JUnit.ElectionTest (1)" />
         <item itemvalue="JUnit.PollingStationTest" />
         <item itemvalue="JUnit.PartyTest" />
-        <item itemvalue="JUnit.CandidateTest" />
         <item itemvalue="JUnit.ConstituencyTest (1)" />
+        <item itemvalue="JUnit.CandidateTest" />
       </list>
     </recent_temporary>
   </component>
@@ -191,7 +184,7 @@
       <workItem from="1670853980485" duration="18006000" />
       <workItem from="1670930757523" duration="762000" />
       <workItem from="1670932860923" duration="376000" />
-      <workItem from="1670947824714" duration="1821000" />
+      <workItem from="1670947824714" duration="2753000" />
     </task>
     <servers />
   </component>
