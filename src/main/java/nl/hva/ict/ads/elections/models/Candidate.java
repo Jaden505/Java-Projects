@@ -52,7 +52,6 @@ public class Candidate {
         }
 
 
-        System.out.println(fullName);
 
         return fullName;
     }
