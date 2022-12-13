@@ -23,7 +23,7 @@ import java.util.stream.Stream;
  * Navigable SubSets of PollingStations within a range of zipcodes can be retrieved efficiently.
  * Votes can be collected by Candidate and by Party across all polling stations.
  */
-public class Constituency {
+public class Constituency implements Comparable<Constituency> {
 
     private final int id;
     private final String name;
@@ -77,7 +77,7 @@ public class Constituency {
      * @return
      */
     public Collection<Party> getParties() {
-        return this.rankedCandidatesByParty.keySet().stream().filter(c -> c.getCandidates().size() >= 1).collect(Collectors.toList());
+        return new HashSet<>(rankedCandidatesByParty.keySet());
     }
 
     /**
@@ -229,5 +229,10 @@ public class Constituency {
             LOG.warning("Can't find " + CONSTITUENCY + " opening tag.");
         }
         return new Constituency(-1, INVALID_NAME);
+    }
+
+    @Override
+    public int compareTo(Constituency o) {
+        return 0;
     }
 }

@@ -14,7 +14,7 @@ import java.util.*;
  * Different, ranked Candidate lists may be registered into different constituencies.
  * Votes can be collected by Candidate and by Party across all Constituencies
  */
-public class Party {
+public class Party implements Comparable<Party> {
 
     private final int id;
     private final String name;
@@ -127,5 +127,10 @@ public class Party {
             return party;
         }
         return new Party(-1, INVALID_NAME);
+    }
+
+    @Override
+    public int compareTo(Party o) {
+        return 0;
     }
 }
