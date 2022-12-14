@@ -4,6 +4,7 @@ import nl.hva.ict.ads.utils.xml.XMLParser;
 
 import javax.xml.stream.XMLStreamException;
 import java.util.*;
+import java.util.function.Function;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -118,11 +119,14 @@ public class Constituency implements Comparable<Constituency> {
      * @return      the sub set of polling stations within the specified zipCode range
      */
     public NavigableSet<PollingStation> getPollingStationsByZipCodeRange(String firstZipCode, String lastZipCode) {
-        // TODO: return all polling stations that have been registered at this constituency
-        //  hint: there is no need to build a new collection; just return what you have got...
+        System.out.println(pollingStations.stream().filter(p ->
+                firstZipCode.compareTo(p.getZipCode()) <= 0 &&
+                        p.getZipCode().compareTo(lastZipCode) <= 0).collect(Collectors.toList()));
 
-
-        return null; // replace by a proper outcome
+        return pollingStations.stream().filter(p ->
+                firstZipCode.compareTo(p.getZipCode()) <= 0 &&
+                p.getZipCode().compareTo(lastZipCode) <= 0).
+                collect(Collectors.toCollection(TreeSet::new));
     }
 
     /**

@@ -67,7 +67,7 @@
       <recent name="$PROJECT_DIR$/Assignment3" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ConstituencyTest">
+  <component name="RunManager" selected="JUnit.ConstituencyTest.getPollingStationsByZipCodeRangeShouldReturnSome">
     <configuration name="ConstituencyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="elections" />
       <extension name="coverage">
@@ -99,7 +99,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConstituencyTest.getCandidatesShouldReturnAllCandidatesOfAPartyInOrderOfRank" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ConstituencyTest.getPollingStationsByZipCodeRangeShouldReturnSome" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="elections" />
       <extension name="coverage">
         <pattern>
@@ -109,7 +109,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="nl.hva.ict.ads.elections.models" />
       <option name="MAIN_CLASS_NAME" value="nl.hva.ict.ads.elections.models.ConstituencyTest" />
-      <option name="METHOD_NAME" value="getCandidatesShouldReturnAllCandidatesOfAPartyInOrderOfRank" />
+      <option name="METHOD_NAME" value="getPollingStationsByZipCodeRangeShouldReturnSome" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -148,11 +148,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ConstituencyTest.getPollingStationsByZipCodeRangeShouldReturnSome" />
         <item itemvalue="JUnit.ConstituencyTest" />
         <item itemvalue="JUnit.ElectionTest.allConstituenciesShouldHaveBeenLoaded" />
         <item itemvalue="JUnit.ElectionTest" />
         <item itemvalue="JUnit.ConstituencyTest.getAllPartiesShouldReturnAllPartiesOfRegisteredCandidates" />
-        <item itemvalue="JUnit.ConstituencyTest.getCandidatesShouldReturnAllCandidatesOfAPartyInOrderOfRank" />
       </list>
     </recent_temporary>
   </component>
@@ -174,7 +174,8 @@
       <workItem from="1668947856370" duration="49000" />
       <workItem from="1668981338592" duration="682000" />
       <workItem from="1670853980485" duration="18006000" />
-      <workItem from="1670930757523" duration="5982000" />
+      <workItem from="1670930757523" duration="9676000" />
+      <workItem from="1671025386599" duration="229000" />
     </task>
     <servers />
   </component>
