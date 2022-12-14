@@ -6,13 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="f85e8287-dc84-492d-9c35-cefc89a26899" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Election.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Election.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -57,7 +59,7 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.ElectionTest (1)">
-    <configuration name="ConstituencyTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ElectionTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="team15" />
       <extension name="coverage">
         <pattern>
@@ -66,14 +68,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="nl.hva.ict.ads.elections.models" />
-      <option name="MAIN_CLASS_NAME" value="nl.hva.ict.ads.elections.models.ConstituencyTest" />
+      <option name="MAIN_CLASS_NAME" value="nl.hva.ict.ads.elections.models.ElectionTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ConstituencyTest.getPollingStationsByZipCodeRangeShouldReturnSome" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="elections" />
+    <configuration name="PartyTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="team15" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="nl.hva.ict.ads.elections.models.*" />
@@ -81,23 +83,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="nl.hva.ict.ads.elections.models" />
-      <option name="MAIN_CLASS_NAME" value="nl.hva.ict.ads.elections.models.ConstituencyTest" />
-      <option name="METHOD_NAME" value="getPollingStationsByZipCodeRangeShouldReturnSome" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ElectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="elections" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="nl.hva.ict.ads.elections.models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="nl.hva.ict.ads.elections.models" />
-      <option name="MAIN_CLASS_NAME" value="nl.hva.ict.ads.elections.models.ElectionTest" />
+      <option name="MAIN_CLASS_NAME" value="nl.hva.ict.ads.elections.models.PartyTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -152,10 +138,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ElectionTest (1)" />
+        <item itemvalue="JUnit.PartyTest (1)" />
         <item itemvalue="JUnit.PartyTest.addOrGetCandidate" />
         <item itemvalue="JUnit.PollingStationTest" />
         <item itemvalue="JUnit.PartyTest" />
-        <item itemvalue="JUnit.ConstituencyTest (1)" />
       </list>
     </recent_temporary>
   </component>
@@ -179,7 +165,7 @@
       <workItem from="1670930757523" duration="762000" />
       <workItem from="1670932860923" duration="376000" />
       <workItem from="1670947824714" duration="3254000" />
-      <workItem from="1671025429682" duration="3041000" />
+      <workItem from="1671025429682" duration="4465000" />
     </task>
     <servers />
   </component>

@@ -32,7 +32,6 @@ public class Election {
         this.parties = new HashMap<>();
 
 
-
     }
 
     /**
@@ -40,7 +39,6 @@ public class Election {
      * @return all parties participating in at least one constituency, without duplicates
      */
     public Collection<Party> getParties() {
-
 
         return parties.values();
     }
@@ -91,17 +89,18 @@ public class Election {
     public Map<Constituency,Integer> numberOfRegistrationsByConstituency(Party party) {
 //        // TODO build a map with the number of candidate registrations per constituency
 
-        Map<Constituency, Integer> registrations = new HashMap<>();
-        for (Candidate candidate : party.getCandidates()) {
-
-            Constituency constituency = candidate.();
-            if (registrations.containsKey(constituency)) {
-                registrations.put(constituency, registrations.get(constituency) + 1);
-            } else {
-                registrations.put(constituency, 1);
-            }
-        }
-        return registrations;
+//        Map<Constituency, Integer> registrations = new HashMap<>();
+//        for (Candidate candidate : party.getCandidates()) {
+//
+//            Constituency constituency = candidate.getFullName().getConstituency();
+//            if (registrations.containsKey(constituency)) {
+//                registrations.put(constituency, registrations.get(constituency) + 1);
+//            } else {
+//                registrations.put(constituency, 1);
+//            }
+//        }
+//        return registrations;
+        return null;
     }
 
     /**
@@ -208,8 +207,12 @@ public class Election {
     public static List<Map.Entry<Party,Double>> sortedElectionResultsByPartyPercentage(int tops, Map<Party, Integer> votesCounts) {
         // TODO transform the voteCounts input into a sorted list of entries holding votes percentage by party
 
+        List<Map.Entry<Party, Double>> sortedElectionResultsByPartyPercentage = new ArrayList<>();
+        votesCounts.forEach((party, votes) -> {
+            sortedElectionResultsByPartyPercentage.add(new AbstractMap.SimpleEntry<>(party, 100.0 * votes / votesCounts.values().stream().mapToInt(Integer::intValue).sum()));
+        });
 
-        return null; // replace by a proper outcome
+        return sortedElectionResultsByPartyPercentage; // replace by a proper outcome
     }
 
     /**
@@ -280,9 +283,9 @@ public class Election {
                 .append("\nSummary of ").append(party).append(":\n")
                 .append("Total votes: ").append(this.getVotesByParty().get(party)).append("\n")
                 .append("all candidates: ").append(this.getAllCandidates()).append("\n")
-                .append("all constituencies: ").append(this.getConstituencies()).append("\n");
+                .append("all constituencies: ").append(this.getConstituencies()).append("\n")
+                .append("all polling stations: ").append(this.getParty(partyId)).append("\n");
 
-        // TODO report total number of candidates in the given party
         // TODO report the list with all candidates in the given party
         // TODO report total number of registrations for the given party
         // TODO report the map of number of registrations by constituency for the given party
@@ -310,7 +313,6 @@ public class Election {
         //   with zipcodes between 1091AA and 1091ZZ ordered by decreasing party percentage
         // TODO report the most representative polling station across the election
         // TODO report the sorted election results by decreasing party percentage of the most representative polling station
-
 
 
         return summary.toString();
