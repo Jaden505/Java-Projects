@@ -42,7 +42,6 @@ public class Election {
     public Collection<Party> getParties() {
 
 
-
         return parties.values();
     }
 
@@ -52,8 +51,6 @@ public class Election {
      * @return  the party with given Id, or null if no such party exists.
      */
     public Party getParty(int Id) {
-        // TODO find the party with the given Id
-        //find the party with the given Id
         return parties.get(Id);
 
     }
@@ -82,8 +79,6 @@ public class Election {
         //        Collections.sort(candidates, Comparator.comparingInt(c -> c.getParty().getId()));
 
 
-
-        // return the list of candidates
         return candidates.stream().sorted(Comparator.comparingInt(c -> c.getParty().getId())).collect(Collectors.toList());
 
     }
@@ -94,10 +89,19 @@ public class Election {
      * @return
      */
     public Map<Constituency,Integer> numberOfRegistrationsByConstituency(Party party) {
-        // TODO build a map with the number of candidate registrations per constituency
+//        // TODO build a map with the number of candidate registrations per constituency
 
+        Map<Constituency, Integer> registrations = new HashMap<>();
+        for (Candidate candidate : party.getCandidates()) {
 
-        return null; // replace by a proper outcome
+            Constituency constituency = candidate.();
+            if (registrations.containsKey(constituency)) {
+                registrations.put(constituency, registrations.get(constituency) + 1);
+            } else {
+                registrations.put(constituency, 1);
+            }
+        }
+        return registrations;
     }
 
     /**
@@ -110,12 +114,17 @@ public class Election {
         //   Hint: There are multiple approaches possible,
         //   if you cannot think of one, read the hints at the bottom of this file.
 
-        // create a set of candidates with duplicate names
-
         Set<Candidate> candidatesWithDuplicateNames = new HashSet<>();
+        parties.forEach((id, party) -> {
+            party.getCandidates().forEach(candidate -> {
+                if (candidate.getFullName().equals(candidate.getFullName())) {
+                    candidatesWithDuplicateNames.add(candidate);
+                }
+            });
+        });
 
 
-        return null; // replace by a proper outcome
+        return candidatesWithDuplicateNames; // replace by a proper outcome
     }
 
     /**
@@ -268,15 +277,15 @@ public class Election {
 
         Party party = this.getParty(partyId);
         StringBuilder summary = new StringBuilder()
-                .append("\nSummary of ").append(party).append(":\n");
+                .append("\nSummary of ").append(party).append(":\n")
+                .append("Total votes: ").append(this.getVotesByParty().get(party)).append("\n")
+                .append("all candidates: ").append(this.getAllCandidates()).append("\n")
+                .append("all constituencies: ").append(this.getConstituencies()).append("\n");
 
         // TODO report total number of candidates in the given party
         // TODO report the list with all candidates in the given party
         // TODO report total number of registrations for the given party
         // TODO report the map of number of registrations by constituency for the given party
-
-
-
 
 
 
@@ -301,8 +310,6 @@ public class Election {
         //   with zipcodes between 1091AA and 1091ZZ ordered by decreasing party percentage
         // TODO report the most representative polling station across the election
         // TODO report the sorted election results by decreasing party percentage of the most representative polling station
-
-
 
 
 

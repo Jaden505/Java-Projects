@@ -4,17 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f7fe6763-a13f-465d-9327-47802a4a3668" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Candidate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Candidate.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Constituency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Constituency.java" afterDir="false" />
+    <list default="true" id="f85e8287-dc84-492d-9c35-cefc89a26899" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Election.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Election.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Party.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Party.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/PollingStation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/PollingStation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Candidate.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Candidate.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Constituency.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Constituency.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Election.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Election.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Party.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Party.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/PollingStation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/PollingStation.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,9 +23,42 @@
   <component name="ProjectViewState">
     <option name="flattenPackages" value="true" />
   </component>
-  <component name="RunManager" selected="JUnit.ConstituencyTest.getPollingStationsByZipCodeRangeShouldReturnSome">
-    <configuration name="ConstituencyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="elections" />
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/joelamarh/team15&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.." />
+      <recent name="$PROJECT_DIR$/Assignment5" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Assignment3" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ElectionTest (1)">
+    <configuration name="ConstituencyTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="team15" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="nl.hva.ict.ads.elections.models.*" />
@@ -92,16 +118,69 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PartyTest.addOrGetCandidate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="team15" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="nl.hva.ict.ads.elections.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="nl.hva.ict.ads.elections.models" />
+      <option name="MAIN_CLASS_NAME" value="nl.hva.ict.ads.elections.models.PartyTest" />
+      <option name="METHOD_NAME" value="addOrGetCandidate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PollingStationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="team15" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="nl.hva.ict.ads.elections.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="nl.hva.ict.ads.elections.models" />
+      <option name="MAIN_CLASS_NAME" value="nl.hva.ict.ads.elections.models.PollingStationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ConstituencyTest.getPollingStationsByZipCodeRangeShouldReturnSome" />
-        <item itemvalue="JUnit.ConstituencyTest" />
-        <item itemvalue="JUnit.ElectionTest" />
+        <item itemvalue="JUnit.ElectionTest (1)" />
+        <item itemvalue="JUnit.PartyTest.addOrGetCandidate" />
+        <item itemvalue="JUnit.PollingStationTest" />
         <item itemvalue="JUnit.PartyTest" />
+        <item itemvalue="JUnit.ConstituencyTest (1)" />
       </list>
     </recent_temporary>
   </component>
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f85e8287-dc84-492d-9c35-cefc89a26899" name="Changes" comment="" />
+      <created>1668351147429</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1668351147429</updated>
+      <workItem from="1668351150172" duration="1385000" />
+      <workItem from="1668606773602" duration="2446000" />
+      <workItem from="1668699774398" duration="17559000" />
+      <workItem from="1668852888178" duration="3927000" />
+      <workItem from="1668862601081" duration="4099000" />
+      <workItem from="1668937490013" duration="3818000" />
+      <workItem from="1668942690848" duration="1250000" />
+      <workItem from="1668947856370" duration="49000" />
+      <workItem from="1668981338592" duration="682000" />
+      <workItem from="1670853980485" duration="18006000" />
+      <workItem from="1670930757523" duration="762000" />
+      <workItem from="1670932860923" duration="376000" />
+      <workItem from="1670947824714" duration="3254000" />
+      <workItem from="1671025429682" duration="3041000" />
+    </task>
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
