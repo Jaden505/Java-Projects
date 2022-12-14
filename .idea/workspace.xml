@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f85e8287-dc84-492d-9c35-cefc89a26899" name="Changes" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Election.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Election.java" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/src/test/java/nl/hva/ict/ads/elections/models/ExtraPollingStationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/nl/hva/ict/ads/elections/models/ExtraCandidateTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/nl/hva/ict/ads/elections/models/ExtraCandidateTest.java" afterDir="false" />
+>>>>>>> 525e3cba6dfe4058393fb78d79fd73a7e6ee7757
       <change beforePath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Election$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Election$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Election.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Election.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/nl/hva/ict/ads/elections/models/ExtraCandidateTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/nl/hva/ict/ads/elections/models/ExtraCandidateTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,8 +71,11 @@
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Assignment3" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="nl.hva.ict.ads.elections.models" />
+    </key>
   </component>
-  <component name="RunManager" selected="JUnit.ElectionTest">
+  <component name="RunManager" selected="JUnit.ExtraCandidateTest">
     <configuration name="ElectionTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="team15" />
       <extension name="coverage">
@@ -81,8 +91,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ElectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="elections" />
+    <configuration name="ExtraCandidateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="team15" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="nl.hva.ict.ads.elections.models.*" />
@@ -90,14 +100,34 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="nl.hva.ict.ads.elections.models" />
-      <option name="MAIN_CLASS_NAME" value="nl.hva.ict.ads.elections.models.ElectionTest" />
+      <option name="MAIN_CLASS_NAME" value="nl.hva.ict.ads.elections.models.ExtraCandidateTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="ElectionTest.candidatesWithDuplicateNamesShouldBeFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="elections" />
+=======
+    <configuration name="ExtraPartyTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="team15" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="nl.hva.ict.ads.elections.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="nl.hva.ict.ads.elections.models" />
+      <option name="MAIN_CLASS_NAME" value="nl.hva.ict.ads.elections.models.ExtraPartyTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PartyTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="team15" />
+>>>>>>> 525e3cba6dfe4058393fb78d79fd73a7e6ee7757
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="nl.hva.ict.ads.elections.models.*" />
@@ -128,8 +158,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+<<<<<<< HEAD
     <configuration name="ElectionTest.sortedElectionResultsByPartyPercentageShouldReturnCorrectRanking" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="elections" />
+=======
+    <configuration name="PollingStationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="team15" />
+>>>>>>> 525e3cba6dfe4058393fb78d79fd73a7e6ee7757
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="nl.hva.ict.ads.elections.models.*" />
@@ -137,20 +172,33 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="nl.hva.ict.ads.elections.models" />
+<<<<<<< HEAD
       <option name="MAIN_CLASS_NAME" value="nl.hva.ict.ads.elections.models.ElectionTest" />
       <option name="METHOD_NAME" value="sortedElectionResultsByPartyPercentageShouldReturnCorrectRanking" />
       <option name="TEST_OBJECT" value="method" />
+=======
+      <option name="MAIN_CLASS_NAME" value="nl.hva.ict.ads.elections.models.PollingStationTest" />
+      <option name="TEST_OBJECT" value="class" />
+>>>>>>> 525e3cba6dfe4058393fb78d79fd73a7e6ee7757
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< HEAD
         <item itemvalue="JUnit.ElectionTest" />
         <item itemvalue="JUnit.ElectionTest.candidatesWithDuplicateNamesShouldBeFound" />
         <item itemvalue="JUnit.ElectionTest.everyConstituencyShouldHoldCorrectNumberOfRegistrations" />
         <item itemvalue="JUnit.ElectionTest.sortedElectionResultsByPartyPercentageShouldReturnCorrectRanking" />
         <item itemvalue="JUnit.ElectionTest (1)" />
+=======
+        <item itemvalue="JUnit.ExtraCandidateTest" />
+        <item itemvalue="JUnit.PollingStationTest" />
+        <item itemvalue="JUnit.ElectionTest (1)" />
+        <item itemvalue="JUnit.PartyTest (1)" />
+        <item itemvalue="JUnit.ExtraPartyTest" />
+>>>>>>> 525e3cba6dfe4058393fb78d79fd73a7e6ee7757
       </list>
     </recent_temporary>
   </component>
@@ -175,7 +223,7 @@
       <workItem from="1670930757523" duration="762000" />
       <workItem from="1670932860923" duration="376000" />
       <workItem from="1670947824714" duration="3254000" />
-      <workItem from="1671025429682" duration="4465000" />
+      <workItem from="1671025429682" duration="8730000" />
     </task>
     <servers />
   </component>
