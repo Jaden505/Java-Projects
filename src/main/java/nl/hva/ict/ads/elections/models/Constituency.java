@@ -55,8 +55,6 @@ public class Constituency {
      * @return whether the registration has succeeded
      */
     public boolean register(int rank, Candidate candidate) {
-        // TODO  register the candidate in this constituency for his/her party at the given rank (ballot position)
-        //  hint: try to use computeIfAbsent to efficiently create and insert an empty ballot map into rankedCandidatesByParty only when required
         Party party = candidate.getParty();
 
         // Create new ballot map if it doesn't exist
@@ -96,7 +94,6 @@ public class Constituency {
      * @return
      */
     public final List<Candidate> getCandidates(Party party) {
-        // TODO: return a list with all registered candidates of a given party in order of their rank
         return new ArrayList<>(rankedCandidatesByParty.get(party).values());
     }
 

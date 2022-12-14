@@ -37,7 +37,6 @@ public class Election {
      * @return all parties participating in at least one constituency, without duplicates
      */
     public Collection<Party> getParties() {
-
         return parties.values();
     }
 
@@ -61,19 +60,12 @@ public class Election {
      * @return alle unique candidates organised in an ordered set.
      */
     public List<Candidate> getAllCandidates() {
-        // TODO find all candidates organised by increasing party-id
-
         List<Candidate> candidates = new ArrayList<>();
 
         // add all candidates to the list
         for (Party party : getParties()) {
             candidates.addAll(party.getCandidates());
         }
-
-        // sort the list of candidates by party-id in increasing order
-        //        Collections.sort(candidates, (c1, c2) -> c1.getPartyId() - c2.getPartyId());
-        //        Collections.sort(candidates, Comparator.comparingInt(c -> c.getParty().getId()));
-
 
         return candidates.stream().sorted(Comparator.comparingInt(c -> c.getParty().getId())).collect(Collectors.toList());
 
@@ -109,7 +101,7 @@ public class Election {
             });
         });
 
-        return candidatesWithDuplicateNames; // replace by a proper outcome
+        return candidatesWithDuplicateNames;
     }
 
     /**
@@ -126,10 +118,8 @@ public class Election {
         constituencies.forEach(constituency -> {
             pollingstations.addAll(constituency.getPollingStationsByZipCodeRange(firstZipCode, lastZipCode));
         });
-        // TODO retrieve all polling stations within the area of the given range of zip codes (inclusively)
 
-
-        return pollingstations; // replace by a proper outcome
+        return pollingstations;
     }
 
     /**
@@ -137,8 +127,6 @@ public class Election {
      * @return
      */
     public Map<Party, Integer> getVotesByParty() {
-        // TODO calculate the total number of votes per party
-
         Map<Party, Integer> votesByParty = new HashMap<>();
 
         for (Constituency constituency : constituencies) {
@@ -154,7 +142,6 @@ public class Election {
             }
         }
 
-        // replace by a proper outcome
         return votesByParty;
     }
 
@@ -165,10 +152,8 @@ public class Election {
             Count.merge(party, votes, Integer::sum);
         });
         });
-        // TODO calculate the total number of votes per party across the given polling stations
 
-
-        return Count; // replace by a proper outcome
+        return Count;
     }
 
 

@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f85e8287-dc84-492d-9c35-cefc89a26899" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Constituency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Constituency.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Election.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Election.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -168,7 +169,7 @@
       <workItem from="1670932860923" duration="376000" />
       <workItem from="1670947824714" duration="3254000" />
       <workItem from="1671025429682" duration="4465000" />
-      <workItem from="1671053578572" duration="2195000" />
+      <workItem from="1671053578572" duration="2381000" />
     </task>
     <servers />
   </component>
