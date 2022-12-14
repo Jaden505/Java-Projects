@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="f85e8287-dc84-492d-9c35-cefc89a26899" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Election.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/nl/hva/ict/ads/elections/models/Election.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Election$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Election$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Election.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/nl/hva/ict/ads/elections/models/Election.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,6 +60,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/Assignment3" />
     </key>
@@ -94,6 +96,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ElectionTest.candidatesWithDuplicateNamesShouldBeFound" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="elections" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="nl.hva.ict.ads.elections.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="nl.hva.ict.ads.elections.models" />
+      <option name="MAIN_CLASS_NAME" value="nl.hva.ict.ads.elections.models.ElectionTest" />
+      <option name="METHOD_NAME" value="candidatesWithDuplicateNamesShouldBeFound" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ElectionTest.everyConstituencyShouldHoldCorrectNumberOfRegistrations" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="elections" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="nl.hva.ict.ads.elections.models.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="nl.hva.ict.ads.elections.models" />
+      <option name="MAIN_CLASS_NAME" value="nl.hva.ict.ads.elections.models.ElectionTest" />
+      <option name="METHOD_NAME" value="everyConstituencyShouldHoldCorrectNumberOfRegistrations(nl.hva.ict.ads.elections.models.Constituency,int,java.util.Map)" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ElectionTest.sortedElectionResultsByPartyPercentageShouldReturnCorrectRanking" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="elections" />
       <extension name="coverage">
@@ -110,44 +144,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PartyTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="team15" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="nl.hva.ict.ads.elections.models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="nl.hva.ict.ads.elections.models" />
-      <option name="MAIN_CLASS_NAME" value="nl.hva.ict.ads.elections.models.PartyTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="PartyTest.addOrGetCandidate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="team15" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="nl.hva.ict.ads.elections.models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="nl.hva.ict.ads.elections.models" />
-      <option name="MAIN_CLASS_NAME" value="nl.hva.ict.ads.elections.models.PartyTest" />
-      <option name="METHOD_NAME" value="addOrGetCandidate" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ElectionTest" />
+        <item itemvalue="JUnit.ElectionTest.candidatesWithDuplicateNamesShouldBeFound" />
+        <item itemvalue="JUnit.ElectionTest.everyConstituencyShouldHoldCorrectNumberOfRegistrations" />
         <item itemvalue="JUnit.ElectionTest.sortedElectionResultsByPartyPercentageShouldReturnCorrectRanking" />
         <item itemvalue="JUnit.ElectionTest (1)" />
-        <item itemvalue="JUnit.PartyTest (1)" />
-        <item itemvalue="JUnit.PartyTest.addOrGetCandidate" />
       </list>
     </recent_temporary>
   </component>

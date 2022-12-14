@@ -87,20 +87,8 @@ public class Election {
      * @return
      */
     public Map<Constituency,Integer> numberOfRegistrationsByConstituency(Party party) {
-//        // TODO build a map with the number of candidate registrations per constituency
-
-//        Map<Constituency, Integer> registrations = new HashMap<>();
-//        for (Candidate candidate : party.getCandidates()) {
-//
-//            Constituency constituency = candidate.getFullName().getConstituency();
-//            if (registrations.containsKey(constituency)) {
-//                registrations.put(constituency, registrations.get(constituency) + 1);
-//            } else {
-//                registrations.put(constituency, 1);
-//            }
-//        }
-//        return registrations;
-        return null;
+        return constituencies.stream().collect(Collectors.toMap(c -> c,
+                c -> c.getRankedCandidatesByParty().get(party).size()));
     }
 
     /**
@@ -109,19 +97,19 @@ public class Election {
      * @return
      */
     public Set<Candidate> getCandidatesWithDuplicateNames() {
-        // TODO build the collection of candidates with duplicate names across parties
-        //   Hint: There are multiple approaches possible,
-        //   if you cannot think of one, read the hints at the bottom of this file.
+        Set<String> dups = this.parties.values().stream()
+                .flatMap(p -> p.getCandidates().stream()
+                .map(c -> c.getFullName()))
+                .collect(Collectors.groupingBy(c -> c, Collectors.counting()))
+                .entrySet().stream().filter(e -> e.getValue() > 1)
+                .map(Map.Entry::getKey).collect(Collectors.toSet());
 
         Set<Candidate> candidatesWithDuplicateNames = new HashSet<>();
         parties.forEach((id, party) -> {
             party.getCandidates().forEach(candidate -> {
-                if (candidate.getFullName().equals(candidate.getFullName())) {
-                    candidatesWithDuplicateNames.add(candidate);
-                }
+                if (dups.contains(candidate.getFullName())) candidatesWithDuplicateNames.add(candidate);
             });
         });
-
 
         return candidatesWithDuplicateNames; // replace by a proper outcome
     }
@@ -217,7 +205,6 @@ public class Election {
         sortedElectionResultsByPartyPercentage.sort(new Comparator<Map.Entry<Party, Double>>() {
             @Override
             public int compare(Map.Entry<Party, Double> entry1, Map.Entry<Party, Double> entry2) {
-                // Compare the value of the Double field in each entry
                 return entry2.getValue().compareTo(entry1.getValue());
             }
         });
@@ -239,15 +226,9 @@ public class Election {
      * @return the most representative polling station.
      */
     public PollingStation findMostRepresentativePollingStation() {
-
-        // TODO: calculate the overall total votes count distribution by Party
-        //  and find the PollingStation with the lowest relative deviation between
-        //  its votes count distribution and the overall distribution.
-        //   hint: reuse euclidianVotesDistributionDeviation to calculate a difference metric between two vote counts
-        //   hint: use the .min reducer on a stream of polling stations with a suitable comparator
-
-
-        return null; // replace by a proper outcome
+        return this.constituencies.stream().flatMap(c -> c.getPollingStations().stream()).
+                min(Comparator.comparingDouble(x -> euclidianVotesDistributionDeviation(
+                x.getVotesByParty(), this.getVotesByParty()))).orElseThrow();
     }
 
     /**
