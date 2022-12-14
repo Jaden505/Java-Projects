@@ -30,8 +30,6 @@ public class Election {
         this.name = name;
         this.constituencies = new HashSet<>();
         this.parties = new HashMap<>();
-
-
     }
 
     /**
@@ -305,6 +303,18 @@ public class Election {
         // TODO report the most representative polling station across the election
         // TODO report the sorted election results by decreasing party percentage of the most representative polling station
 
+        summary.append(parties.size()).append(" Participating parties:\n");
+        summary.append(getParties());
+        summary.append("\nTotal number of constituencies = ").append(constituencies.size());
+        summary.append("\nTotal number of polling stations = ").append(constituencies.stream().map(c -> c.getPollingStations().size()).mapToInt(Integer::intValue).sum());
+        summary.append("\nTotal number of candidates = ").append(getAllCandidates().size());
+        summary.append("\nDifferent candidates with duplicate names across different parties are:\n").append(getCandidatesWithDuplicateNames());
+
+        Collection<PollingStation> pollingStations = getPollingStationsByZipCodeRange("1091AA", "1091ZZ");
+        summary.append("\nOverall election results by party percentage:\n").append(sortedElectionResultsByPartyPercentage(getVotesByParty().size() ,getVotesByParty()));
+        summary.append("\nPolling stations in Amsterdam Wibautstraat area with zip codes 1091AA-1091ZZ:\n").append(pollingStations);
+        summary.append("\nTop 10 election results by party percentage in Amsterdam area with zip codes 1091AA-1091ZZ:\n").append(sortedElectionResultsByPartyPercentage(10,getVotesByPartyAcrossPollingStations(pollingStations)));
+        summary.append("\nMost representative polling station is:\n").append(findMostRepresentativePollingStation());
 
         return summary.toString();
     }
