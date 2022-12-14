@@ -194,6 +194,6 @@ public class PollingStation implements Comparable<PollingStation> {
 
     @Override
     public int compareTo(PollingStation o) {
-        return 0;
+        return 1;
     }
 }

@@ -24,7 +24,7 @@ import java.util.stream.Stream;
  * Navigable SubSets of PollingStations within a range of zipcodes can be retrieved efficiently.
  * Votes can be collected by Candidate and by Party across all polling stations.
  */
-public class Constituency implements Comparable<Constituency> {
+public class Constituency {
 
     private final int id;
     private final String name;
@@ -119,10 +119,6 @@ public class Constituency implements Comparable<Constituency> {
      * @return      the sub set of polling stations within the specified zipCode range
      */
     public NavigableSet<PollingStation> getPollingStationsByZipCodeRange(String firstZipCode, String lastZipCode) {
-        System.out.println(pollingStations.stream().filter(p ->
-                firstZipCode.compareTo(p.getZipCode()) <= 0 &&
-                        p.getZipCode().compareTo(lastZipCode) <= 0).collect(Collectors.toList()));
-
         return pollingStations.stream().filter(p ->
                 firstZipCode.compareTo(p.getZipCode()) <= 0 &&
                 p.getZipCode().compareTo(lastZipCode) <= 0).
@@ -230,10 +226,5 @@ public class Constituency implements Comparable<Constituency> {
             LOG.warning("Can't find " + CONSTITUENCY + " opening tag.");
         }
         return new Constituency(-1, INVALID_NAME);
-    }
-
-    @Override
-    public int compareTo(Constituency o) {
-        return 0;
     }
 }

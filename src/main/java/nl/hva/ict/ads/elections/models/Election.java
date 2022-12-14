@@ -28,8 +28,8 @@ public class Election {
 
     public Election(String name) {
         this.name = name;
-
-        // TODO initialise this.parties and this.constituencies with an appropriate Map implementations
+        this.constituencies = new HashSet<>();
+        this.parties = new HashMap<>();
 
 
 
@@ -40,11 +40,10 @@ public class Election {
      * @return all parties participating in at least one constituency, without duplicates
      */
     public Collection<Party> getParties() {
-        // TODO: return all parties that have been registered for the election
-        //  hint: there is no need to build a new collection; just return what you have got...
 
 
-        return null; // replace by a proper outcome
+
+        return parties.values();
     }
 
     /**
@@ -54,9 +53,9 @@ public class Election {
      */
     public Party getParty(int Id) {
         // TODO find the party with the given Id
+        //find the party with the given Id
+        return parties.get(Id);
 
-
-        return null; // replace by a proper outcome
     }
 
     public Set<? extends Constituency> getConstituencies() {
@@ -71,8 +70,22 @@ public class Election {
     public List<Candidate> getAllCandidates() {
         // TODO find all candidates organised by increasing party-id
 
+        List<Candidate> candidates = new ArrayList<>();
 
-        return null; // replace by a proper outcome
+        // add all candidates to the list
+        for (Party party : getParties()) {
+            candidates.addAll(party.getCandidates());
+        }
+
+        // sort the list of candidates by party-id in increasing order
+        //        Collections.sort(candidates, (c1, c2) -> c1.getPartyId() - c2.getPartyId());
+        //        Collections.sort(candidates, Comparator.comparingInt(c -> c.getParty().getId()));
+
+
+
+        // return the list of candidates
+        return candidates.stream().sorted(Comparator.comparingInt(c -> c.getParty().getId())).collect(Collectors.toList());
+
     }
 
     /**
@@ -97,6 +110,10 @@ public class Election {
         //   Hint: There are multiple approaches possible,
         //   if you cannot think of one, read the hints at the bottom of this file.
 
+        // create a set of candidates with duplicate names
+
+        Set<Candidate> candidatesWithDuplicateNames = new HashSet<>();
+
 
         return null; // replace by a proper outcome
     }
@@ -110,10 +127,15 @@ public class Election {
      * @return      the sub set of polling stations within the specified zipCode range
      */
     public Collection<PollingStation> getPollingStationsByZipCodeRange(String firstZipCode, String lastZipCode) {
+
+        NavigableSet<PollingStation> pollingstations = new TreeSet<>();
+        constituencies.forEach(constituency -> {
+            pollingstations.addAll(constituency.getPollingStationsByZipCodeRange(firstZipCode, lastZipCode));
+        });
         // TODO retrieve all polling stations within the area of the given range of zip codes (inclusively)
 
 
-        return null; // replace by a proper outcome
+        return pollingstations; // replace by a proper outcome
     }
 
     /**
@@ -123,9 +145,39 @@ public class Election {
     public Map<Party, Integer> getVotesByParty() {
         // TODO calculate the total number of votes per party
 
+        Map<Party, Integer> votesByParty = new HashMap<>();
 
-        return null; // replace by a proper outcome
+//        // iterate over the given polling stations
+//        for (PollingStation station : pollingStations) {
+//            // get the votes by party at the current polling station
+//            Map<Party, Integer> stationVotesByParty = station.getVotesByParty();
+//
+//            // add the votes from the current polling station to the total votes by party
+//            for (Party party : stationVotesByParty.keySet()) {
+//                votesByParty.put(party, votesByParty.getOrDefault(party, 0) + stationVotesByParty.get(party));
+//            }
+//        }
+
+        // replace by a proper outcome
+        return votesByParty;
     }
+
+    public Map<Party, Integer> getVotesByPartyAcrossPollingStations(Collection<PollingStation> pollingStations) {
+
+        Map<Party, Integer> Count = new HashMap<>();
+        pollingStations.forEach(pollingstation -> {pollingstation.getVotesByParty().forEach((party, votes) -> {
+            Count.merge(party, votes, Integer::sum);
+        });
+        });
+        // TODO calculate the total number of votes per party across the given polling stations
+
+
+        return Count; // replace by a proper outcome
+    }
+
+
+
+
 
     /**
      * Retrieves per party the total number of votes across all candidates,
@@ -135,12 +187,7 @@ public class Election {
      * @param pollingStations the polling stations that cover the sub-area of interest
      * @return
      */
-    public Map<Party, Integer> getVotesByPartyAcrossPollingStations(Collection<PollingStation> pollingStations) {
-        // TODO calculate the total number of votes per party across the given polling stations
 
-
-        return null; // replace by a proper outcome
-    }
 
 
     /**

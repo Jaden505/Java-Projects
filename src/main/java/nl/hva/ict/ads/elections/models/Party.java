@@ -47,7 +47,6 @@ public class Party implements Comparable<Party> {
 
         for (Candidate candidate : candidates) {
             if (candidate.equals(newCandidate)) {
-                newCandidate.setParty(null);
                 return candidate;
             }
         }
@@ -75,7 +74,7 @@ public class Party implements Comparable<Party> {
 
     @Override
     public int hashCode() {
-        return Objects.hash(this.candidates);
+        return getName().hashCode();
     }
 
     public int getId() {
