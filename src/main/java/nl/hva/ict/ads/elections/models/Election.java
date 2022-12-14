@@ -122,7 +122,6 @@ public class Election {
             });
         });
 
-
         return candidatesWithDuplicateNames; // replace by a proper outcome
     }
 
