@@ -155,16 +155,18 @@ public class Election {
 
         Map<Party, Integer> votesByParty = new HashMap<>();
 
-//        // iterate over the given polling stations
-//        for (PollingStation station : pollingStations) {
-//            // get the votes by party at the current polling station
-//            Map<Party, Integer> stationVotesByParty = station.getVotesByParty();
-//
-//            // add the votes from the current polling station to the total votes by party
-//            for (Party party : stationVotesByParty.keySet()) {
-//                votesByParty.put(party, votesByParty.getOrDefault(party, 0) + stationVotesByParty.get(party));
-//            }
-//        }
+        for (Constituency constituency : constituencies) {
+            // iterate over the given polling stations
+            for (PollingStation station : constituency.getPollingStations()) {
+                // get the votes by party at the current polling station
+                Map<Party, Integer> stationVotesByParty = station.getVotesByParty();
+
+                // add the votes from the current polling station to the total votes by party
+                for (Party party : stationVotesByParty.keySet()) {
+                    votesByParty.put(party, votesByParty.getOrDefault(party, 0) + stationVotesByParty.get(party));
+                }
+            }
+        }
 
         // replace by a proper outcome
         return votesByParty;
@@ -212,7 +214,15 @@ public class Election {
             sortedElectionResultsByPartyPercentage.add(new AbstractMap.SimpleEntry<>(party, 100.0 * votes / votesCounts.values().stream().mapToInt(Integer::intValue).sum()));
         });
 
-        return sortedElectionResultsByPartyPercentage; // replace by a proper outcome
+        sortedElectionResultsByPartyPercentage.sort(new Comparator<Map.Entry<Party, Double>>() {
+            @Override
+            public int compare(Map.Entry<Party, Double> entry1, Map.Entry<Party, Double> entry2) {
+                // Compare the value of the Double field in each entry
+                return entry2.getValue().compareTo(entry1.getValue());
+            }
+        });
+
+        return sortedElectionResultsByPartyPercentage.stream().limit(tops).collect(Collectors.toList());
     }
 
     /**
