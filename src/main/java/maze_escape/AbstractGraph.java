@@ -31,11 +31,19 @@ public abstract class AbstractGraph<V> {
      * @return
      */
     public Set<V> getAllVertices(V firstVertex) {
-        // TODO calculate recursively the set of all connected vertices that can be reached from the given start vertex
-        //  hint: reuse getNeighbours()
-
-
-        return null;    // replace by a proper outcome
+        Set<V> visited = new HashSet<>();
+        Stack<V> stack = new Stack<>();
+        stack.push(firstVertex);
+        while (!stack.isEmpty()) {
+            V current = stack.pop();
+            visited.add(current);
+            for (V neighbour : getNeighbours(current)) {
+                if (!visited.contains(neighbour)) {
+                    stack.push(neighbour);
+                }
+            }
+        }
+        return visited;
     }
 
 
