@@ -66,11 +66,12 @@ public abstract class AbstractGraph<V> {
         //  following a recursive pre-order traversal of a spanning tree
         //  using the above stringBuilder to format the list
         //  hint: use the getNeighbours() method to retrieve the roots of the child subtrees.
-
-
+        Set<V> visited = new HashSet<>();
+        Stack<V> stack = new Stack<>();
+        stack.push(firstVertex);
+        return stringBuilder.toString();
 
         // return the result
-        return stringBuilder.toString();
     }
 
 
@@ -151,12 +152,28 @@ public abstract class AbstractGraph<V> {
     public GPath depthFirstSearch(V startVertex, V targetVertex) {
 
         if (startVertex == null || targetVertex == null) return null;
-
-        // TODO calculate the path from start to target by recursive depth-first-search
-
-
-
-        return null;    // replace by a proper outcome, if any
+        List<V> path = new ArrayList<>();
+        Set<V> visited = new HashSet<>();
+        Stack<V> stack = new Stack<>();
+        stack.push(startVertex);
+        while (!stack.isEmpty()) {
+            V current = stack.pop();
+            visited.add(current);
+            path.add(current);
+            if (current.equals(targetVertex)) {
+                GPath gPath = new GPath();
+                gPath.vertices.addAll(path);
+                gPath.visited.addAll(visited);
+                return gPath;
+            }
+            for (V neighbour : getNeighbours(current)) {
+                if (!visited.contains(neighbour)) {
+                    stack.push(neighbour);
+                }
+            }
+        }
+        return null;
+        // replace by a proper outcome, if any
     }
 
 
@@ -171,14 +188,32 @@ public abstract class AbstractGraph<V> {
     public GPath breadthFirstSearch(V startVertex, V targetVertex) {
 
         if (startVertex == null || targetVertex == null) return null;
-
-        // TODO calculate the path from start to target by breadth-first-search
-
-
-
-
-
-        return null;    // replace by a proper outcome, if any
+        Map<V, V> parentMap = new HashMap<>();
+        Queue<V> queue = new LinkedList<>();
+        Set<V> visited = new HashSet<>();
+        queue.offer(startVertex);
+        visited.add(startVertex);
+        while (!queue.isEmpty()) {
+            V current = queue.poll();
+            if (current.equals(targetVertex)) {
+                GPath gPath = new GPath();
+                gPath.vertices.add(current);
+                while (parentMap.containsKey(current)) {
+                    current = parentMap.get(current);
+                    gPath.vertices.addFirst(current);
+                }
+                gPath.visited.addAll(visited);
+                return gPath;
+            }
+            for (V neighbour : getNeighbours(current)) {
+                if (!visited.contains(neighbour)) {
+                    parentMap.put(neighbour, current);
+                    queue.offer(neighbour);
+                    visited.add(neighbour);
+                }
+            }
+        }
+        return null;   // replace by a proper outcome, if any
     }
 
     // helper class to build the spanning tree of visited vertices in dijkstra's shortest path algorithm
