@@ -73,12 +73,19 @@ public abstract class AbstractGraph<V> {
 
     private void formatAdjacencyListHelper(V firstVertex, StringBuilder stringBuilder) {
         Queue<V> queue = new LinkedList<>();
+        Set<V> visited = new HashSet<>();
         queue.offer(firstVertex);
 
         while (!queue.isEmpty()) {
             V vertex = queue.poll();
-            if (!stringBuilder.toString().contains(vertex.toString() + ": ")) {
-                stringBuilder.append(vertex).append(": ").append(getNeighbours(vertex).toString().replaceAll("\\s+", "")).append("\n");
+            if (!visited.contains(vertex)) {
+                visited.add(vertex);
+
+                String neighbours = getNeighbours(vertex).toString().replaceAll("\\s+", "");
+
+                stringBuilder.append(vertex).append(": ");
+                stringBuilder.append(neighbours).append("\n");
+
                 getNeighbours(vertex).forEach(queue::offer);
             }
         }

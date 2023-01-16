@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="f85e8287-dc84-492d-9c35-cefc89a26899" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/maze_escape/AbstractGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/maze_escape/AbstractGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/maze_escape/AbstractGraph$GPath.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/maze_escape/AbstractGraph$GPath.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/maze_escape/AbstractGraph$MSTNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/maze_escape/AbstractGraph$MSTNode.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/maze_escape/AbstractGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/maze_escape/AbstractGraph.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -176,7 +178,7 @@
       <workItem from="1671098072457" duration="41000" />
       <workItem from="1673626137321" duration="3518000" />
       <workItem from="1673792824949" duration="3557000" />
-      <workItem from="1673904669126" duration="4864000" />
+      <workItem from="1673904669126" duration="6156000" />
     </task>
     <servers />
   </component>
