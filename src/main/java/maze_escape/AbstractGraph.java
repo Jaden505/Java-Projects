@@ -36,16 +36,19 @@ public abstract class AbstractGraph<V> {
     public Set<V> getAllVertices(V firstVertex) {
         Set<V> visited = new HashSet<>();
         Stack<V> stack = new Stack<>();
+
         stack.push(firstVertex);
         while (!stack.isEmpty()) {
             V current = stack.pop();
             visited.add(current);
+
             for (V neighbour : getNeighbours(current)) {
                 if (!visited.contains(neighbour)) {
                     stack.push(neighbour);
                 }
             }
         }
+
         return visited;
     }
 
@@ -63,27 +66,22 @@ public abstract class AbstractGraph<V> {
      */
     public String formatAdjacencyList(V firstVertex) {
         StringBuilder stringBuilder = new StringBuilder("Graph adjacency list:\n");
-
-        // TODO recursively build the adjacency list including all vertices that can be reached from firstVertex
-        //  following a recursive pre-order traversal of a spanning tree
-        //  using the above stringBuilder to format the list
-        //  hint: use the getNeighbours() method to retrieve the roots of the child subtrees.
-
-        for(V vertex : getAllVertices(firstVertex)) {
-            stringBuilder.append(vertex).append(": [");
-            Iterator<V> iterator = getNeighbours(vertex).iterator();
-
-            for (V neighbour : getNeighbours(vertex)) {
-                iterator.next();
-                stringBuilder.append(neighbour);
-
-                if(iterator.hasNext())
-                    stringBuilder.append(",");
-            }
-            stringBuilder.append("]").append("\n");
-        }
+        formatAdjacencyListHelper(firstVertex, stringBuilder);
 
         return stringBuilder.toString();
+    }
+
+    private void formatAdjacencyListHelper(V firstVertex, StringBuilder stringBuilder) {
+        Queue<V> queue = new LinkedList<>();
+        queue.offer(firstVertex);
+
+        while (!queue.isEmpty()) {
+            V vertex = queue.poll();
+            if (!stringBuilder.toString().contains(vertex.toString() + ": ")) {
+                stringBuilder.append(vertex).append(": ").append(getNeighbours(vertex).toString().replaceAll("\\s+", "")).append("\n");
+                getNeighbours(vertex).forEach(queue::offer);
+            }
+        }
     }
 
 

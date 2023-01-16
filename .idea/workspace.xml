@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f85e8287-dc84-492d-9c35-cefc89a26899" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/maze_escape/AbstractGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/maze_escape/AbstractGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/maze_escape/AbstractGraph$GPath.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/maze_escape/AbstractGraph$GPath.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/maze_escape/AbstractGraph$MSTNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/maze_escape/AbstractGraph$MSTNode.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/maze_escape/AbstractGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/maze_escape/AbstractGraph.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +63,7 @@
       <recent name="$PROJECT_DIR$/Assignment3" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AbstractGraphTest (1)">
+  <component name="RunManager" selected="JUnit.AbstractGraphTest.adjacencyListsShouldFormatPerOrder (1)">
     <configuration name="PrimMazeEscapeMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="maze_escape.PrimMazeEscapeMain" />
       <module name="team15" />
@@ -143,8 +141,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AbstractGraphTest (1)" />
         <item itemvalue="JUnit.AbstractGraphTest.adjacencyListsShouldFormatPerOrder (1)" />
+        <item itemvalue="JUnit.AbstractGraphTest (1)" />
         <item itemvalue="JUnit.AbstractGraphTest" />
         <item itemvalue="JUnit.AbstractGraphTest.adjacencyListsShouldFormatPerOrder" />
         <item itemvalue="Application.PrimMazeEscapeMain" />
@@ -177,7 +175,8 @@
       <workItem from="1671097324324" duration="269000" />
       <workItem from="1671098072457" duration="41000" />
       <workItem from="1673626137321" duration="3518000" />
-      <workItem from="1673792824949" duration="2895000" />
+      <workItem from="1673792824949" duration="3557000" />
+      <workItem from="1673904669126" duration="4864000" />
     </task>
     <servers />
   </component>
