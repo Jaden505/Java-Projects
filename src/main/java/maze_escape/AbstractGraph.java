@@ -1,5 +1,8 @@
 package maze_escape;
 
+import com.sun.source.tree.BinaryTree;
+import com.sun.source.tree.Tree;
+
 import java.util.*;
 import java.util.function.BiFunction;
 import java.util.stream.Collectors;
@@ -46,7 +49,6 @@ public abstract class AbstractGraph<V> {
         return visited;
     }
 
-
     /**
      * Formats the adjacency list of the subgraph starting at the given firstVertex
      * according to the format:
@@ -66,12 +68,22 @@ public abstract class AbstractGraph<V> {
         //  following a recursive pre-order traversal of a spanning tree
         //  using the above stringBuilder to format the list
         //  hint: use the getNeighbours() method to retrieve the roots of the child subtrees.
-        Set<V> visited = new HashSet<>();
-        Stack<V> stack = new Stack<>();
-        stack.push(firstVertex);
-        return stringBuilder.toString();
 
-        // return the result
+        for(V vertex : getAllVertices(firstVertex)) {
+            stringBuilder.append(vertex).append(": [");
+            Iterator<V> iterator = getNeighbours(vertex).iterator();
+
+            for (V neighbour : getNeighbours(vertex)) {
+                iterator.next();
+                stringBuilder.append(neighbour);
+
+                if(iterator.hasNext())
+                    stringBuilder.append(",");
+            }
+            stringBuilder.append("]").append("\n");
+        }
+
+        return stringBuilder.toString();
     }
 
 

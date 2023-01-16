@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f85e8287-dc84-492d-9c35-cefc89a26899" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/maze_escape/AbstractGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/maze_escape/AbstractGraph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/maze_escape/AbstractGraph$GPath.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/maze_escape/AbstractGraph$GPath.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/maze_escape/AbstractGraph$MSTNode.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/maze_escape/AbstractGraph$MSTNode.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/maze_escape/AbstractGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/maze_escape/AbstractGraph.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,20 +65,7 @@
       <recent name="$PROJECT_DIR$/Assignment3" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AbstractGraphTest">
-    <configuration name="ElectionsMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="nl.hva.ict.ads.elections.ElectionsMain" />
-      <module name="elections" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="nl.hva.ict.ads.elections.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.AbstractGraphTest (1)">
     <configuration name="PrimMazeEscapeMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="maze_escape.PrimMazeEscapeMain" />
       <module name="team15" />
@@ -86,6 +75,21 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AbstractGraphTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maze-escape" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="maze_escape.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="maze_escape" />
+      <option name="MAIN_CLASS_NAME" value="maze_escape.AbstractGraphTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -101,6 +105,22 @@
       <option name="PACKAGE_NAME" value="maze_escape" />
       <option name="MAIN_CLASS_NAME" value="maze_escape.AbstractGraphTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AbstractGraphTest.adjacencyListsShouldFormatPerOrder (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="maze-escape" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="maze_escape.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="maze_escape" />
+      <option name="MAIN_CLASS_NAME" value="maze_escape.AbstractGraphTest" />
+      <option name="METHOD_NAME" value="adjacencyListsShouldFormatPerOrder" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -121,28 +141,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ElectionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="elections" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="nl.hva.ict.ads.elections.models.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="nl.hva.ict.ads.elections.models" />
-      <option name="MAIN_CLASS_NAME" value="nl.hva.ict.ads.elections.models.ElectionTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.AbstractGraphTest (1)" />
+        <item itemvalue="JUnit.AbstractGraphTest.adjacencyListsShouldFormatPerOrder (1)" />
         <item itemvalue="JUnit.AbstractGraphTest" />
         <item itemvalue="JUnit.AbstractGraphTest.adjacencyListsShouldFormatPerOrder" />
         <item itemvalue="Application.PrimMazeEscapeMain" />
-        <item itemvalue="Application.ElectionsMain" />
-        <item itemvalue="JUnit.ElectionTest" />
       </list>
     </recent_temporary>
   </component>
@@ -172,6 +177,7 @@
       <workItem from="1671097324324" duration="269000" />
       <workItem from="1671098072457" duration="41000" />
       <workItem from="1673626137321" duration="3518000" />
+      <workItem from="1673792824949" duration="2895000" />
     </task>
     <servers />
   </component>
