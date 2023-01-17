@@ -63,7 +63,7 @@
       <recent name="$PROJECT_DIR$/Assignment3" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AbstractGraphTest.dijkstraShortestPathShouldFindPathAndVisited">
+  <component name="RunManager" selected="JUnit.AbstractGraphTest (1)">
     <configuration name="AbstractGraphTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="maze-escape" />
       <extension name="coverage">
@@ -144,8 +144,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AbstractGraphTest.dijkstraShortestPathShouldFindPathAndVisited" />
         <item itemvalue="JUnit.AbstractGraphTest (1)" />
+        <item itemvalue="JUnit.AbstractGraphTest.dijkstraShortestPathShouldFindPathAndVisited" />
         <item itemvalue="JUnit.AbstractGraphTest.adjacencyListsShouldFormatPerOrder (1)" />
         <item itemvalue="JUnit.AbstractGraphTest" />
         <item itemvalue="JUnit.AbstractGraphTest.adjacencyListsShouldFormatPerOrder" />
