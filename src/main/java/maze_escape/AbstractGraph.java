@@ -301,15 +301,46 @@ public abstract class AbstractGraph<V> {
             //  register all visited vertices for statistical purposes
 
 
+            // Find the nearest unmarked vertex
+            for (V neighbour : getNeighbours(nearestMSTNode.vertex)) {
+                if (!minimumSpanningTree.containsKey(neighbour)) {
+                    MSTNode neighbourMSTNode = new MSTNode(neighbour);
+                    minimumSpanningTree.put(neighbour, neighbourMSTNode);
+                }
+
+                MSTNode neighbourMSTNode = minimumSpanningTree.get(neighbour);
+                if (!neighbourMSTNode.marked) {
+                    double weight = weightMapper.apply(nearestMSTNode.vertex, neighbour);
+                    if (nearestMSTNode.weightSumTo + weight < neighbourMSTNode.weightSumTo) {
+                        neighbourMSTNode.weightSumTo = nearestMSTNode.weightSumTo + weight;
+                        neighbourMSTNode.parentVertex = nearestMSTNode.vertex;
+
+                        nearestMSTNode = neighbourMSTNode;
+                    }
+                }
+            }
 
 
+            // If the target is found, complete the path and bail out
+            if (nearestMSTNode.vertex == targetVertex) {
+                path.vertices.add(nearestMSTNode.vertex);
 
+                // Add all the vertices to the path
+                while (nearestMSTNode.parentVertex != null) {
+                    nearestMSTNode = minimumSpanningTree.get(nearestMSTNode.parentVertex);
+                    nearestMSTNode.marked = true;
+                    path.vertices.addFirst(nearestMSTNode.vertex);
+                }
 
-            // TODO find the next nearest MSTNode that is not marked yet
-            nearestMSTNode = null;      // replace by a proper selection
+                // Add all the visited vertex to the path
+                path.visited.addAll(minimumSpanningTree.keySet());
+
+                path.totalWeight = minimumSpanningTree.get(targetVertex).weightSumTo;
+
+                nearestMSTNode = null;
+            }
         }
 
-
-        return null;        // replace by a proper outcome, if any
+        return path;
     }
 }
