@@ -1,11 +1,7 @@
 package maze_escape;
 
-import com.sun.source.tree.BinaryTree;
-import com.sun.source.tree.Tree;
-
 import java.util.*;
 import java.util.function.BiFunction;
-import java.util.stream.Collectors;
 
 public abstract class AbstractGraph<V> {
 
@@ -167,22 +163,26 @@ public abstract class AbstractGraph<V> {
      *          or null if target cannot be matched with a vertex in the sub-graph from startVertex
      */
     public GPath depthFirstSearch(V startVertex, V targetVertex) {
-
         if (startVertex == null || targetVertex == null) return null;
+
         List<V> path = new ArrayList<>();
         Set<V> visited = new HashSet<>();
         Stack<V> stack = new Stack<>();
+
         stack.push(startVertex);
+
         while (!stack.isEmpty()) {
             V current = stack.pop();
             visited.add(current);
             path.add(current);
+
             if (current.equals(targetVertex)) {
                 GPath gPath = new GPath();
                 gPath.vertices.addAll(path);
                 gPath.visited.addAll(visited);
                 return gPath;
             }
+
             for (V neighbour : getNeighbours(current)) {
                 if (!visited.contains(neighbour)) {
                     stack.push(neighbour);
@@ -190,7 +190,6 @@ public abstract class AbstractGraph<V> {
             }
         }
         return null;
-        // replace by a proper outcome, if any
     }
 
 
@@ -203,25 +202,31 @@ public abstract class AbstractGraph<V> {
      *          or null if target cannot be matched with a vertex in the sub-graph from startVertex
      */
     public GPath breadthFirstSearch(V startVertex, V targetVertex) {
-
         if (startVertex == null || targetVertex == null) return null;
+
         Map<V, V> parentMap = new HashMap<>();
         Queue<V> queue = new LinkedList<>();
         Set<V> visited = new HashSet<>();
+
         queue.offer(startVertex);
         visited.add(startVertex);
+
         while (!queue.isEmpty()) {
             V current = queue.poll();
+
             if (current.equals(targetVertex)) {
                 GPath gPath = new GPath();
                 gPath.vertices.add(current);
+
                 while (parentMap.containsKey(current)) {
                     current = parentMap.get(current);
                     gPath.vertices.addFirst(current);
                 }
+
                 gPath.visited.addAll(visited);
                 return gPath;
             }
+
             for (V neighbour : getNeighbours(current)) {
                 if (!visited.contains(neighbour)) {
                     parentMap.put(neighbour, current);
@@ -230,7 +235,7 @@ public abstract class AbstractGraph<V> {
                 }
             }
         }
-        return null;   // replace by a proper outcome, if any
+        return null;
     }
 
     // helper class to build the spanning tree of visited vertices in dijkstra's shortest path algorithm

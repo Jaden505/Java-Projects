@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="f85e8287-dc84-492d-9c35-cefc89a26899" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/maze_escape/AbstractGraph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/maze_escape/AbstractGraph.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/maze_escape/AbstractGraph.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/maze_escape/AbstractGraph.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +62,20 @@
       <recent name="$PROJECT_DIR$/Assignment3" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AbstractGraphTest (1)">
+  <component name="RunManager" selected="Application.PrimMazeEscapeMain">
+    <configuration name="PrimMazeEscapeMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="maze_escape.PrimMazeEscapeMain" />
+      <module name="maze-escape" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="maze_escape.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AbstractGraphTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="maze-escape" />
       <extension name="coverage">
@@ -110,22 +122,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AbstractGraphTest.adjacencyListsShouldFormatPerOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="team15" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="maze_escape.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="maze_escape" />
-      <option name="MAIN_CLASS_NAME" value="maze_escape.AbstractGraphTest" />
-      <option name="METHOD_NAME" value="adjacencyListsShouldFormatPerOrder" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="AbstractGraphTest.dijkstraShortestPathShouldFindPathAndVisited" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="maze-escape" />
       <extension name="coverage">
@@ -144,11 +140,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.PrimMazeEscapeMain" />
         <item itemvalue="JUnit.AbstractGraphTest (1)" />
         <item itemvalue="JUnit.AbstractGraphTest.dijkstraShortestPathShouldFindPathAndVisited" />
         <item itemvalue="JUnit.AbstractGraphTest.adjacencyListsShouldFormatPerOrder (1)" />
         <item itemvalue="JUnit.AbstractGraphTest" />
-        <item itemvalue="JUnit.AbstractGraphTest.adjacencyListsShouldFormatPerOrder" />
       </list>
     </recent_temporary>
   </component>
@@ -180,6 +176,7 @@
       <workItem from="1673626137321" duration="3518000" />
       <workItem from="1673792824949" duration="3557000" />
       <workItem from="1673904669126" duration="14151000" />
+      <workItem from="1674142635594" duration="1456000" />
     </task>
     <servers />
   </component>
