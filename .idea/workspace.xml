@@ -63,6 +63,19 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.PrimMazeEscapeMain">
+    <configuration name="HugePrimMazeEscapeMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="maze_escape.HugePrimMazeEscapeMain" />
+      <module name="maze-escape" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="maze_escape.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PrimMazeEscapeMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="maze_escape.PrimMazeEscapeMain" />
       <module name="maze-escape" />
@@ -78,21 +91,6 @@
     </configuration>
     <configuration name="AbstractGraphTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="maze-escape" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="maze_escape.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="maze_escape" />
-      <option name="MAIN_CLASS_NAME" value="maze_escape.AbstractGraphTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AbstractGraphTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="team15" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="maze_escape.*" />
@@ -141,10 +139,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Application.PrimMazeEscapeMain" />
+        <item itemvalue="Application.HugePrimMazeEscapeMain" />
         <item itemvalue="JUnit.AbstractGraphTest (1)" />
         <item itemvalue="JUnit.AbstractGraphTest.dijkstraShortestPathShouldFindPathAndVisited" />
         <item itemvalue="JUnit.AbstractGraphTest.adjacencyListsShouldFormatPerOrder (1)" />
-        <item itemvalue="JUnit.AbstractGraphTest" />
       </list>
     </recent_temporary>
   </component>
@@ -176,7 +174,7 @@
       <workItem from="1673626137321" duration="3518000" />
       <workItem from="1673792824949" duration="3557000" />
       <workItem from="1673904669126" duration="14151000" />
-      <workItem from="1674142635594" duration="1456000" />
+      <workItem from="1674142635594" duration="5392000" />
     </task>
     <servers />
   </component>

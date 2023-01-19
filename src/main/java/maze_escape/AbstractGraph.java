@@ -257,15 +257,15 @@ public abstract class AbstractGraph<V> {
         }
     }
 
-    private GPath checkForTarget(MSTNode nearestMSTNode, V targetVertex, GPath path, Map<V, MSTNode> minimumSpanningTree) {
-        if (nearestMSTNode.vertex == targetVertex) {
-            path.totalWeight = nearestMSTNode.weightSumTo;
-
-            while (nearestMSTNode.vertex != null) {
+    private GPath checkForTargetVertex(MSTNode nearestMSTNode, V targetVertex, GPath path, Map<V, MSTNode> minimumSpanningTree) {
+        while (nearestMSTNode.vertex != null) {
+            if (nearestMSTNode.vertex.equals(targetVertex)) {
+                path.totalWeight = nearestMSTNode.weightSumTo;
                 path.vertices.addFirst(nearestMSTNode.vertex);
-                nearestMSTNode.vertex = minimumSpanningTree.get(nearestMSTNode.vertex).parentVertex;
+                return path;
             }
-            return path;
+            path.vertices.addFirst(nearestMSTNode.vertex);
+            nearestMSTNode.vertex = minimumSpanningTree.get(nearestMSTNode.vertex).parentVertex;
         }
         return null;
     }
@@ -303,30 +303,32 @@ public abstract class AbstractGraph<V> {
         minimumSpanningTree.put(startVertex, nearestMSTNode);
 
         while (nearestMSTNode != null) {
+            V nearestVertex = nearestMSTNode.vertex;
             nearestMSTNode.marked = true;
 
-            for (V neighbour : getNeighbours(nearestMSTNode.vertex)) {
-
+            for (V neighbour : getNeighbours(nearestVertex)) {
                 MSTNode current = new MSTNode(neighbour);
-                double weight = weightMapper.apply(nearestMSTNode.vertex, neighbour);
+                double weight = weightMapper.apply(nearestVertex, neighbour);
 
-                current.parentVertex = nearestMSTNode.vertex;
+                current.parentVertex = nearestVertex;
                 current.weightSumTo = nearestMSTNode.weightSumTo + weight;
                 double currentWeight = current.weightSumTo;
 
-                if (!minimumSpanningTree.containsKey(neighbour) ||
-                            currentWeight < minimumSpanningTree.get(neighbour).weightSumTo) {
+                if (!minimumSpanningTree.containsKey(neighbour)) {
                     minimumSpanningTree.put(neighbour, current);
+                }
+                else if (minimumSpanningTree.get(neighbour).weightSumTo > currentWeight) {
+                    minimumSpanningTree.put(neighbour,current);
                 }
 
                 path.visited.add(neighbour);
             }
 
-            GPath targetPath = checkForTarget(nearestMSTNode, targetVertex, path, minimumSpanningTree);
-            if (targetPath != null) return targetPath;
+            // End loop if targetVertex is found
+            GPath foundTargetVertex = checkForTargetVertex(nearestMSTNode, targetVertex, path, minimumSpanningTree);
+            if (foundTargetVertex != null) return foundTargetVertex;
 
-            nearestMSTNode = minimumSpanningTree.values().stream().filter(n -> n.marked == false)
-                    .min(MSTNode::compareTo).orElse(null);
+            nearestMSTNode = minimumSpanningTree.values().stream().filter(v -> !v.marked).min(MSTNode::compareTo).orElse(null);
         }
 
         return null;
